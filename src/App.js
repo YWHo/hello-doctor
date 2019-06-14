@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
 // import logo from './logo.svg';
 import './App.css';
-import { fetchSchedule } from './apiRequester';
+// import { fetchSchedule } from './apiRequester';
+import { mockFetchSchedule } from './mocks/mockApi'
 
 function App() {
   const [schedules, setSchedules] = useState([]);
 
   useEffect(() => {
-    fetchSchedule('2019-06-13')
+    mockFetchSchedule('2019-06-13')
     .then(json => {
       console.log('returned:\n', json);
       setSchedules(json);
