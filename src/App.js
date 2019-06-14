@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 // import { fetchSchedule } from './apiRequester';
 import { mockFetchSchedule } from './mocks/mockApi'
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 function App() {
   const [schedules, setSchedules] = useState([]);
@@ -10,7 +11,6 @@ function App() {
   useEffect(() => {
     mockFetchSchedule('2019-06-13')
     .then(json => {
-      console.log('returned:\n', json);
       setSchedules(json);
     });
   }, []);
@@ -26,10 +26,21 @@ function App() {
   });
 
   return (
-    <div>
-      { nameList }
-    </div>
+    <Router>
+      <div>
+        { nameList }
+        <Link to="/register">Register Page</Link>
+    
+      </div>
+      <Route path="/register" component={registerPage} />
+    </Router>
   ) 
+}
+
+function registerPage() {
+  return (
+    <div>Hello World from register page</div>
+  )
 }
 
 // function App() {
