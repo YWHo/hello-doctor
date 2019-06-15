@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HomePage render correctly 1`] = `
+<div>
+  <div>
+    <div>
+      Name: 
+      Dr. John Smith
+    </div>
+    <div>
+      Title: 
+      General Practitioner
+    </div>
+    <br />
+  </div>
+  <div>
+    <div>
+      Name: 
+      Dr. Mary Aniston
+    </div>
+    <div>
+      Title: 
+      General Practitioner
+    </div>
+    <br />
+  </div>
+  <div>
+    <div>
+      Name: 
+      Dr. Sarah Lee Mance
+    </div>
+    <div>
+      Title: 
+      General Practitioner
+    </div>
+    <br />
+  </div>
+</div>
+`;
