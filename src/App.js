@@ -3,21 +3,20 @@ import { connect } from 'react-redux';
 // import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import HomePage from './components/HomePage'
+import AppointmentPage from './components/AppointmentPage'
 import RegisterPage from './components/RegisterPage'
 import actions from './state/actions'
 
 export function App(props) {
-  const { dToFetchSchedules } = props 
-
   useEffect(() => {
+    const { dToFetchSchedules } = props 
     dToFetchSchedules('2019-06-13');
-  }, []);
+  }, [props]);
 
   return (
     <Router>
       <div>
-        <Route exact path="/" component={() => <HomePage />} />
+        <Route exact path="/" component={() => <AppointmentPage />} />
         <Route path="/register" component={() => <RegisterPage />} />
       </div>
     </Router>

@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import selectors from '../../state/selectors'
 
-export function HomePage(props) {
+export function AppointmentPage(props) {
   const { schedules = [] } = props
   const nameList = Array.from(schedules).map((item, idx) => {
     return (
@@ -32,4 +32,4 @@ function mapDispatchToProps (dispatch) {
 }
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(HomePage);
+export default connect(mapStateToProps, mapDispatchToProps)(AppointmentPage);
