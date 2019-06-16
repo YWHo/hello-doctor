@@ -18,7 +18,8 @@ export function fetchPicture(id) {
 function remoteGet(url) {
   return new Promise((resolve, reject) => {
     axios.get(url)
-      .then(res => resolve(JSON.parse(res.data)))
+      .then(res => {
+        resolve(JSON.parse(res.data))})
       .catch(err => reject(err))
   });
 }

@@ -1,6 +1,8 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import selectors from '../../state/selectors'
 
-export default function HomePage(props) {
+export function HomePage(props) {
   const { schedules = [] } = props
   const nameList = Array.from(schedules).map((item, idx) => {
     return (
@@ -18,3 +20,16 @@ export default function HomePage(props) {
     </div>
   ) 
 }
+
+const mapStateToProps = (state) => {
+  return {
+    schedules : selectors.getSchedules(state)
+  }
+}
+
+function mapDispatchToProps (dispatch) {
+  return { }
+}
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(HomePage);

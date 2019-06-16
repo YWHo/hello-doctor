@@ -1,29 +1,38 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
+import { connect } from 'react-redux';
 // import logo from './logo.svg';
 import './App.css';
-import { fetchSchedule } from './apiRequester';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import HomePage from './components/HomePage'
 import RegisterPage from './components/RegisterPage'
+import actions from './state/actions'
 
-function App() {
-  const [schedules, setSchedules] = useState([]);
+export function App(props) {
+  const { dToFetchSchedules } = props 
 
   useEffect(() => {
-    fetchSchedule('2019-06-13')
-    .then(json => {
-      setSchedules(json);
-    });
+    dToFetchSchedules('2019-06-13');
   }, []);
 
   return (
     <Router>
       <div>
-        <Route exact path="/" component={() => <HomePage schedules={schedules} />} />
+        <Route exact path="/" component={() => <HomePage />} />
         <Route path="/register" component={() => <RegisterPage />} />
       </div>
     </Router>
-  )
+  );
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  return { }
+}
+
+function mapDispatchToProps (dispatch) {
+  return {
+    dToFetchSchedules: (dateStr) => dispatch(actions.toFetchSchedules(dateStr)),
+  }
+}
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
