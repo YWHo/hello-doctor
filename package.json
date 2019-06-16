@@ -18,6 +18,9 @@
   "devDependencies": {
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
+    "husky": "^2.4.1",
+    "lint-staged": "^8.2.1",
+    "prettier-standard": "^9.1.1",
     "react-test-renderer": "^16.8.6",
     "redux-mock-store": "^1.5.3"
   },
@@ -29,6 +32,19 @@
   },
   "eslintConfig": {
     "extends": "react-app"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged && yarn test --watchAll=false"
+    }
+  },
+  "lint-staged": {
+    "linters": {
+      "src/**/*.js": [
+        "prettier-standard",
+        "git add"
+      ]
+    }
   },
   "browserslist": {
     "production": [
