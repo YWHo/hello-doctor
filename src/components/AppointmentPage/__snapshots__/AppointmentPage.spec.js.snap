@@ -1,7 +1,37 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`AppointmentPage render correctly 1`] = `
-<div>
+<div
+  className="sc-bxivhb kKWjxe"
+>
+  <div
+    className="sc-bdVaJa kWEhro"
+  >
+    <button
+      className="sc-bwzfXH iIfGWt"
+    >
+      <img
+        alt="Go Back"
+        src="icon_go_back.svg"
+      />
+    </button>
+    <img
+      alt="Vensa"
+      src="vensa_logo.svg"
+    />
+    <button
+      className="sc-bwzfXH iIfGWt"
+    >
+      <div
+        className="sc-htpNat dEvzsY"
+      >
+        <img
+          alt="Help"
+          src="icon_help.svg"
+        />
+      </div>
+    </button>
+  </div>
   <div>
     <div>
       Name: 

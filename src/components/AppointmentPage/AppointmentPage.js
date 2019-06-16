@@ -1,8 +1,17 @@
-import React from 'react';
-import { connect } from 'react-redux';
+import React from 'react'
+import { connect } from 'react-redux'
+import styled from 'styled-components'
 import selectors from '../../state/selectors'
+import NavBar from '../NavBar'
 
-export function AppointmentPage(props) {
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  min-width: 375px;
+`
+
+export function AppointmentPage (props) {
   const { schedules = [] } = props
   const nameList = Array.from(schedules).map((item, idx) => {
     return (
@@ -11,25 +20,28 @@ export function AppointmentPage(props) {
         <div>Title: {item.Title}</div>
         <br />
       </div>
-    );
-  });
+    )
+  })
 
   return (
-    <div>
-      { nameList }
-    </div>
-  ) 
+    <Container>
+      <NavBar />
+      {nameList}
+    </Container>
+  )
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
-    schedules : selectors.getSchedules(state)
+    schedules: selectors.getSchedules(state)
   }
 }
 
 function mapDispatchToProps (dispatch) {
-  return { }
+  return {}
 }
 
-
-export default connect(mapStateToProps, mapDispatchToProps)(AppointmentPage);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(AppointmentPage)
