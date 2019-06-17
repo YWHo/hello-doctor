@@ -23,15 +23,15 @@ const Icon = styled.img`
 `;
 
 export default function MonthBar(props) {
-  const {
-    selectedMonth = moment()
-      .format('MMMM')
-      .toUpperCase()
-  } = props;
+  const { selectedDate = moment() } = props;
+
+  const month = moment(selectedDate)
+    .format('MMMM')
+    .toUpperCase();
 
   return (
     <Container>
-      <Month>{selectedMonth}</Month>
+      <Month>{month}</Month>
       <Icon src={calendarIcon} alt='Calendar' />
     </Container>
   );

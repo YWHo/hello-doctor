@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavBar render correctly 1`] = `
+<div
+  className="sc-bdVaJa eLyiIX"
+>
+  <div
+    className="sc-bwzfXH hBCumc"
+    selected={false}
+  >
+    <div
+      className="sc-htpNat hfnhPW"
+    >
+      <div
+        className="sc-bxivhb eyjcHp"
+      >
+        17
+      </div>
+      <div
+        className="sc-ifAKCX jyGSsx"
+      >
+        mon
+      </div>
+    </div>
+  </div>
+  <div
+    className="sc-bwzfXH hBCumc"
+    selected={false}
+  >
+    <div
+      className="sc-htpNat hfnhPW"
+    >
+      <div
+        className="sc-bxivhb eyjcHp"
+      >
+        18
+      </div>
+      <div
+        className="sc-ifAKCX jyGSsx"
+      >
+        tue
+      </div>
+    </div>
+  </div>
+  <div
+    className="sc-bwzfXH dLXFRF"
+    selected={true}
+  >
+    <div
+      className="sc-htpNat hfnhPW"
+    >
+      <div
+        className="sc-bxivhb eyjcHp"
+      >
+        19
+      </div>
+      <div
+        className="sc-ifAKCX jyGSsx"
+      >
+        wed
+      </div>
+    </div>
+  </div>
+  <div
+    className="sc-bwzfXH hBCumc"
+    selected={false}
+  >
+    <div
+      className="sc-htpNat hfnhPW"
+    >
+      <div
+        className="sc-bxivhb eyjcHp"
+      >
+        20
+      </div>
+      <div
+        className="sc-ifAKCX jyGSsx"
+      >
+        thu
+      </div>
+    </div>
+  </div>
+  <div
+    className="sc-bwzfXH hBCumc"
+    selected={false}
+  >
+    <div
+      className="sc-htpNat hfnhPW"
+    >
+      <div
+        className="sc-bxivhb eyjcHp"
+      >
+        21
+      </div>
+      <div
+        className="sc-ifAKCX jyGSsx"
+      >
+        fri
+      </div>
+    </div>
+  </div>
+</div>
+`;

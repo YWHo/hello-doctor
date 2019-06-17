@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import selectors from '../../state/selectors';
 import NavBar from '../NavBar';
 import MonthBar from '../MonthBar';
+import FiveDayBar from '../FiveDaysBar';
 
 const Container = styled.div`
   height: 100vh;
@@ -14,7 +15,7 @@ export function AppointmentPage(props) {
   const { schedules = [] } = props;
   const nameList = Array.from(schedules).map((item, idx) => {
     return (
-      <div key={idx}>
+      <div key={`app_${idx}`}>
         <div>Name: {item.Name}</div>
         <div>Title: {item.Title}</div>
         <br />
@@ -26,6 +27,7 @@ export function AppointmentPage(props) {
     <Container>
       <NavBar />
       <MonthBar />
+      <FiveDayBar />
       {nameList}
     </Container>
   );
