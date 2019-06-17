@@ -20,7 +20,7 @@
     "enzyme-adapter-react-16": "^1.14.0",
     "husky": "^2.4.1",
     "lint-staged": "^8.2.1",
-    "prettier-standard": "^9.1.1",
+    "prettier": "^1.18.2",
     "react-test-renderer": "^16.8.6",
     "redux-mock-store": "^1.5.3"
   },
@@ -28,7 +28,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "format": "prettier \"src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\" --write"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -39,12 +40,10 @@
     }
   },
   "lint-staged": {
-    "linters": {
-      "src/**/*.js": [
-        "prettier-standard",
-        "git add"
-      ]
-    }
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "browserslist": {
     "production": [
