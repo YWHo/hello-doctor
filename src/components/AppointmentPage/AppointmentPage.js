@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import moment from 'moment';
 import styled from 'styled-components';
 import selectors from '../../state/selectors';
 import NavBar from '../NavBar';
@@ -14,10 +15,16 @@ const Container = styled.div`
 export function AppointmentPage(props) {
   const { schedules = [] } = props;
   const nameList = Array.from(schedules).map((item, idx) => {
+    const { AvailableSlots = {} } = item;
+    console.log('item: ', item);
+    const slots = Object.keys(AvailableSlots).map(key =>
+      moment(AvailableSlots[key]).format('HH:mm')
+    );
     return (
       <div key={`app_${idx}`}>
         <div>Name: {item.Name}</div>
         <div>Title: {item.Title}</div>
+        <div>Available Slots: {slots.join(' | ')}</div>
         <br />
       </div>
     );
