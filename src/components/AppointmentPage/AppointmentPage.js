@@ -3,10 +3,9 @@ import { connect } from 'react-redux';
 import styled from 'styled-components';
 import selectors from '../../state/selectors';
 import NavBar from '../NavBar';
+import MonthBar from '../MonthBar';
 
 const Container = styled.div`
-  display: flex;
-  flex-direction: column;
   height: 100vh;
   min-width: 375px;
 `;
@@ -26,6 +25,7 @@ export function AppointmentPage(props) {
   return (
     <Container>
       <NavBar />
+      <MonthBar />
       {nameList}
     </Container>
   );

@@ -10,34 +10,36 @@ const Container = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 0.4rem;
+  align-items: center;
+  height: 56px;
 `;
 
-const Button = styled.button`
+const ButtonBack = styled.button`
   border: none;
   background-color: Transparent;
+  margin-left: 0.4rem;
+  margin-top: 0.4rem;
   text-align: center;
 `;
 
-const ContainerHelp = styled.div`
+const ButtonHelp = styled.button`
+  border: none;
   border-right: 5px solid #fff;
   height: 20px;
-  padding-right: 0.2rem;
-  vertical-align: middle;
+  background-color: Transparent;
+  text-align: center;
 `;
 
 export default function NavBar(props) {
   return (
     <Container>
-      <Button>
+      <ButtonBack>
         <img src={iconGoBack} alt='Go Back' />
-      </Button>
+      </ButtonBack>
       <img src={vensaLogo} alt='Vensa' />
-      <Button>
-        <ContainerHelp>
-          <img src={iconHelp} alt='Help' />
-        </ContainerHelp>
-      </Button>
+      <ButtonHelp>
+        <img src={iconHelp} alt='Help' />
+      </ButtonHelp>
     </Container>
   );
 }

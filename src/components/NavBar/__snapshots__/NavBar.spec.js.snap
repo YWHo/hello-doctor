@@ -2,10 +2,10 @@
 
 exports[`NavBar render correctly 1`] = `
 <div
-  className="sc-bdVaJa kWEhro"
+  className="sc-bdVaJa iHPEZw"
 >
   <button
-    className="sc-bwzfXH iIfGWt"
+    className="sc-bwzfXH cruCNk"
   >
     <img
       alt="Go Back"
@@ -17,16 +17,12 @@ exports[`NavBar render correctly 1`] = `
     src="vensa_logo.svg"
   />
   <button
-    className="sc-bwzfXH iIfGWt"
+    className="sc-htpNat jjVWIa"
   >
-    <div
-      className="sc-htpNat dEvzsY"
-    >
-      <img
-        alt="Help"
-        src="icon_help.svg"
-      />
-    </div>
+    <img
+      alt="Help"
+      src="icon_help.svg"
+    />
   </button>
 </div>
 `;
