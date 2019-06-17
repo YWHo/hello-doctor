@@ -1,8 +1,8 @@
-import { CLEAR_SCHEDULES, SAVE_SCHEDULES } from '../../../shared/constants'
+import { CLEAR_SCHEDULES, SAVE_SCHEDULES } from '../../../shared/constants';
 
 const initialState = [];
 
-export default function schedules (state = initialState, action) {
+export default function schedules(state = initialState, action) {
   const { type, payload = {} } = action;
   switch (type) {
     case CLEAR_SCHEDULES:

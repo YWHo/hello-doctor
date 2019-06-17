@@ -1,2 +1,2 @@
-import AppointmentPage from './AppointmentPage'
-export default AppointmentPage
+import AppointmentPage from './AppointmentPage';
+export default AppointmentPage;

@@ -1,11 +1,11 @@
-import React from 'react'
-import NavBar from './NavBar'
+import React from 'react';
+import NavBar from './NavBar';
 
-import renderer from 'react-test-renderer'
+import renderer from 'react-test-renderer';
 
 describe('NavBar', () => {
   it('render correctly', () => {
-    const component = renderer.create(<NavBar />)
-    expect(component.toJSON()).toMatchSnapshot()
-  })
-})
+    const component = renderer.create(<NavBar />);
+    expect(component.toJSON()).toMatchSnapshot();
+  });
+});

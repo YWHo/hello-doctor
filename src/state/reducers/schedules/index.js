@@ -1,2 +1,2 @@
-import schedules from './schedules'
-export default schedules
+import schedules from './schedules';
+export default schedules;

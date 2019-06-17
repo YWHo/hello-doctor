@@ -1,18 +1,18 @@
-import React, { useEffect } from 'react'
-import { connect } from 'react-redux'
+import React, { useEffect } from 'react';
+import { connect } from 'react-redux';
 // import logo from './logo.svg';
-import './App.css'
-import ErrorBoundary from './ErrorBoundary'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
-import AppointmentPage from './components/AppointmentPage'
-import RegisterPage from './components/RegisterPage'
-import actions from './state/actions'
+import './App.css';
+import ErrorBoundary from './ErrorBoundary';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import AppointmentPage from './components/AppointmentPage';
+import RegisterPage from './components/RegisterPage';
+import actions from './state/actions';
 
-export function App (props) {
+export function App(props) {
   useEffect(() => {
-    const { dToFetchSchedules } = props
-    dToFetchSchedules('2019-06-13')
-  }, [props])
+    const { dToFetchSchedules } = props;
+    dToFetchSchedules('2019-06-13');
+  }, [props]);
 
   return (
     <ErrorBoundary>
@@ -23,20 +23,20 @@ export function App (props) {
         </div>
       </Router>
     </ErrorBoundary>
-  )
+  );
 }
 
 const mapStateToProps = state => {
-  return {}
-}
+  return {};
+};
 
-function mapDispatchToProps (dispatch) {
+function mapDispatchToProps(dispatch) {
   return {
     dToFetchSchedules: dateStr => dispatch(actions.toFetchSchedules(dateStr))
-  }
+  };
 }
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(App)
+)(App);

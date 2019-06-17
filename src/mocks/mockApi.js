@@ -1,4 +1,4 @@
-import * as mockData from './mockData'
+import * as mockData from './mockData';
 
 export function mockFetchSchedule(date) {
   const data = mockData.schedules;
@@ -19,4 +19,3 @@ export function mockFetchProvider(id) {
     return Promise.resolve({});
   }
 }
-

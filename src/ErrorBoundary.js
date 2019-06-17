@@ -1,26 +1,26 @@
 // Note: https://reactjs.org/docs/error-boundaries.html
 
-import React from 'react'
+import React from 'react';
 
 export default class ErrorBoundary extends React.Component {
-  constructor (props) {
-    super(props)
-    this.state = { hasError: false }
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
   }
 
-  componentDidCatch (error, info) {
+  componentDidCatch(error, info) {
     // Display fallback UI
-    this.setState({ hasError: true })
+    this.setState({ hasError: true });
     // You can also log the error to an error reporting service
     // logErrorToMyService(error, info);
-    console.log('ErrorBoundary:\n err: ', error, '\n info: ', info)
+    console.log('ErrorBoundary:\n err: ', error, '\n info: ', info);
   }
 
-  render () {
+  render() {
     if (this.state.hasError) {
       // You can render any custom fallback UI
-      return <h1>Something went wrong.</h1>
+      return <h1>Something went wrong.</h1>;
     }
-    return this.props.children
+    return this.props.children;
   }
 }

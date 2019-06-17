@@ -8,57 +8,56 @@ import thunk from 'redux-thunk';
 const middlewares = [thunk];
 const mockStore = configureMockStore(middlewares);
 
-describe('actions', () => { 
+describe('actions', () => {
   it('should create an action to save schedules', () => {
-    const schedules = mockData.schedules
+    const schedules = mockData.schedules;
     const expectedAction = {
       type: constants.SAVE_SCHEDULES,
       payload: { schedules }
-    }
-    expect(actions.saveSchedules(schedules)).toEqual(expectedAction)
-  })
+    };
+    expect(actions.saveSchedules(schedules)).toEqual(expectedAction);
+  });
 
   it('should create an action to clear schedules', () => {
-    const schedules = []
+    const schedules = [];
     const expectedAction = {
       type: constants.CLEAR_SCHEDULES,
       payload: {}
-    }
-    actions.saveSchedules(schedules)
-    expect(actions.clearSchedules()).toEqual(expectedAction)
-  })
-})
+    };
+    actions.saveSchedules(schedules);
+    expect(actions.clearSchedules()).toEqual(expectedAction);
+  });
+});
 
 describe('async actions', () => {
-  let mockGet
-    beforeEach(() => {
-      mockGet = jest.spyOn(axios, 'get')
-    })
+  let mockGet;
+  beforeEach(() => {
+    mockGet = jest.spyOn(axios, 'get');
+  });
 
-    afterEach(() => {
-      mockGet.mockRestore()
-    })
-
+  afterEach(() => {
+    mockGet.mockRestore();
+  });
 
   it('should create an async action to fetch and then save schedules', () => {
     const schedules = [
-      { name: 'Bob', name : 'Bob', },
-      { name: 'Doe', time : 'Morning' }
-    ]
+      { name: 'Bob', name: 'Bob' },
+      { name: 'Doe', time: 'Morning' }
+    ];
     const expectedAction = {
       type: constants.SAVE_SCHEDULES,
       payload: { schedules }
-    }
+    };
 
     mockGet.mockImplementation(fullUrl => {
       return Promise.resolve({
-        data: JSON.stringify(schedules)});
-    })
+        data: JSON.stringify(schedules)
+      });
+    });
 
     const store = mockStore({ schedules: [] });
-    return store.dispatch(actions.toFetchSchedules('2019-01-01'))
-      .then(() => {
-        expect(store.getActions()).toContainEqual(expectedAction);
-      });
+    return store.dispatch(actions.toFetchSchedules('2019-01-01')).then(() => {
+      expect(store.getActions()).toContainEqual(expectedAction);
+    });
   });
 });

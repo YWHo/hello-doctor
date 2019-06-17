@@ -1,3 +1,3 @@
-export function getSchedules ({ schedules }) {
-  return schedules
+export function getSchedules({ schedules }) {
+  return schedules;
 }

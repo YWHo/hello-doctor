@@ -1,4 +1,4 @@
-import axios from 'axios'
+import axios from 'axios';
 
 export function fetchSchedule(date) {
   const fullUrl = `https://frontendchallenge2019.azurewebsites.net/api/Schedule/${date}`;
@@ -17,9 +17,11 @@ export function fetchPicture(id) {
 
 function remoteGet(url) {
   return new Promise((resolve, reject) => {
-    axios.get(url)
+    axios
+      .get(url)
       .then(res => {
-        resolve(JSON.parse(res.data))})
-      .catch(err => reject(err))
+        resolve(JSON.parse(res.data));
+      })
+      .catch(err => reject(err));
   });
 }

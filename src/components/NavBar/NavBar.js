@@ -1,8 +1,8 @@
-import React from 'react'
-import styled from 'styled-components'
-import iconGoBack from '../../assets/icon_go_back.svg'
-import iconHelp from '../../assets/icon_help.svg'
-import vensaLogo from '../../assets/vensa_logo.svg'
+import React from 'react';
+import styled from 'styled-components';
+import iconGoBack from '../../assets/icon_go_back.svg';
+import iconHelp from '../../assets/icon_help.svg';
+import vensaLogo from '../../assets/vensa_logo.svg';
 
 const Container = styled.div`
   background-color: #3cb9c0;
@@ -11,22 +11,22 @@ const Container = styled.div`
   flex-direction: row;
   justify-content: space-between;
   padding: 0.4rem;
-`
+`;
 
 const Button = styled.button`
   border: none;
   background-color: Transparent;
   text-align: center;
-`
+`;
 
 const ContainerHelp = styled.div`
   border-right: 5px solid #fff;
   height: 20px;
   padding-right: 0.2rem;
   vertical-align: middle;
-`
+`;
 
-export default function NavBar (props) {
+export default function NavBar(props) {
   return (
     <Container>
       <Button>
@@ -39,5 +39,5 @@ export default function NavBar (props) {
         </ContainerHelp>
       </Button>
     </Container>
-  )
+  );
 }
