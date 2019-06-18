@@ -2,10 +2,10 @@
 
 exports[`NavBar render correctly 1`] = `
 <div
-  className="sc-bdVaJa iGovpx"
+  className="sc-bdVaJa cqEXRB"
 >
   <div
-    className="sc-bwzfXH cLVtoy"
+    className="sc-bwzfXH kfdVx"
   >
     <button
       className="sc-htpNat dsehsp"

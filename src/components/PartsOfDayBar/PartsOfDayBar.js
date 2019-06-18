@@ -26,7 +26,7 @@ const Button = styled.button`
   border-color: #fff;
   border-style: ${props => (props.selected ? 'solid' : 'none')};
   border-radius: 50px;
-  border-width: 2px;
+  border-width: 1px;
   font-size: 18px;
   font-weight: 300;
 

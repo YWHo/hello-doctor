@@ -9,7 +9,7 @@ import * as dateHelper from '../../shared/dateHelper';
 const ContainerOuter = styled.div`
   display: block;
   height: 78px;
-  padding: 10px 2px;
+  padding: 12px 2px;
   overflow: hidden;
   white-space: nowrap;
 `;
@@ -19,7 +19,7 @@ const ContainerInner = styled.div`
   height: 84px;
   overflow-x: auto;
   overflow-y: hidden;
-  padding: 2px;
+  padding: 0 2px;
   white-space: nowrap;
 `;
 
