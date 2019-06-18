@@ -16,7 +16,7 @@ const Container = styled.div`
   align-items: center;
   height: 38px;
   padding: 0 8px;
-  margin-top: 12px;
+  margin: 12px 4px;
 `;
 
 const Button = styled.button`
@@ -26,6 +26,7 @@ const Button = styled.button`
   border-color: #fff;
   border-style: ${props => (props.selected ? 'solid' : 'none')};
   border-radius: 50px;
+  border-weight: 2px;
   font-size: 18px;
   font-weight: 300;
 
