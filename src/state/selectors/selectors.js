@@ -5,3 +5,7 @@ export function getSchedules({ schedules }) {
 export function getSelectedDate({ selectedDate }) {
   return selectedDate;
 }
+
+export function getSelectedDayPart({ selectedDayPart }) {
+  return selectedDayPart;
+}

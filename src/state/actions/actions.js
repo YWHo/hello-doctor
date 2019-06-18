@@ -15,6 +15,13 @@ export function clearSelectedDate() {
   };
 }
 
+export function clearSelectedDayPart() {
+  return {
+    type: constants.CLEAR_SELECTED_DAY_PART,
+    payload: {}
+  };
+}
+
 export function saveSchedules(schedules) {
   return {
     type: constants.SAVE_SCHEDULES,
@@ -26,6 +33,13 @@ export function saveSelectedDate(selectedDate) {
   return {
     type: constants.SAVE_SELECTED_DATE,
     payload: { selectedDate }
+  };
+}
+
+export function saveSelectedDayPart(selectedDayPart) {
+  return {
+    type: constants.SAVE_SELECTED_DAY_PART,
+    payload: { selectedDayPart }
   };
 }
 

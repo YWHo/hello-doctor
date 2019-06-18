@@ -5,7 +5,7 @@ exports[`NavBar render correctly 1`] = `
   className="sc-bdVaJa iHPEZw"
 >
   <button
-    className="sc-bwzfXH cruCNk"
+    className="sc-bwzfXH lbpgZt"
   >
     <img
       alt="Go Back"
@@ -17,7 +17,7 @@ exports[`NavBar render correctly 1`] = `
     src="vensa_logo.svg"
   />
   <button
-    className="sc-htpNat jjVWIa"
+    className="sc-htpNat bnTCTa"
   >
     <img
       alt="Help"

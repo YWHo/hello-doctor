@@ -16,7 +16,7 @@ const Container = styled.div`
 
 const ButtonBack = styled.button`
   border: none;
-  background-color: Transparent;
+  background-color: transparent;
   margin-left: 0.4rem;
   margin-top: 0.4rem;
   text-align: center;
@@ -26,7 +26,7 @@ const ButtonHelp = styled.button`
   border: none;
   border-right: 5px solid #fff;
   height: 20px;
-  background-color: Transparent;
+  background-color: transparent;
   text-align: center;
 `;
 
