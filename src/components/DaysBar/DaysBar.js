@@ -6,10 +6,17 @@ import * as actions from '../../state/actions';
 import * as selectors from '../../state/selectors';
 import * as dateHelper from '../../shared/dateHelper';
 
-const Container = styled.div`
+const ContainerOuter = styled.div`
   display: block;
-  height: 82px;
-  padding: 8px 2px;
+  height: 78px;
+  padding: 10px 2px;
+  overflow: hidden;
+  white-space: nowrap;
+`;
+
+const ContainerInner = styled.div`
+  display: block;
+  height: 84px;
   overflow-x: auto;
   overflow-y: hidden;
   white-space: nowrap;
@@ -75,7 +82,11 @@ export function DaysBar(props) {
     );
   });
 
-  return <Container>{dateList}</Container>;
+  return (
+    <ContainerOuter>
+      <ContainerInner>{dateList}</ContainerInner>
+    </ContainerOuter>
+  );
 }
 
 function onDayClicked(props, day) {
