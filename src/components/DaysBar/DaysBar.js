@@ -2,17 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import moment from 'moment';
 
-const Container = styled.div`
-  background-color: #3cb9c0;
-  background-image: linear-gradient(to right, #3cb9c0, #2caaca);
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: start;
-  height: 118.5px;
-  padding: 0 0.4rem;
-`;
-
 const DateCircle = styled.div`
   background-color: ${props => (props.selected ? '#177d91' : 'transparent')};
   border-radius: 50%;
@@ -51,7 +40,7 @@ const WeekDayName = styled.div`
   font-weight: 300;
 `;
 
-export default function FiveDaysBar(props) {
+export default function DaysBar(props) {
   const { selectedDate = moment() } = props;
 
   const dateDiff = [-2, -1, 0, 1, 2];
@@ -70,5 +59,5 @@ export default function FiveDaysBar(props) {
     );
   });
 
-  return <Container>{dateList}</Container>;
+  return <React.Fragment>{dateList}</React.Fragment>;
 }

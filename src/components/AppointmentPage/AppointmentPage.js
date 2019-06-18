@@ -5,7 +5,8 @@ import styled from 'styled-components';
 import selectors from '../../state/selectors';
 import NavBar from '../NavBar';
 import MonthBar from '../MonthBar';
-import FiveDayBar from '../FiveDaysBar';
+import DateSelector from '../DateSelector';
+import FiveDayBar from '../DaysBar';
 
 const Container = styled.div`
   height: 100vh;
@@ -34,7 +35,7 @@ export function AppointmentPage(props) {
     <Container>
       <NavBar />
       <MonthBar />
-      <FiveDayBar />
+      <DateSelector />
       {nameList}
     </Container>
   );

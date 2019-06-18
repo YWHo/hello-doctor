@@ -1,103 +1,101 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`NavBar render correctly 1`] = `
-<div
-  className="sc-bdVaJa eLyiIX"
->
+Array [
   <div
-    className="sc-bwzfXH hBCumc"
+    className="sc-bdVaJa dBkHbX"
     selected={false}
   >
     <div
-      className="sc-htpNat hfnhPW"
+      className="sc-bwzfXH hlWDMT"
     >
       <div
-        className="sc-bxivhb eyjcHp"
+        className="sc-htpNat eeOEiB"
       >
         17
       </div>
       <div
-        className="sc-ifAKCX jyGSsx"
+        className="sc-bxivhb gtZwxw"
       >
         mon
       </div>
     </div>
-  </div>
+  </div>,
   <div
-    className="sc-bwzfXH hBCumc"
+    className="sc-bdVaJa dBkHbX"
     selected={false}
   >
     <div
-      className="sc-htpNat hfnhPW"
+      className="sc-bwzfXH hlWDMT"
     >
       <div
-        className="sc-bxivhb eyjcHp"
+        className="sc-htpNat eeOEiB"
       >
         18
       </div>
       <div
-        className="sc-ifAKCX jyGSsx"
+        className="sc-bxivhb gtZwxw"
       >
         tue
       </div>
     </div>
-  </div>
+  </div>,
   <div
-    className="sc-bwzfXH dLXFRF"
+    className="sc-bdVaJa mevLT"
     selected={true}
   >
     <div
-      className="sc-htpNat hfnhPW"
+      className="sc-bwzfXH hlWDMT"
     >
       <div
-        className="sc-bxivhb eyjcHp"
+        className="sc-htpNat eeOEiB"
       >
         19
       </div>
       <div
-        className="sc-ifAKCX jyGSsx"
+        className="sc-bxivhb gtZwxw"
       >
         wed
       </div>
     </div>
-  </div>
+  </div>,
   <div
-    className="sc-bwzfXH hBCumc"
+    className="sc-bdVaJa dBkHbX"
     selected={false}
   >
     <div
-      className="sc-htpNat hfnhPW"
+      className="sc-bwzfXH hlWDMT"
     >
       <div
-        className="sc-bxivhb eyjcHp"
+        className="sc-htpNat eeOEiB"
       >
         20
       </div>
       <div
-        className="sc-ifAKCX jyGSsx"
+        className="sc-bxivhb gtZwxw"
       >
         thu
       </div>
     </div>
-  </div>
+  </div>,
   <div
-    className="sc-bwzfXH hBCumc"
+    className="sc-bdVaJa dBkHbX"
     selected={false}
   >
     <div
-      className="sc-htpNat hfnhPW"
+      className="sc-bwzfXH hlWDMT"
     >
       <div
-        className="sc-bxivhb eyjcHp"
+        className="sc-htpNat eeOEiB"
       >
         21
       </div>
       <div
-        className="sc-ifAKCX jyGSsx"
+        className="sc-bxivhb gtZwxw"
       >
         fri
       </div>
     </div>
-  </div>
-</div>
+  </div>,
+]
 `;
