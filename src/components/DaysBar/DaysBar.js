@@ -19,6 +19,7 @@ const ContainerInner = styled.div`
   height: 84px;
   overflow-x: auto;
   overflow-y: hidden;
+  padding: 0 2px;
   white-space: nowrap;
 `;
 
