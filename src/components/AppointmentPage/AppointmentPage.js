@@ -6,7 +6,6 @@ import selectors from '../../state/selectors';
 import NavBar from '../NavBar';
 import MonthBar from '../MonthBar';
 import DateSelector from '../DateSelector';
-import FiveDayBar from '../DaysBar';
 
 const Container = styled.div`
   height: 100vh;

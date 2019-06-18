@@ -1,2 +1,1 @@
-import DateSelector from './DateSelector';
-export default DateSelector;
+export { default } from './DateSelector';

@@ -1,101 +1,1133 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`NavBar render correctly 1`] = `
-Array [
-  <div
-    className="sc-bdVaJa dBkHbX"
+<div
+  className="sc-bdVaJa jcfMkX"
+>
+  <button
+    className="sc-bwzfXH cspXqa"
     selected={false}
   >
     <div
-      className="sc-bwzfXH hlWDMT"
+      className="sc-htpNat eeOEiB"
     >
-      <div
-        className="sc-htpNat eeOEiB"
-      >
-        17
-      </div>
-      <div
-        className="sc-bxivhb gtZwxw"
-      >
-        mon
-      </div>
+      18
     </div>
-  </div>,
-  <div
-    className="sc-bdVaJa dBkHbX"
-    selected={false}
-  >
     <div
-      className="sc-bwzfXH hlWDMT"
+      className="sc-bxivhb gtZwxw"
     >
-      <div
-        className="sc-htpNat eeOEiB"
-      >
-        18
-      </div>
-      <div
-        className="sc-bxivhb gtZwxw"
-      >
-        tue
-      </div>
+      tue
     </div>
-  </div>,
-  <div
-    className="sc-bdVaJa mevLT"
+  </button>
+  <button
+    className="sc-bwzfXH fIMks"
     selected={true}
   >
     <div
-      className="sc-bwzfXH hlWDMT"
+      className="sc-htpNat eeOEiB"
     >
-      <div
-        className="sc-htpNat eeOEiB"
-      >
-        19
-      </div>
-      <div
-        className="sc-bxivhb gtZwxw"
-      >
-        wed
-      </div>
+      19
     </div>
-  </div>,
-  <div
-    className="sc-bdVaJa dBkHbX"
+    <div
+      className="sc-bxivhb gtZwxw"
+    >
+      wed
+    </div>
+  </button>
+  <button
+    className="sc-bwzfXH cspXqa"
     selected={false}
   >
     <div
-      className="sc-bwzfXH hlWDMT"
+      className="sc-htpNat eeOEiB"
     >
-      <div
-        className="sc-htpNat eeOEiB"
-      >
-        20
-      </div>
-      <div
-        className="sc-bxivhb gtZwxw"
-      >
-        thu
-      </div>
+      20
     </div>
-  </div>,
-  <div
-    className="sc-bdVaJa dBkHbX"
+    <div
+      className="sc-bxivhb gtZwxw"
+    >
+      thu
+    </div>
+  </button>
+  <button
+    className="sc-bwzfXH cspXqa"
     selected={false}
   >
     <div
-      className="sc-bwzfXH hlWDMT"
+      className="sc-htpNat eeOEiB"
     >
-      <div
-        className="sc-htpNat eeOEiB"
-      >
-        21
-      </div>
-      <div
-        className="sc-bxivhb gtZwxw"
-      >
-        fri
-      </div>
+      21
     </div>
-  </div>,
-]
+    <div
+      className="sc-bxivhb gtZwxw"
+    >
+      fri
+    </div>
+  </button>
+  <button
+    className="sc-bwzfXH cspXqa"
+    selected={false}
+  >
+    <div
+      className="sc-htpNat eeOEiB"
+    >
+      22
+    </div>
+    <div
+      className="sc-bxivhb gtZwxw"
+    >
+      sat
+    </div>
+  </button>
+  <button
+    className="sc-bwzfXH cspXqa"
+    selected={false}
+  >
+    <div
+      className="sc-htpNat eeOEiB"
+    >
+      23
+    </div>
+    <div
+      className="sc-bxivhb gtZwxw"
+    >
+      sun
+    </div>
+  </button>
+  <button
+    className="sc-bwzfXH cspXqa"
+    selected={false}
+  >
+    <div
+      className="sc-htpNat eeOEiB"
+    >
+      24
+    </div>
+    <div
+      className="sc-bxivhb gtZwxw"
+    >
+      mon
+    </div>
+  </button>
+  <button
+    className="sc-bwzfXH cspXqa"
+    selected={false}
+  >
+    <div
+      className="sc-htpNat eeOEiB"
+    >
+      25
+    </div>
+    <div
+      className="sc-bxivhb gtZwxw"
+    >
+      tue
+    </div>
+  </button>
+  <button
+    className="sc-bwzfXH cspXqa"
+    selected={false}
+  >
+    <div
+      className="sc-htpNat eeOEiB"
+    >
+      26
+    </div>
+    <div
+      className="sc-bxivhb gtZwxw"
+    >
+      wed
+    </div>
+  </button>
+  <button
+    className="sc-bwzfXH cspXqa"
+    selected={false}
+  >
+    <div
+      className="sc-htpNat eeOEiB"
+    >
+      27
+    </div>
+    <div
+      className="sc-bxivhb gtZwxw"
+    >
+      thu
+    </div>
+  </button>
+  <button
+    className="sc-bwzfXH cspXqa"
+    selected={false}
+  >
+    <div
+      className="sc-htpNat eeOEiB"
+    >
+      28
+    </div>
+    <div
+      className="sc-bxivhb gtZwxw"
+    >
+      fri
+    </div>
+  </button>
+  <button
+    className="sc-bwzfXH cspXqa"
+    selected={false}
+  >
+    <div
+      className="sc-htpNat eeOEiB"
+    >
+      29
+    </div>
+    <div
+      className="sc-bxivhb gtZwxw"
+    >
+      sat
+    </div>
+  </button>
+  <button
+    className="sc-bwzfXH cspXqa"
+    selected={false}
+  >
+    <div
+      className="sc-htpNat eeOEiB"
+    >
+      30
+    </div>
+    <div
+      className="sc-bxivhb gtZwxw"
+    >
+      sun
+    </div>
+  </button>
+  <button
+    className="sc-bwzfXH cspXqa"
+    selected={false}
+  >
+    <div
+      className="sc-htpNat eeOEiB"
+    >
+      1
+    </div>
+    <div
+      className="sc-bxivhb gtZwxw"
+    >
+      mon
+    </div>
+  </button>
+  <button
+    className="sc-bwzfXH cspXqa"
+    selected={false}
+  >
+    <div
+      className="sc-htpNat eeOEiB"
+    >
+      2
+    </div>
+    <div
+      className="sc-bxivhb gtZwxw"
+    >
+      tue
+    </div>
+  </button>
+  <button
+    className="sc-bwzfXH cspXqa"
+    selected={false}
+  >
+    <div
+      className="sc-htpNat eeOEiB"
+    >
+      3
+    </div>
+    <div
+      className="sc-bxivhb gtZwxw"
+    >
+      wed
+    </div>
+  </button>
+  <button
+    className="sc-bwzfXH cspXqa"
+    selected={false}
+  >
+    <div
+      className="sc-htpNat eeOEiB"
+    >
+      4
+    </div>
+    <div
+      className="sc-bxivhb gtZwxw"
+    >
+      thu
+    </div>
+  </button>
+  <button
+    className="sc-bwzfXH cspXqa"
+    selected={false}
+  >
+    <div
+      className="sc-htpNat eeOEiB"
+    >
+      5
+    </div>
+    <div
+      className="sc-bxivhb gtZwxw"
+    >
+      fri
+    </div>
+  </button>
+  <button
+    className="sc-bwzfXH cspXqa"
+    selected={false}
+  >
+    <div
+      className="sc-htpNat eeOEiB"
+    >
+      6
+    </div>
+    <div
+      className="sc-bxivhb gtZwxw"
+    >
+      sat
+    </div>
+  </button>
+  <button
+    className="sc-bwzfXH cspXqa"
+    selected={false}
+  >
+    <div
+      className="sc-htpNat eeOEiB"
+    >
+      7
+    </div>
+    <div
+      className="sc-bxivhb gtZwxw"
+    >
+      sun
+    </div>
+  </button>
+  <button
+    className="sc-bwzfXH cspXqa"
+    selected={false}
+  >
+    <div
+      className="sc-htpNat eeOEiB"
+    >
+      8
+    </div>
+    <div
+      className="sc-bxivhb gtZwxw"
+    >
+      mon
+    </div>
+  </button>
+  <button
+    className="sc-bwzfXH cspXqa"
+    selected={false}
+  >
+    <div
+      className="sc-htpNat eeOEiB"
+    >
+      9
+    </div>
+    <div
+      className="sc-bxivhb gtZwxw"
+    >
+      tue
+    </div>
+  </button>
+  <button
+    className="sc-bwzfXH cspXqa"
+    selected={false}
+  >
+    <div
+      className="sc-htpNat eeOEiB"
+    >
+      10
+    </div>
+    <div
+      className="sc-bxivhb gtZwxw"
+    >
+      wed
+    </div>
+  </button>
+  <button
+    className="sc-bwzfXH cspXqa"
+    selected={false}
+  >
+    <div
+      className="sc-htpNat eeOEiB"
+    >
+      11
+    </div>
+    <div
+      className="sc-bxivhb gtZwxw"
+    >
+      thu
+    </div>
+  </button>
+  <button
+    className="sc-bwzfXH cspXqa"
+    selected={false}
+  >
+    <div
+      className="sc-htpNat eeOEiB"
+    >
+      12
+    </div>
+    <div
+      className="sc-bxivhb gtZwxw"
+    >
+      fri
+    </div>
+  </button>
+  <button
+    className="sc-bwzfXH cspXqa"
+    selected={false}
+  >
+    <div
+      className="sc-htpNat eeOEiB"
+    >
+      13
+    </div>
+    <div
+      className="sc-bxivhb gtZwxw"
+    >
+      sat
+    </div>
+  </button>
+  <button
+    className="sc-bwzfXH cspXqa"
+    selected={false}
+  >
+    <div
+      className="sc-htpNat eeOEiB"
+    >
+      14
+    </div>
+    <div
+      className="sc-bxivhb gtZwxw"
+    >
+      sun
+    </div>
+  </button>
+  <button
+    className="sc-bwzfXH cspXqa"
+    selected={false}
+  >
+    <div
+      className="sc-htpNat eeOEiB"
+    >
+      15
+    </div>
+    <div
+      className="sc-bxivhb gtZwxw"
+    >
+      mon
+    </div>
+  </button>
+  <button
+    className="sc-bwzfXH cspXqa"
+    selected={false}
+  >
+    <div
+      className="sc-htpNat eeOEiB"
+    >
+      16
+    </div>
+    <div
+      className="sc-bxivhb gtZwxw"
+    >
+      tue
+    </div>
+  </button>
+  <button
+    className="sc-bwzfXH cspXqa"
+    selected={false}
+  >
+    <div
+      className="sc-htpNat eeOEiB"
+    >
+      17
+    </div>
+    <div
+      className="sc-bxivhb gtZwxw"
+    >
+      wed
+    </div>
+  </button>
+  <button
+    className="sc-bwzfXH cspXqa"
+    selected={false}
+  >
+    <div
+      className="sc-htpNat eeOEiB"
+    >
+      18
+    </div>
+    <div
+      className="sc-bxivhb gtZwxw"
+    >
+      thu
+    </div>
+  </button>
+  <button
+    className="sc-bwzfXH cspXqa"
+    selected={false}
+  >
+    <div
+      className="sc-htpNat eeOEiB"
+    >
+      19
+    </div>
+    <div
+      className="sc-bxivhb gtZwxw"
+    >
+      fri
+    </div>
+  </button>
+  <button
+    className="sc-bwzfXH cspXqa"
+    selected={false}
+  >
+    <div
+      className="sc-htpNat eeOEiB"
+    >
+      20
+    </div>
+    <div
+      className="sc-bxivhb gtZwxw"
+    >
+      sat
+    </div>
+  </button>
+  <button
+    className="sc-bwzfXH cspXqa"
+    selected={false}
+  >
+    <div
+      className="sc-htpNat eeOEiB"
+    >
+      21
+    </div>
+    <div
+      className="sc-bxivhb gtZwxw"
+    >
+      sun
+    </div>
+  </button>
+  <button
+    className="sc-bwzfXH cspXqa"
+    selected={false}
+  >
+    <div
+      className="sc-htpNat eeOEiB"
+    >
+      22
+    </div>
+    <div
+      className="sc-bxivhb gtZwxw"
+    >
+      mon
+    </div>
+  </button>
+  <button
+    className="sc-bwzfXH cspXqa"
+    selected={false}
+  >
+    <div
+      className="sc-htpNat eeOEiB"
+    >
+      23
+    </div>
+    <div
+      className="sc-bxivhb gtZwxw"
+    >
+      tue
+    </div>
+  </button>
+  <button
+    className="sc-bwzfXH cspXqa"
+    selected={false}
+  >
+    <div
+      className="sc-htpNat eeOEiB"
+    >
+      24
+    </div>
+    <div
+      className="sc-bxivhb gtZwxw"
+    >
+      wed
+    </div>
+  </button>
+  <button
+    className="sc-bwzfXH cspXqa"
+    selected={false}
+  >
+    <div
+      className="sc-htpNat eeOEiB"
+    >
+      25
+    </div>
+    <div
+      className="sc-bxivhb gtZwxw"
+    >
+      thu
+    </div>
+  </button>
+  <button
+    className="sc-bwzfXH cspXqa"
+    selected={false}
+  >
+    <div
+      className="sc-htpNat eeOEiB"
+    >
+      26
+    </div>
+    <div
+      className="sc-bxivhb gtZwxw"
+    >
+      fri
+    </div>
+  </button>
+  <button
+    className="sc-bwzfXH cspXqa"
+    selected={false}
+  >
+    <div
+      className="sc-htpNat eeOEiB"
+    >
+      27
+    </div>
+    <div
+      className="sc-bxivhb gtZwxw"
+    >
+      sat
+    </div>
+  </button>
+  <button
+    className="sc-bwzfXH cspXqa"
+    selected={false}
+  >
+    <div
+      className="sc-htpNat eeOEiB"
+    >
+      28
+    </div>
+    <div
+      className="sc-bxivhb gtZwxw"
+    >
+      sun
+    </div>
+  </button>
+  <button
+    className="sc-bwzfXH cspXqa"
+    selected={false}
+  >
+    <div
+      className="sc-htpNat eeOEiB"
+    >
+      29
+    </div>
+    <div
+      className="sc-bxivhb gtZwxw"
+    >
+      mon
+    </div>
+  </button>
+  <button
+    className="sc-bwzfXH cspXqa"
+    selected={false}
+  >
+    <div
+      className="sc-htpNat eeOEiB"
+    >
+      30
+    </div>
+    <div
+      className="sc-bxivhb gtZwxw"
+    >
+      tue
+    </div>
+  </button>
+  <button
+    className="sc-bwzfXH cspXqa"
+    selected={false}
+  >
+    <div
+      className="sc-htpNat eeOEiB"
+    >
+      31
+    </div>
+    <div
+      className="sc-bxivhb gtZwxw"
+    >
+      wed
+    </div>
+  </button>
+  <button
+    className="sc-bwzfXH cspXqa"
+    selected={false}
+  >
+    <div
+      className="sc-htpNat eeOEiB"
+    >
+      1
+    </div>
+    <div
+      className="sc-bxivhb gtZwxw"
+    >
+      thu
+    </div>
+  </button>
+  <button
+    className="sc-bwzfXH cspXqa"
+    selected={false}
+  >
+    <div
+      className="sc-htpNat eeOEiB"
+    >
+      2
+    </div>
+    <div
+      className="sc-bxivhb gtZwxw"
+    >
+      fri
+    </div>
+  </button>
+  <button
+    className="sc-bwzfXH cspXqa"
+    selected={false}
+  >
+    <div
+      className="sc-htpNat eeOEiB"
+    >
+      3
+    </div>
+    <div
+      className="sc-bxivhb gtZwxw"
+    >
+      sat
+    </div>
+  </button>
+  <button
+    className="sc-bwzfXH cspXqa"
+    selected={false}
+  >
+    <div
+      className="sc-htpNat eeOEiB"
+    >
+      4
+    </div>
+    <div
+      className="sc-bxivhb gtZwxw"
+    >
+      sun
+    </div>
+  </button>
+  <button
+    className="sc-bwzfXH cspXqa"
+    selected={false}
+  >
+    <div
+      className="sc-htpNat eeOEiB"
+    >
+      5
+    </div>
+    <div
+      className="sc-bxivhb gtZwxw"
+    >
+      mon
+    </div>
+  </button>
+  <button
+    className="sc-bwzfXH cspXqa"
+    selected={false}
+  >
+    <div
+      className="sc-htpNat eeOEiB"
+    >
+      6
+    </div>
+    <div
+      className="sc-bxivhb gtZwxw"
+    >
+      tue
+    </div>
+  </button>
+  <button
+    className="sc-bwzfXH cspXqa"
+    selected={false}
+  >
+    <div
+      className="sc-htpNat eeOEiB"
+    >
+      7
+    </div>
+    <div
+      className="sc-bxivhb gtZwxw"
+    >
+      wed
+    </div>
+  </button>
+  <button
+    className="sc-bwzfXH cspXqa"
+    selected={false}
+  >
+    <div
+      className="sc-htpNat eeOEiB"
+    >
+      8
+    </div>
+    <div
+      className="sc-bxivhb gtZwxw"
+    >
+      thu
+    </div>
+  </button>
+  <button
+    className="sc-bwzfXH cspXqa"
+    selected={false}
+  >
+    <div
+      className="sc-htpNat eeOEiB"
+    >
+      9
+    </div>
+    <div
+      className="sc-bxivhb gtZwxw"
+    >
+      fri
+    </div>
+  </button>
+  <button
+    className="sc-bwzfXH cspXqa"
+    selected={false}
+  >
+    <div
+      className="sc-htpNat eeOEiB"
+    >
+      10
+    </div>
+    <div
+      className="sc-bxivhb gtZwxw"
+    >
+      sat
+    </div>
+  </button>
+  <button
+    className="sc-bwzfXH cspXqa"
+    selected={false}
+  >
+    <div
+      className="sc-htpNat eeOEiB"
+    >
+      11
+    </div>
+    <div
+      className="sc-bxivhb gtZwxw"
+    >
+      sun
+    </div>
+  </button>
+  <button
+    className="sc-bwzfXH cspXqa"
+    selected={false}
+  >
+    <div
+      className="sc-htpNat eeOEiB"
+    >
+      12
+    </div>
+    <div
+      className="sc-bxivhb gtZwxw"
+    >
+      mon
+    </div>
+  </button>
+  <button
+    className="sc-bwzfXH cspXqa"
+    selected={false}
+  >
+    <div
+      className="sc-htpNat eeOEiB"
+    >
+      13
+    </div>
+    <div
+      className="sc-bxivhb gtZwxw"
+    >
+      tue
+    </div>
+  </button>
+  <button
+    className="sc-bwzfXH cspXqa"
+    selected={false}
+  >
+    <div
+      className="sc-htpNat eeOEiB"
+    >
+      14
+    </div>
+    <div
+      className="sc-bxivhb gtZwxw"
+    >
+      wed
+    </div>
+  </button>
+  <button
+    className="sc-bwzfXH cspXqa"
+    selected={false}
+  >
+    <div
+      className="sc-htpNat eeOEiB"
+    >
+      15
+    </div>
+    <div
+      className="sc-bxivhb gtZwxw"
+    >
+      thu
+    </div>
+  </button>
+  <button
+    className="sc-bwzfXH cspXqa"
+    selected={false}
+  >
+    <div
+      className="sc-htpNat eeOEiB"
+    >
+      16
+    </div>
+    <div
+      className="sc-bxivhb gtZwxw"
+    >
+      fri
+    </div>
+  </button>
+  <button
+    className="sc-bwzfXH cspXqa"
+    selected={false}
+  >
+    <div
+      className="sc-htpNat eeOEiB"
+    >
+      17
+    </div>
+    <div
+      className="sc-bxivhb gtZwxw"
+    >
+      sat
+    </div>
+  </button>
+  <button
+    className="sc-bwzfXH cspXqa"
+    selected={false}
+  >
+    <div
+      className="sc-htpNat eeOEiB"
+    >
+      18
+    </div>
+    <div
+      className="sc-bxivhb gtZwxw"
+    >
+      sun
+    </div>
+  </button>
+  <button
+    className="sc-bwzfXH cspXqa"
+    selected={false}
+  >
+    <div
+      className="sc-htpNat eeOEiB"
+    >
+      19
+    </div>
+    <div
+      className="sc-bxivhb gtZwxw"
+    >
+      mon
+    </div>
+  </button>
+  <button
+    className="sc-bwzfXH cspXqa"
+    selected={false}
+  >
+    <div
+      className="sc-htpNat eeOEiB"
+    >
+      20
+    </div>
+    <div
+      className="sc-bxivhb gtZwxw"
+    >
+      tue
+    </div>
+  </button>
+  <button
+    className="sc-bwzfXH cspXqa"
+    selected={false}
+  >
+    <div
+      className="sc-htpNat eeOEiB"
+    >
+      21
+    </div>
+    <div
+      className="sc-bxivhb gtZwxw"
+    >
+      wed
+    </div>
+  </button>
+  <button
+    className="sc-bwzfXH cspXqa"
+    selected={false}
+  >
+    <div
+      className="sc-htpNat eeOEiB"
+    >
+      22
+    </div>
+    <div
+      className="sc-bxivhb gtZwxw"
+    >
+      thu
+    </div>
+  </button>
+  <button
+    className="sc-bwzfXH cspXqa"
+    selected={false}
+  >
+    <div
+      className="sc-htpNat eeOEiB"
+    >
+      23
+    </div>
+    <div
+      className="sc-bxivhb gtZwxw"
+    >
+      fri
+    </div>
+  </button>
+  <button
+    className="sc-bwzfXH cspXqa"
+    selected={false}
+  >
+    <div
+      className="sc-htpNat eeOEiB"
+    >
+      24
+    </div>
+    <div
+      className="sc-bxivhb gtZwxw"
+    >
+      sat
+    </div>
+  </button>
+  <button
+    className="sc-bwzfXH cspXqa"
+    selected={false}
+  >
+    <div
+      className="sc-htpNat eeOEiB"
+    >
+      25
+    </div>
+    <div
+      className="sc-bxivhb gtZwxw"
+    >
+      sun
+    </div>
+  </button>
+  <button
+    className="sc-bwzfXH cspXqa"
+    selected={false}
+  >
+    <div
+      className="sc-htpNat eeOEiB"
+    >
+      26
+    </div>
+    <div
+      className="sc-bxivhb gtZwxw"
+    >
+      mon
+    </div>
+  </button>
+  <button
+    className="sc-bwzfXH cspXqa"
+    selected={false}
+  >
+    <div
+      className="sc-htpNat eeOEiB"
+    >
+      27
+    </div>
+    <div
+      className="sc-bxivhb gtZwxw"
+    >
+      tue
+    </div>
+  </button>
+  <button
+    className="sc-bwzfXH cspXqa"
+    selected={false}
+  >
+    <div
+      className="sc-htpNat eeOEiB"
+    >
+      28
+    </div>
+    <div
+      className="sc-bxivhb gtZwxw"
+    >
+      wed
+    </div>
+  </button>
+  <button
+    className="sc-bwzfXH cspXqa"
+    selected={false}
+  >
+    <div
+      className="sc-htpNat eeOEiB"
+    >
+      29
+    </div>
+    <div
+      className="sc-bxivhb gtZwxw"
+    >
+      thu
+    </div>
+  </button>
+  <button
+    className="sc-bwzfXH cspXqa"
+    selected={false}
+  >
+    <div
+      className="sc-htpNat eeOEiB"
+    >
+      30
+    </div>
+    <div
+      className="sc-bxivhb gtZwxw"
+    >
+      fri
+    </div>
+  </button>
+  <button
+    className="sc-bwzfXH cspXqa"
+    selected={false}
+  >
+    <div
+      className="sc-htpNat eeOEiB"
+    >
+      31
+    </div>
+    <div
+      className="sc-bxivhb gtZwxw"
+    >
+      sat
+    </div>
+  </button>
+</div>
 `;

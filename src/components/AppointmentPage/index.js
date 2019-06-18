@@ -1,2 +1,1 @@
-import AppointmentPage from './AppointmentPage';
-export default AppointmentPage;
+export { default } from './AppointmentPage';

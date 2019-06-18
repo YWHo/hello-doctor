@@ -1,2 +1,1 @@
-import MonthBar from './MonthBar';
-export default MonthBar;
+export { default } from './MonthBar';
