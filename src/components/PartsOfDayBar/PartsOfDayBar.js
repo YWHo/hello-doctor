@@ -21,9 +21,10 @@ const Container = styled.div`
 
 const Button = styled.button`
   height: 38px;
-  background-color: transparent;
+  background-color: inherit;
   color: #fff;
-  border-color: ${props => (props.selected ? '#fff' : 'transparent')};
+  border-color: #fff;
+  border-style: ${props => (props.selected ? 'solid' : 'none')};
   border-radius: 50px;
   font-size: 18px;
   font-weight: 300;
