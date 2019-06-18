@@ -12,10 +12,10 @@ import * as actions from '../../state/actions';
 const Container = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   height: 38px;
-  padding: 2px;
+  padding: 0 8px;
   margin-top: 12px;
 `;
 
@@ -39,6 +39,8 @@ const Button = styled.button`
 
 export function PartsOfDayBar(props) {
   const { schedules = [], selectedDayPart = DAY_MORNING } = props;
+
+  console.log('schedules: ', schedules);
 
   return (
     <Container>
