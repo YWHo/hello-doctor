@@ -19,7 +19,7 @@ const ContainerInner = styled.div`
   height: 84px;
   overflow-x: auto;
   overflow-y: hidden;
-  padding: 0 2px;
+  padding: 2px;
   white-space: nowrap;
 `;
 
@@ -41,6 +41,7 @@ const ButtonCircle = styled.button`
 
   :hover {
     border-style: solid;
+    border-width: 1px;
     border-color: #177d91;
   }
 `;

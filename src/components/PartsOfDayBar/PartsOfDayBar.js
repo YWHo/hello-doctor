@@ -26,7 +26,7 @@ const Button = styled.button`
   border-color: #fff;
   border-style: ${props => (props.selected ? 'solid' : 'none')};
   border-radius: 50px;
-  border-weight: 2px;
+  border-width: 2px;
   font-size: 18px;
   font-weight: 300;
 
@@ -40,9 +40,7 @@ const Button = styled.button`
 `;
 
 export function PartsOfDayBar(props) {
-  const { schedules = [], selectedDayPart = DAY_MORNING } = props;
-
-  console.log('schedules: ', schedules);
+  const { selectedDayPart = DAY_MORNING } = props;
 
   return (
     <Container>
