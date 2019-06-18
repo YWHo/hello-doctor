@@ -12,7 +12,6 @@ export default function DateSelector(props) {
   return (
     <Container>
       <DaysBar />
-      <div>test</div>
     </Container>
   );
 }

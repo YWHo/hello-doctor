@@ -1,6 +1,6 @@
 import React from 'react';
 import moment from 'moment';
-import MonthBar from './MonthBar';
+import { MonthBar } from './MonthBar';
 import renderer from 'react-test-renderer';
 
 describe('NavBar', () => {

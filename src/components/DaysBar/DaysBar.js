@@ -1,6 +1,9 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import styled from 'styled-components';
 import moment from 'moment';
+import * as actions from '../../state/actions';
+import * as selectors from '../../state/selectors';
 import * as dateHelper from '../../shared/dateHelper';
 
 const Container = styled.div`
@@ -29,7 +32,8 @@ const ButtonCircle = styled.button`
   }
 
   :hover {
-    background-color: #20aac5;
+    border-style: solid;
+    border-color: #177d91;
   }
 `;
 
@@ -50,17 +54,19 @@ const WeekDayName = styled.div`
   font-weight: 300;
 `;
 
-export default function DaysBar(props) {
+export function DaysBar(props) {
   const { selectedDate = moment() } = props;
 
   const days = dateHelper.getDatesInThreeMonthsFrom();
-  console.log('days: ', days);
-  console.log('selectedDate', moment(selectedDate).format('YYYY-MM-DD'));
   const dateList = days.map((day, idx) => {
     const tmpDate = moment(day);
     const selected = day === moment(selectedDate).format('YYYY-MM-DD');
     return (
-      <ButtonCircle key={`dateCi_${idx}`} selected={selected}>
+      <ButtonCircle
+        key={`dateCi_${idx}`}
+        selected={selected}
+        onClick={() => onDayClicked(props, day)}
+      >
         <DateNum key={`dateNu_${idx}`}>{tmpDate.format('D')}</DateNum>
         <WeekDayName key={`weekDa_${idx}`}>
           {tmpDate.format('ddd').toLowerCase()}
@@ -71,3 +77,25 @@ export default function DaysBar(props) {
 
   return <Container>{dateList}</Container>;
 }
+
+function onDayClicked(props, day) {
+  const { dSaveSelectedDate } = props;
+  dSaveSelectedDate(moment(day));
+}
+
+const mapStateToProps = state => {
+  return {
+    selectedDate: selectors.getSelectedDate(state)
+  };
+};
+
+function mapDispatchToProps(dispatch) {
+  return {
+    dSaveSelectedDate: value => dispatch(actions.saveSelectedDate(value))
+  };
+}
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(DaysBar);

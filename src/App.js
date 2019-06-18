@@ -7,13 +7,15 @@ import ErrorBoundary from './ErrorBoundary';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import AppointmentPage from './components/AppointmentPage';
 import RegisterPage from './components/RegisterPage';
-import actions from './state/actions';
+import * as actions from './state/actions';
+import * as selectors from './state/selectors';
 
 export function App(props) {
+  const { dToFetchSchedules, selectedDate } = props;
+
   useEffect(() => {
-    const { dToFetchSchedules } = props;
-    dToFetchSchedules(moment().format('YYYY-MM-DD'));
-  }, [props]);
+    dToFetchSchedules(moment(selectedDate).format('YYYY-MM-DD'));
+  }, [dToFetchSchedules, selectedDate]);
 
   return (
     <ErrorBoundary>
@@ -28,7 +30,9 @@ export function App(props) {
 }
 
 const mapStateToProps = state => {
-  return {};
+  return {
+    selectedDate: selectors.getSelectedDate(state)
+  };
 };
 
 function mapDispatchToProps(dispatch) {

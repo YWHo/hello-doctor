@@ -1,2 +1,1 @@
-import schedules from './schedules';
-export default schedules;
+export { default } from './schedules';

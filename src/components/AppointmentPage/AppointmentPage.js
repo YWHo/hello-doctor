@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import moment from 'moment';
 import styled from 'styled-components';
-import selectors from '../../state/selectors';
+import * as selectors from '../../state/selectors';
 import NavBar from '../NavBar';
 import MonthBar from '../MonthBar';
 import DateSelector from '../DateSelector';

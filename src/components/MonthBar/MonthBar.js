@@ -1,7 +1,9 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import styled from 'styled-components';
 import moment from 'moment';
 import calendarIcon from '../../assets/calendar_icon.svg';
+import * as selectors from '../../state/selectors';
 
 const Container = styled.div`
   background-color: #177d91;
@@ -22,7 +24,7 @@ const Icon = styled.img`
   margin-bottom: 0.1rem;
 `;
 
-export default function MonthBar(props) {
+export function MonthBar(props) {
   const { selectedDate = moment() } = props;
 
   const month = moment(selectedDate)
@@ -36,3 +38,18 @@ export default function MonthBar(props) {
     </Container>
   );
 }
+
+const mapStateToProps = state => {
+  return {
+    selectedDate: selectors.getSelectedDate(state)
+  };
+};
+
+function mapDispatchToProps(dispatch) {
+  return {};
+}
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(MonthBar);

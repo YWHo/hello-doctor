@@ -1,2 +1,1 @@
-import * as selectors from './selectors';
-export default selectors;
+export * from './selectors';

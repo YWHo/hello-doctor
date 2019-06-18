@@ -1,17 +1,31 @@
-import { CLEAR_SCHEDULES, SAVE_SCHEDULES } from '../../shared/constants';
+import * as constants from '../../shared/constants';
 import { fetchSchedule } from '../../shared/apiRequester';
 
 export function clearSchedules() {
   return {
-    type: CLEAR_SCHEDULES,
+    type: constants.CLEAR_SCHEDULES,
+    payload: {}
+  };
+}
+
+export function clearSelectedDate() {
+  return {
+    type: constants.CLEAR_SELECTED_DATE,
     payload: {}
   };
 }
 
 export function saveSchedules(schedules) {
   return {
-    type: SAVE_SCHEDULES,
+    type: constants.SAVE_SCHEDULES,
     payload: { schedules }
+  };
+}
+
+export function saveSelectedDate(selectedDate) {
+  return {
+    type: constants.SAVE_SELECTED_DATE,
+    payload: { selectedDate }
   };
 }
 
