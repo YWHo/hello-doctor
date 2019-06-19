@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
-import moment from 'moment';
+import dayjs from 'dayjs';
 import * as actions from '../../state/actions';
 import * as selectors from '../../state/selectors';
 import * as dateHelper from '../../shared/dateHelper';
@@ -64,12 +64,12 @@ const WeekDayName = styled.div`
 `;
 
 export function DaysBar(props) {
-  const { selectedDate = moment() } = props;
+  const { selectedDate = dayjs() } = props;
 
   const days = dateHelper.getDatesInThreeMonthsFrom();
   const dateList = days.map((day, idx) => {
-    const tmpDate = moment(day);
-    const selected = day === moment(selectedDate).format('YYYY-MM-DD');
+    const tmpDate = dayjs(day);
+    const selected = day === dayjs(selectedDate).format('YYYY-MM-DD');
     return (
       <ButtonCircle
         key={`dateCi_${idx}`}
@@ -93,7 +93,7 @@ export function DaysBar(props) {
 
 function onDayClicked(props, day) {
   const { dSaveSelectedDate } = props;
-  dSaveSelectedDate(moment(day));
+  dSaveSelectedDate(dayjs(day));
 }
 
 const mapStateToProps = state => {

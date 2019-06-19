@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import moment from 'moment';
+import dayjs from 'dayjs';
 import styled from 'styled-components';
 import * as selectors from '../../state/selectors';
 import NavBar from '../NavBar';
@@ -18,7 +18,7 @@ export function AppointmentPage(props) {
     const { AvailableSlots = {} } = item;
     console.log('item: ', item);
     const slots = Object.keys(AvailableSlots).map(key =>
-      moment(AvailableSlots[key]).format('HH:mm')
+      dayjs(AvailableSlots[key]).format('HH:mm')
     );
     return (
       <div key={`app_${idx}`}>

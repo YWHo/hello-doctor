@@ -1,9 +1,10 @@
+import dayjs from 'dayjs';
 import {
   CLEAR_SELECTED_DATE,
   SAVE_SELECTED_DATE
 } from '../../../shared/constants';
 
-const initialState = {};
+const initialState = dayjs();
 
 export default function selectedDate(state = initialState, action) {
   const { type, payload = {} } = action;

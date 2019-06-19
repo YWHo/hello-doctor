@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
-import moment from 'moment';
+import dayjs from 'dayjs';
 import calendarIcon from '../../assets/calendar_icon.svg';
 import * as selectors from '../../state/selectors';
 
@@ -25,9 +25,8 @@ const Icon = styled.img`
 `;
 
 export function MonthBar(props) {
-  const { selectedDate = moment() } = props;
-
-  const month = moment(selectedDate)
+  const { selectedDate = dayjs() } = props;
+  const month = dayjs(selectedDate)
     .format('MMMM')
     .toUpperCase();
 

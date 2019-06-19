@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-import moment from 'moment';
+import dayjs from 'dayjs';
 // import logo from './logo.svg';
 import './App.css';
 import ErrorBoundary from './ErrorBoundary';
@@ -14,7 +14,7 @@ export function App(props) {
   const { dToFetchSchedules, selectedDate } = props;
 
   useEffect(() => {
-    dToFetchSchedules(moment(selectedDate).format('YYYY-MM-DD'));
+    dToFetchSchedules(dayjs(selectedDate));
   }, [dToFetchSchedules, selectedDate]);
 
   return (

@@ -1,12 +1,12 @@
 import React from 'react';
-import moment from 'moment';
+import dayjs from 'dayjs';
 import { DaysBar } from './DaysBar';
 import renderer from 'react-test-renderer';
 
 describe('NavBar', () => {
   it('render correctly', () => {
     const component = renderer.create(
-      <DaysBar selectedDate={moment('20190619', 'YYYYMMDD')} />
+      <DaysBar selectedDate={dayjs('2019-06-19')} />
     );
     expect(component.toJSON()).toMatchSnapshot();
   });
