@@ -30,6 +30,7 @@ const ButtonCircle = styled.button`
   color: #fff;
   height: 66px;
   width: 66px;
+  margin-right: 8px;
 
   :focus {
     outline: none;
@@ -37,12 +38,6 @@ const ButtonCircle = styled.button`
 
   :active {
     outline: none;
-  }
-
-  :hover {
-    border-style: solid;
-    border-width: 1px;
-    border-color: #177d91;
   }
 `;
 
