@@ -16,7 +16,6 @@ export function AppointmentPage(props) {
   const { schedules = [] } = props;
   const nameList = Array.from(schedules).map((item, idx) => {
     const { AvailableSlots = {} } = item;
-    console.log('item: ', item);
     const slots = Object.keys(AvailableSlots).map(key =>
       dayjs(AvailableSlots[key]).format('HH:mm')
     );

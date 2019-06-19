@@ -10,7 +10,7 @@ const mockStore = configureMockStore(middlewares);
 
 describe('actions', () => {
   it('should create an action to save schedules', () => {
-    const schedules = mockData.schedules;
+    const schedules = mockData.scheduleDict['2019-06-16'];
     const expectedAction = {
       type: constants.SAVE_SCHEDULES,
       payload: { schedules }

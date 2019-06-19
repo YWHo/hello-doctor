@@ -1,5 +1,27 @@
 import * as constants from '../../shared/constants';
 import { fetchSchedule } from '../../shared/apiRequester';
+import * as dateHelper from '../../shared/dateHelper';
+
+export function clearHasAfternoonTime() {
+  return {
+    type: constants.CLEAR_HAS_AFTERNOON_TIME,
+    payload: {}
+  };
+}
+
+export function clearHasEveningTime() {
+  return {
+    type: constants.CLEAR_HAS_EVENING_TIME,
+    payload: {}
+  };
+}
+
+export function clearHasMorningTime() {
+  return {
+    type: constants.CLEAR_HAS_MORNING_TIME,
+    payload: {}
+  };
+}
 
 export function clearSchedules() {
   return {
@@ -19,6 +41,27 @@ export function clearSelectedDayPart() {
   return {
     type: constants.CLEAR_SELECTED_DAY_PART,
     payload: {}
+  };
+}
+
+export function saveHasAfternoonTime(hasAfternoonTime) {
+  return {
+    type: constants.SAVE_HAS_AFTERNOON_TIME,
+    payload: { hasAfternoonTime }
+  };
+}
+
+export function saveHasEveningTime(hasEveningTime) {
+  return {
+    type: constants.SAVE_HAS_EVENING_TIME,
+    payload: { hasEveningTime }
+  };
+}
+
+export function saveHasMorningTime(hasMorningTime) {
+  return {
+    type: constants.SAVE_HAS_MORNING_TIME,
+    payload: { hasMorningTime }
   };
 }
 
@@ -46,8 +89,14 @@ export function saveSelectedDayPart(selectedDayPart) {
 export function toFetchSchedules(date) {
   return dispatch => {
     return fetchSchedule(date)
-      .then(json => {
-        dispatch(saveSchedules(json));
+      .then(list => {
+        dispatch(saveSchedules(list));
+        const hasMorning = dateHelper.hasMorningTimeInSchedules(list);
+        dispatch(saveHasMorningTime(hasMorning));
+        const hasAfternoon = dateHelper.hasAfternoonTimeInSchedules(list);
+        dispatch(saveHasAfternoonTime(hasAfternoon));
+        const hasEvening = dateHelper.hasEveningTimeInSchedules(list);
+        dispatch(saveHasEveningTime(hasEvening));
       })
       .catch(err => {
         console.log('Failed to fetch schedule: ', err);

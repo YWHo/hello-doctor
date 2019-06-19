@@ -37,38 +37,89 @@ const Button = styled.button`
   :active {
     outline: none;
   }
+
+  :disabled {
+    color: #7bcadb;
+    border-style: none;
+  }
 `;
 
 export function PartsOfDayBar(props) {
-  const { selectedDayPart = DAY_MORNING } = props;
-
   return (
     <Container>
-      <Button
-        selected={selectedDayPart === DAY_MORNING}
-        onClick={() => {
-          onDayPartClicked(props, DAY_MORNING);
-        }}
-      >
-        Morning
-      </Button>
-      <Button
-        selected={selectedDayPart === DAY_AFTERNOON}
-        onClick={() => {
-          onDayPartClicked(props, DAY_AFTERNOON);
-        }}
-      >
-        Afternoon
-      </Button>
-      <Button
-        selected={selectedDayPart === DAY_EVENING}
-        onClick={() => {
-          onDayPartClicked(props, DAY_EVENING);
-        }}
-      >
-        Evening
-      </Button>
+      {showMorningButton(props)}
+      {showAfternoonButton(props)}
+      {showEveningButton(props)}
     </Container>
+  );
+}
+
+function showMorningButton(props) {
+  const { hasMorningTime, selectedDayPart = DAY_MORNING } = props;
+  const selected = hasMorningTime && selectedDayPart === DAY_MORNING;
+
+  return (
+    <Button
+      disabled={!hasMorningTime}
+      selected={selected}
+      onClick={() => {
+        if (hasMorningTime) {
+          onDayPartClicked(props, DAY_MORNING);
+        }
+      }}
+    >
+      Morning
+    </Button>
+  );
+}
+
+function showAfternoonButton(props) {
+  const {
+    hasAfternoonTime,
+    hasMorningTime,
+    selectedDayPart = DAY_MORNING
+  } = props;
+  const selected =
+    hasAfternoonTime && (!hasMorningTime || selectedDayPart === DAY_AFTERNOON);
+
+  return (
+    <Button
+      disabled={!hasAfternoonTime}
+      selected={selected}
+      onClick={() => {
+        if (hasAfternoonTime) {
+          onDayPartClicked(props, DAY_AFTERNOON);
+        }
+      }}
+    >
+      Afternoon
+    </Button>
+  );
+}
+
+function showEveningButton(props) {
+  const {
+    hasAfternoonTime,
+    hasMorningTime,
+    hasEveningTime,
+    selectedDayPart = DAY_MORNING
+  } = props;
+  const selected =
+    hasEveningTime &&
+    ((!hasMorningTime && !hasAfternoonTime) || selectedDayPart === DAY_EVENING);
+
+  return (
+    <Button
+      disabled={!hasEveningTime}
+      selected={selected}
+      onClick={() => {
+        if (hasEveningTime) {
+          onDayPartClicked(props, DAY_EVENING);
+        }
+      }}
+    >
+      Evening
+    </Button>
   );
 }
 
@@ -79,6 +130,9 @@ function onDayPartClicked(props, dayPart) {
 
 const mapStateToProps = state => {
   return {
+    hasAfternoonTime: selectors.getHasAfternoonTime(state),
+    hasEveningTime: selectors.getHasEveningTime(state),
+    hasMorningTime: selectors.getHasMorningTime(state),
     schedules: selectors.getSchedules(state),
     selectedDayPart: selectors.getSelectedDayPart(state)
   };

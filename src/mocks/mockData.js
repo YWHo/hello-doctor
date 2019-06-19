@@ -1,4 +1,4 @@
-export const schedules = {
+export const scheduleDict = {
   '2019-06-16': [
     {
       Id: 'e538c28d-52df-0654-800f-6145909aca28',

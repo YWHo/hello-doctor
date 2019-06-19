@@ -1,7 +1,7 @@
 import * as mockData from './mockData';
 
 export function mockFetchSchedule(date) {
-  const data = mockData.schedules;
+  const data = mockData.scheduleDict;
 
   if (data[date]) {
     return Promise.resolve(data[date]);

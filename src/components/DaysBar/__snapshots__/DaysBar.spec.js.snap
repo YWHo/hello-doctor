@@ -8,22 +8,6 @@ exports[`NavBar render correctly 1`] = `
     className="sc-bwzfXH kfdVx"
   >
     <button
-      className="sc-htpNat dsehsp"
-      onClick={[Function]}
-      selected={true}
-    >
-      <div
-        className="sc-bxivhb eyjcHp"
-      >
-        19
-      </div>
-      <div
-        className="sc-ifAKCX jyGSsx"
-      >
-        wed
-      </div>
-    </button>
-    <button
       className="sc-htpNat jfmXbr"
       onClick={[Function]}
       selected={false}

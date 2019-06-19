@@ -1,3 +1,15 @@
+export function getHasAfternoonTime({ hasAfternoonTime }) {
+  return hasAfternoonTime;
+}
+
+export function getHasEveningTime({ hasEveningTime }) {
+  return hasEveningTime;
+}
+
+export function getHasMorningTime({ hasMorningTime }) {
+  return hasMorningTime;
+}
+
 export function getSchedules({ schedules }) {
   return schedules;
 }
