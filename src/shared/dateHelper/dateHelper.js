@@ -42,7 +42,46 @@ export function isAfternoonTime(givenDate) {
 export function isEveningTime(givenDate) {
   const startTime = dayjs('17:00', 'HH:mm');
   const endTime = dayjs('20:01', 'HH:mm');
-  const givenTime = dayjs(givenDate, 'HH:mm');
+  const givenTime = dayjs(dayjs(givenDate).format('HH:mm'), 'HH:mm');
 
   return isInTimeRange(startTime, endTime, givenTime);
+}
+
+export function hasMorningTimeInSchedules(schedules = []) {
+  for (let drSchedule of schedules) {
+    const { AvailableSlots = {} } = drSchedule;
+    for (let key in AvailableSlots) {
+      const theDate = AvailableSlots[key];
+      if (isMorningTime(theDate)) {
+        return true;
+      }
+    }
+  }
+  return false;
+}
+
+export function hasAfternoonTimeInSchedules(schedules = []) {
+  for (let drSchedule of schedules) {
+    const { AvailableSlots = {} } = drSchedule;
+    for (let key in AvailableSlots) {
+      const theDate = AvailableSlots[key];
+      if (isAfternoonTime(theDate)) {
+        return true;
+      }
+    }
+  }
+  return false;
+}
+
+export function hasEveningTimeInSchedules(schedules = []) {
+  for (let drSchedule of schedules) {
+    const { AvailableSlots = {} } = drSchedule;
+    for (let key in AvailableSlots) {
+      const theDate = AvailableSlots[key];
+      if (isEveningTime(theDate)) {
+        return true;
+      }
+    }
+  }
+  return false;
 }
