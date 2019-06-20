@@ -1,10 +1,10 @@
 import {
   CLEAR_SELECTED_DAY_PART,
-  DAY_MORNING,
+  DAY_ALL_TIME,
   SAVE_SELECTED_DAY_PART
 } from '../../../shared/constants';
 
-const initialState = DAY_MORNING;
+const initialState = DAY_ALL_TIME;
 
 export default function selectedDayPart(state = initialState, action) {
   const { type, payload = {} } = action;
