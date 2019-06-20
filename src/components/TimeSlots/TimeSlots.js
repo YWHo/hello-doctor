@@ -4,17 +4,28 @@ import styled from 'styled-components';
 import dayjs from 'dayjs';
 
 const ContainerOuter = styled.div`
+  display: block;
   margin-top: 16px;
+  padding-top: 12px;
   height: 37.95px;
   width: 100%;
   overflow: hidden;
   white-space: nowrap;
 `;
 
+const ContainerInner = styled.div`
+  display: block;
+  height: 42px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0;
+  white-space: nowrap;
+`;
+
 const ContainerNoAppointment = styled.div`
   margin-top: 25.19px;
   height: 38.37px;
-  padding-right: 19.88px;
+  padding-right: 12px;
   width: 100%;
 `;
 
@@ -41,7 +52,11 @@ export function TimeSlots(props) {
       </ContainerNoAppointment>
     );
   } else {
-    return <ContainerOuter>{slots.join(' | ')}</ContainerOuter>;
+    return (
+      <ContainerOuter>
+        <ContainerInner>{slots.join(' | ')}</ContainerInner>
+      </ContainerOuter>
+    );
   }
 }
 
