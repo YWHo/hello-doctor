@@ -1,8 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import dayjs from 'dayjs';
 import styled from 'styled-components';
-import * as selectors from '../../state/selectors';
+import { getSchedules } from '../../state/selectors';
 import DateSelector from '../DateSelector';
 import NavBar from '../NavBar';
 import MonthBar from '../MonthBar';
@@ -16,19 +15,8 @@ const Container = styled.div`
 
 export function AppointmentPage(props) {
   const { schedules = [] } = props;
-  const nameList = Array.from(schedules).map((item, idx) => {
-    const { AvailableSlots = {} } = item;
-    const slots = Object.keys(AvailableSlots).map(key =>
-      dayjs(AvailableSlots[key]).format('HH:mm')
-    );
-    return (
-      <div key={`app_${idx}`}>
-        <div>Name: {item.Name}</div>
-        <div>Title: {item.Title}</div>
-        <div>Available Slots: {slots.join(' | ')}</div>
-        <br />
-      </div>
-    );
+  const showTimeCards = Array.from(schedules).map((item, idx) => {
+    return <TimeCard meetSchedule={item} key={`tc_${idx}`} />;
   });
 
   return (
@@ -36,15 +24,14 @@ export function AppointmentPage(props) {
       <NavBar />
       <MonthBar />
       <DateSelector />
-      <TimeCard />
-      {nameList}
+      {showTimeCards}
     </Container>
   );
 }
 
 const mapStateToProps = state => {
   return {
-    schedules: selectors.getSchedules(state)
+    schedules: getSchedules(state)
   };
 };
 

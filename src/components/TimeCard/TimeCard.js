@@ -12,15 +12,13 @@ const Container = styled.div`
   padding-left: 12px;
 `;
 
-const PhotoFrame = styled.div`
-  background-color: red;
+const Photo = styled.img`
   float: left;
   height: 81px;
   width: 80px;
 `;
 
 const NameFrame = styled.div`
-  background-color: orange;
   color: #2a95bf;
   font-size: 22px;
   height: 29px;
@@ -29,7 +27,6 @@ const NameFrame = styled.div`
 `;
 
 const TitleFrame = styled.div`
-  background-color: blue;
   color: #818181;
   font-size: 14px;
   height: 19px;
@@ -37,21 +34,28 @@ const TitleFrame = styled.div`
 `;
 
 const TextFrame = styled.div`
-  background-color: yellow;
   margin-left: 103px;
   height: 81px;
-  width: 150px;
 `;
 
 export function TimeCard(props) {
+  const { meetSchedule } = props;
+  const {
+    Name: name,
+    Title: title,
+    AvailableSlots: availableSlots = [],
+    PictureURL: pictureURL = ''
+  } = meetSchedule;
+  const fullUrl = `https://frontendchallenge2019.azurewebsites.net/${pictureURL}`;
+
   return (
     <Container>
-      <PhotoFrame></PhotoFrame>
+      <Photo src={fullUrl} alt="Doctor's photo" />
       <TextFrame>
-        <NameFrame></NameFrame>
-        <TitleFrame></TitleFrame>
+        <NameFrame>{name}</NameFrame>
+        <TitleFrame>{title}</TitleFrame>
       </TextFrame>
-      <TimeSlots></TimeSlots>
+      <TimeSlots availableSlots={availableSlots} />
     </Container>
   );
 }
