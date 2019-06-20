@@ -8,28 +8,12 @@ exports[`DaySlots render correctly 1`] = `
     className="sc-bwzfXH kfdVx"
   >
     <button
-      className="sc-htpNat fyaUJv"
+      className="sc-htpNat fxEHpM"
       onClick={[Function]}
       selected={false}
     >
       <div
-        className="sc-bxivhb eyjcHp"
-      >
-        20
-      </div>
-      <div
-        className="sc-ifAKCX jyGSsx"
-      >
-        thu
-      </div>
-    </button>
-    <button
-      className="sc-htpNat fyaUJv"
-      onClick={[Function]}
-      selected={false}
-    >
-      <div
-        className="sc-bxivhb eyjcHp"
+        className="sc-bxivhb gryOGk"
       >
         21
       </div>
@@ -40,12 +24,12 @@ exports[`DaySlots render correctly 1`] = `
       </div>
     </button>
     <button
-      className="sc-htpNat fyaUJv"
+      className="sc-htpNat fxEHpM"
       onClick={[Function]}
       selected={false}
     >
       <div
-        className="sc-bxivhb eyjcHp"
+        className="sc-bxivhb gryOGk"
       >
         22
       </div>
@@ -56,12 +40,12 @@ exports[`DaySlots render correctly 1`] = `
       </div>
     </button>
     <button
-      className="sc-htpNat fyaUJv"
+      className="sc-htpNat fxEHpM"
       onClick={[Function]}
       selected={false}
     >
       <div
-        className="sc-bxivhb eyjcHp"
+        className="sc-bxivhb gryOGk"
       >
         23
       </div>
@@ -72,12 +56,12 @@ exports[`DaySlots render correctly 1`] = `
       </div>
     </button>
     <button
-      className="sc-htpNat fyaUJv"
+      className="sc-htpNat fxEHpM"
       onClick={[Function]}
       selected={false}
     >
       <div
-        className="sc-bxivhb eyjcHp"
+        className="sc-bxivhb gryOGk"
       >
         24
       </div>
@@ -88,12 +72,12 @@ exports[`DaySlots render correctly 1`] = `
       </div>
     </button>
     <button
-      className="sc-htpNat fyaUJv"
+      className="sc-htpNat fxEHpM"
       onClick={[Function]}
       selected={false}
     >
       <div
-        className="sc-bxivhb eyjcHp"
+        className="sc-bxivhb gryOGk"
       >
         25
       </div>
@@ -104,12 +88,12 @@ exports[`DaySlots render correctly 1`] = `
       </div>
     </button>
     <button
-      className="sc-htpNat fyaUJv"
+      className="sc-htpNat fxEHpM"
       onClick={[Function]}
       selected={false}
     >
       <div
-        className="sc-bxivhb eyjcHp"
+        className="sc-bxivhb gryOGk"
       >
         26
       </div>
@@ -120,12 +104,12 @@ exports[`DaySlots render correctly 1`] = `
       </div>
     </button>
     <button
-      className="sc-htpNat fyaUJv"
+      className="sc-htpNat fxEHpM"
       onClick={[Function]}
       selected={false}
     >
       <div
-        className="sc-bxivhb eyjcHp"
+        className="sc-bxivhb gryOGk"
       >
         27
       </div>
@@ -136,12 +120,12 @@ exports[`DaySlots render correctly 1`] = `
       </div>
     </button>
     <button
-      className="sc-htpNat fyaUJv"
+      className="sc-htpNat fxEHpM"
       onClick={[Function]}
       selected={false}
     >
       <div
-        className="sc-bxivhb eyjcHp"
+        className="sc-bxivhb gryOGk"
       >
         28
       </div>
@@ -152,12 +136,12 @@ exports[`DaySlots render correctly 1`] = `
       </div>
     </button>
     <button
-      className="sc-htpNat fyaUJv"
+      className="sc-htpNat fxEHpM"
       onClick={[Function]}
       selected={false}
     >
       <div
-        className="sc-bxivhb eyjcHp"
+        className="sc-bxivhb gryOGk"
       >
         29
       </div>
@@ -168,12 +152,12 @@ exports[`DaySlots render correctly 1`] = `
       </div>
     </button>
     <button
-      className="sc-htpNat fyaUJv"
+      className="sc-htpNat fxEHpM"
       onClick={[Function]}
       selected={false}
     >
       <div
-        className="sc-bxivhb eyjcHp"
+        className="sc-bxivhb gryOGk"
       >
         30
       </div>
@@ -184,12 +168,12 @@ exports[`DaySlots render correctly 1`] = `
       </div>
     </button>
     <button
-      className="sc-htpNat fyaUJv"
+      className="sc-htpNat fxEHpM"
       onClick={[Function]}
       selected={false}
     >
       <div
-        className="sc-bxivhb eyjcHp"
+        className="sc-bxivhb gryOGk"
       >
         1
       </div>
@@ -200,12 +184,12 @@ exports[`DaySlots render correctly 1`] = `
       </div>
     </button>
     <button
-      className="sc-htpNat fyaUJv"
+      className="sc-htpNat fxEHpM"
       onClick={[Function]}
       selected={false}
     >
       <div
-        className="sc-bxivhb eyjcHp"
+        className="sc-bxivhb gryOGk"
       >
         2
       </div>
@@ -216,12 +200,12 @@ exports[`DaySlots render correctly 1`] = `
       </div>
     </button>
     <button
-      className="sc-htpNat fyaUJv"
+      className="sc-htpNat fxEHpM"
       onClick={[Function]}
       selected={false}
     >
       <div
-        className="sc-bxivhb eyjcHp"
+        className="sc-bxivhb gryOGk"
       >
         3
       </div>
@@ -232,12 +216,12 @@ exports[`DaySlots render correctly 1`] = `
       </div>
     </button>
     <button
-      className="sc-htpNat fyaUJv"
+      className="sc-htpNat fxEHpM"
       onClick={[Function]}
       selected={false}
     >
       <div
-        className="sc-bxivhb eyjcHp"
+        className="sc-bxivhb gryOGk"
       >
         4
       </div>
@@ -248,12 +232,12 @@ exports[`DaySlots render correctly 1`] = `
       </div>
     </button>
     <button
-      className="sc-htpNat fyaUJv"
+      className="sc-htpNat fxEHpM"
       onClick={[Function]}
       selected={false}
     >
       <div
-        className="sc-bxivhb eyjcHp"
+        className="sc-bxivhb gryOGk"
       >
         5
       </div>
@@ -264,12 +248,12 @@ exports[`DaySlots render correctly 1`] = `
       </div>
     </button>
     <button
-      className="sc-htpNat fyaUJv"
+      className="sc-htpNat fxEHpM"
       onClick={[Function]}
       selected={false}
     >
       <div
-        className="sc-bxivhb eyjcHp"
+        className="sc-bxivhb gryOGk"
       >
         6
       </div>
@@ -280,12 +264,12 @@ exports[`DaySlots render correctly 1`] = `
       </div>
     </button>
     <button
-      className="sc-htpNat fyaUJv"
+      className="sc-htpNat fxEHpM"
       onClick={[Function]}
       selected={false}
     >
       <div
-        className="sc-bxivhb eyjcHp"
+        className="sc-bxivhb gryOGk"
       >
         7
       </div>
@@ -296,12 +280,12 @@ exports[`DaySlots render correctly 1`] = `
       </div>
     </button>
     <button
-      className="sc-htpNat fyaUJv"
+      className="sc-htpNat fxEHpM"
       onClick={[Function]}
       selected={false}
     >
       <div
-        className="sc-bxivhb eyjcHp"
+        className="sc-bxivhb gryOGk"
       >
         8
       </div>
@@ -312,12 +296,12 @@ exports[`DaySlots render correctly 1`] = `
       </div>
     </button>
     <button
-      className="sc-htpNat fyaUJv"
+      className="sc-htpNat fxEHpM"
       onClick={[Function]}
       selected={false}
     >
       <div
-        className="sc-bxivhb eyjcHp"
+        className="sc-bxivhb gryOGk"
       >
         9
       </div>
@@ -328,12 +312,12 @@ exports[`DaySlots render correctly 1`] = `
       </div>
     </button>
     <button
-      className="sc-htpNat fyaUJv"
+      className="sc-htpNat fxEHpM"
       onClick={[Function]}
       selected={false}
     >
       <div
-        className="sc-bxivhb eyjcHp"
+        className="sc-bxivhb gryOGk"
       >
         10
       </div>
@@ -344,12 +328,12 @@ exports[`DaySlots render correctly 1`] = `
       </div>
     </button>
     <button
-      className="sc-htpNat fyaUJv"
+      className="sc-htpNat fxEHpM"
       onClick={[Function]}
       selected={false}
     >
       <div
-        className="sc-bxivhb eyjcHp"
+        className="sc-bxivhb gryOGk"
       >
         11
       </div>
@@ -360,12 +344,12 @@ exports[`DaySlots render correctly 1`] = `
       </div>
     </button>
     <button
-      className="sc-htpNat fyaUJv"
+      className="sc-htpNat fxEHpM"
       onClick={[Function]}
       selected={false}
     >
       <div
-        className="sc-bxivhb eyjcHp"
+        className="sc-bxivhb gryOGk"
       >
         12
       </div>
@@ -376,12 +360,12 @@ exports[`DaySlots render correctly 1`] = `
       </div>
     </button>
     <button
-      className="sc-htpNat fyaUJv"
+      className="sc-htpNat fxEHpM"
       onClick={[Function]}
       selected={false}
     >
       <div
-        className="sc-bxivhb eyjcHp"
+        className="sc-bxivhb gryOGk"
       >
         13
       </div>
@@ -392,12 +376,12 @@ exports[`DaySlots render correctly 1`] = `
       </div>
     </button>
     <button
-      className="sc-htpNat fyaUJv"
+      className="sc-htpNat fxEHpM"
       onClick={[Function]}
       selected={false}
     >
       <div
-        className="sc-bxivhb eyjcHp"
+        className="sc-bxivhb gryOGk"
       >
         14
       </div>
@@ -408,12 +392,12 @@ exports[`DaySlots render correctly 1`] = `
       </div>
     </button>
     <button
-      className="sc-htpNat fyaUJv"
+      className="sc-htpNat fxEHpM"
       onClick={[Function]}
       selected={false}
     >
       <div
-        className="sc-bxivhb eyjcHp"
+        className="sc-bxivhb gryOGk"
       >
         15
       </div>
@@ -424,12 +408,12 @@ exports[`DaySlots render correctly 1`] = `
       </div>
     </button>
     <button
-      className="sc-htpNat fyaUJv"
+      className="sc-htpNat fxEHpM"
       onClick={[Function]}
       selected={false}
     >
       <div
-        className="sc-bxivhb eyjcHp"
+        className="sc-bxivhb gryOGk"
       >
         16
       </div>
@@ -440,12 +424,12 @@ exports[`DaySlots render correctly 1`] = `
       </div>
     </button>
     <button
-      className="sc-htpNat fyaUJv"
+      className="sc-htpNat fxEHpM"
       onClick={[Function]}
       selected={false}
     >
       <div
-        className="sc-bxivhb eyjcHp"
+        className="sc-bxivhb gryOGk"
       >
         17
       </div>
@@ -456,12 +440,12 @@ exports[`DaySlots render correctly 1`] = `
       </div>
     </button>
     <button
-      className="sc-htpNat fyaUJv"
+      className="sc-htpNat fxEHpM"
       onClick={[Function]}
       selected={false}
     >
       <div
-        className="sc-bxivhb eyjcHp"
+        className="sc-bxivhb gryOGk"
       >
         18
       </div>
@@ -472,12 +456,12 @@ exports[`DaySlots render correctly 1`] = `
       </div>
     </button>
     <button
-      className="sc-htpNat fyaUJv"
+      className="sc-htpNat fxEHpM"
       onClick={[Function]}
       selected={false}
     >
       <div
-        className="sc-bxivhb eyjcHp"
+        className="sc-bxivhb gryOGk"
       >
         19
       </div>
@@ -488,12 +472,12 @@ exports[`DaySlots render correctly 1`] = `
       </div>
     </button>
     <button
-      className="sc-htpNat fyaUJv"
+      className="sc-htpNat fxEHpM"
       onClick={[Function]}
       selected={false}
     >
       <div
-        className="sc-bxivhb eyjcHp"
+        className="sc-bxivhb gryOGk"
       >
         20
       </div>
@@ -504,12 +488,12 @@ exports[`DaySlots render correctly 1`] = `
       </div>
     </button>
     <button
-      className="sc-htpNat fyaUJv"
+      className="sc-htpNat fxEHpM"
       onClick={[Function]}
       selected={false}
     >
       <div
-        className="sc-bxivhb eyjcHp"
+        className="sc-bxivhb gryOGk"
       >
         21
       </div>
@@ -520,12 +504,12 @@ exports[`DaySlots render correctly 1`] = `
       </div>
     </button>
     <button
-      className="sc-htpNat fyaUJv"
+      className="sc-htpNat fxEHpM"
       onClick={[Function]}
       selected={false}
     >
       <div
-        className="sc-bxivhb eyjcHp"
+        className="sc-bxivhb gryOGk"
       >
         22
       </div>
@@ -536,12 +520,12 @@ exports[`DaySlots render correctly 1`] = `
       </div>
     </button>
     <button
-      className="sc-htpNat fyaUJv"
+      className="sc-htpNat fxEHpM"
       onClick={[Function]}
       selected={false}
     >
       <div
-        className="sc-bxivhb eyjcHp"
+        className="sc-bxivhb gryOGk"
       >
         23
       </div>
@@ -552,12 +536,12 @@ exports[`DaySlots render correctly 1`] = `
       </div>
     </button>
     <button
-      className="sc-htpNat fyaUJv"
+      className="sc-htpNat fxEHpM"
       onClick={[Function]}
       selected={false}
     >
       <div
-        className="sc-bxivhb eyjcHp"
+        className="sc-bxivhb gryOGk"
       >
         24
       </div>
@@ -568,12 +552,12 @@ exports[`DaySlots render correctly 1`] = `
       </div>
     </button>
     <button
-      className="sc-htpNat fyaUJv"
+      className="sc-htpNat fxEHpM"
       onClick={[Function]}
       selected={false}
     >
       <div
-        className="sc-bxivhb eyjcHp"
+        className="sc-bxivhb gryOGk"
       >
         25
       </div>
@@ -584,12 +568,12 @@ exports[`DaySlots render correctly 1`] = `
       </div>
     </button>
     <button
-      className="sc-htpNat fyaUJv"
+      className="sc-htpNat fxEHpM"
       onClick={[Function]}
       selected={false}
     >
       <div
-        className="sc-bxivhb eyjcHp"
+        className="sc-bxivhb gryOGk"
       >
         26
       </div>
@@ -600,12 +584,12 @@ exports[`DaySlots render correctly 1`] = `
       </div>
     </button>
     <button
-      className="sc-htpNat fyaUJv"
+      className="sc-htpNat fxEHpM"
       onClick={[Function]}
       selected={false}
     >
       <div
-        className="sc-bxivhb eyjcHp"
+        className="sc-bxivhb gryOGk"
       >
         27
       </div>
@@ -616,12 +600,12 @@ exports[`DaySlots render correctly 1`] = `
       </div>
     </button>
     <button
-      className="sc-htpNat fyaUJv"
+      className="sc-htpNat fxEHpM"
       onClick={[Function]}
       selected={false}
     >
       <div
-        className="sc-bxivhb eyjcHp"
+        className="sc-bxivhb gryOGk"
       >
         28
       </div>
@@ -632,12 +616,12 @@ exports[`DaySlots render correctly 1`] = `
       </div>
     </button>
     <button
-      className="sc-htpNat fyaUJv"
+      className="sc-htpNat fxEHpM"
       onClick={[Function]}
       selected={false}
     >
       <div
-        className="sc-bxivhb eyjcHp"
+        className="sc-bxivhb gryOGk"
       >
         29
       </div>
@@ -648,12 +632,12 @@ exports[`DaySlots render correctly 1`] = `
       </div>
     </button>
     <button
-      className="sc-htpNat fyaUJv"
+      className="sc-htpNat fxEHpM"
       onClick={[Function]}
       selected={false}
     >
       <div
-        className="sc-bxivhb eyjcHp"
+        className="sc-bxivhb gryOGk"
       >
         30
       </div>
@@ -664,12 +648,12 @@ exports[`DaySlots render correctly 1`] = `
       </div>
     </button>
     <button
-      className="sc-htpNat fyaUJv"
+      className="sc-htpNat fxEHpM"
       onClick={[Function]}
       selected={false}
     >
       <div
-        className="sc-bxivhb eyjcHp"
+        className="sc-bxivhb gryOGk"
       >
         31
       </div>
@@ -680,12 +664,12 @@ exports[`DaySlots render correctly 1`] = `
       </div>
     </button>
     <button
-      className="sc-htpNat fyaUJv"
+      className="sc-htpNat fxEHpM"
       onClick={[Function]}
       selected={false}
     >
       <div
-        className="sc-bxivhb eyjcHp"
+        className="sc-bxivhb gryOGk"
       >
         1
       </div>
@@ -696,12 +680,12 @@ exports[`DaySlots render correctly 1`] = `
       </div>
     </button>
     <button
-      className="sc-htpNat fyaUJv"
+      className="sc-htpNat fxEHpM"
       onClick={[Function]}
       selected={false}
     >
       <div
-        className="sc-bxivhb eyjcHp"
+        className="sc-bxivhb gryOGk"
       >
         2
       </div>
@@ -712,12 +696,12 @@ exports[`DaySlots render correctly 1`] = `
       </div>
     </button>
     <button
-      className="sc-htpNat fyaUJv"
+      className="sc-htpNat fxEHpM"
       onClick={[Function]}
       selected={false}
     >
       <div
-        className="sc-bxivhb eyjcHp"
+        className="sc-bxivhb gryOGk"
       >
         3
       </div>
@@ -728,12 +712,12 @@ exports[`DaySlots render correctly 1`] = `
       </div>
     </button>
     <button
-      className="sc-htpNat fyaUJv"
+      className="sc-htpNat fxEHpM"
       onClick={[Function]}
       selected={false}
     >
       <div
-        className="sc-bxivhb eyjcHp"
+        className="sc-bxivhb gryOGk"
       >
         4
       </div>
@@ -744,12 +728,12 @@ exports[`DaySlots render correctly 1`] = `
       </div>
     </button>
     <button
-      className="sc-htpNat fyaUJv"
+      className="sc-htpNat fxEHpM"
       onClick={[Function]}
       selected={false}
     >
       <div
-        className="sc-bxivhb eyjcHp"
+        className="sc-bxivhb gryOGk"
       >
         5
       </div>
@@ -760,12 +744,12 @@ exports[`DaySlots render correctly 1`] = `
       </div>
     </button>
     <button
-      className="sc-htpNat fyaUJv"
+      className="sc-htpNat fxEHpM"
       onClick={[Function]}
       selected={false}
     >
       <div
-        className="sc-bxivhb eyjcHp"
+        className="sc-bxivhb gryOGk"
       >
         6
       </div>
@@ -776,12 +760,12 @@ exports[`DaySlots render correctly 1`] = `
       </div>
     </button>
     <button
-      className="sc-htpNat fyaUJv"
+      className="sc-htpNat fxEHpM"
       onClick={[Function]}
       selected={false}
     >
       <div
-        className="sc-bxivhb eyjcHp"
+        className="sc-bxivhb gryOGk"
       >
         7
       </div>
@@ -792,12 +776,12 @@ exports[`DaySlots render correctly 1`] = `
       </div>
     </button>
     <button
-      className="sc-htpNat fyaUJv"
+      className="sc-htpNat fxEHpM"
       onClick={[Function]}
       selected={false}
     >
       <div
-        className="sc-bxivhb eyjcHp"
+        className="sc-bxivhb gryOGk"
       >
         8
       </div>
@@ -808,12 +792,12 @@ exports[`DaySlots render correctly 1`] = `
       </div>
     </button>
     <button
-      className="sc-htpNat fyaUJv"
+      className="sc-htpNat fxEHpM"
       onClick={[Function]}
       selected={false}
     >
       <div
-        className="sc-bxivhb eyjcHp"
+        className="sc-bxivhb gryOGk"
       >
         9
       </div>
@@ -824,12 +808,12 @@ exports[`DaySlots render correctly 1`] = `
       </div>
     </button>
     <button
-      className="sc-htpNat fyaUJv"
+      className="sc-htpNat fxEHpM"
       onClick={[Function]}
       selected={false}
     >
       <div
-        className="sc-bxivhb eyjcHp"
+        className="sc-bxivhb gryOGk"
       >
         10
       </div>
@@ -840,12 +824,12 @@ exports[`DaySlots render correctly 1`] = `
       </div>
     </button>
     <button
-      className="sc-htpNat fyaUJv"
+      className="sc-htpNat fxEHpM"
       onClick={[Function]}
       selected={false}
     >
       <div
-        className="sc-bxivhb eyjcHp"
+        className="sc-bxivhb gryOGk"
       >
         11
       </div>
@@ -856,12 +840,12 @@ exports[`DaySlots render correctly 1`] = `
       </div>
     </button>
     <button
-      className="sc-htpNat fyaUJv"
+      className="sc-htpNat fxEHpM"
       onClick={[Function]}
       selected={false}
     >
       <div
-        className="sc-bxivhb eyjcHp"
+        className="sc-bxivhb gryOGk"
       >
         12
       </div>
@@ -872,12 +856,12 @@ exports[`DaySlots render correctly 1`] = `
       </div>
     </button>
     <button
-      className="sc-htpNat fyaUJv"
+      className="sc-htpNat fxEHpM"
       onClick={[Function]}
       selected={false}
     >
       <div
-        className="sc-bxivhb eyjcHp"
+        className="sc-bxivhb gryOGk"
       >
         13
       </div>
@@ -888,12 +872,12 @@ exports[`DaySlots render correctly 1`] = `
       </div>
     </button>
     <button
-      className="sc-htpNat fyaUJv"
+      className="sc-htpNat fxEHpM"
       onClick={[Function]}
       selected={false}
     >
       <div
-        className="sc-bxivhb eyjcHp"
+        className="sc-bxivhb gryOGk"
       >
         14
       </div>
@@ -904,12 +888,12 @@ exports[`DaySlots render correctly 1`] = `
       </div>
     </button>
     <button
-      className="sc-htpNat fyaUJv"
+      className="sc-htpNat fxEHpM"
       onClick={[Function]}
       selected={false}
     >
       <div
-        className="sc-bxivhb eyjcHp"
+        className="sc-bxivhb gryOGk"
       >
         15
       </div>
@@ -920,12 +904,12 @@ exports[`DaySlots render correctly 1`] = `
       </div>
     </button>
     <button
-      className="sc-htpNat fyaUJv"
+      className="sc-htpNat fxEHpM"
       onClick={[Function]}
       selected={false}
     >
       <div
-        className="sc-bxivhb eyjcHp"
+        className="sc-bxivhb gryOGk"
       >
         16
       </div>
@@ -936,12 +920,12 @@ exports[`DaySlots render correctly 1`] = `
       </div>
     </button>
     <button
-      className="sc-htpNat fyaUJv"
+      className="sc-htpNat fxEHpM"
       onClick={[Function]}
       selected={false}
     >
       <div
-        className="sc-bxivhb eyjcHp"
+        className="sc-bxivhb gryOGk"
       >
         17
       </div>
@@ -952,12 +936,12 @@ exports[`DaySlots render correctly 1`] = `
       </div>
     </button>
     <button
-      className="sc-htpNat fyaUJv"
+      className="sc-htpNat fxEHpM"
       onClick={[Function]}
       selected={false}
     >
       <div
-        className="sc-bxivhb eyjcHp"
+        className="sc-bxivhb gryOGk"
       >
         18
       </div>
@@ -968,12 +952,12 @@ exports[`DaySlots render correctly 1`] = `
       </div>
     </button>
     <button
-      className="sc-htpNat fyaUJv"
+      className="sc-htpNat fxEHpM"
       onClick={[Function]}
       selected={false}
     >
       <div
-        className="sc-bxivhb eyjcHp"
+        className="sc-bxivhb gryOGk"
       >
         19
       </div>
@@ -984,12 +968,12 @@ exports[`DaySlots render correctly 1`] = `
       </div>
     </button>
     <button
-      className="sc-htpNat fyaUJv"
+      className="sc-htpNat fxEHpM"
       onClick={[Function]}
       selected={false}
     >
       <div
-        className="sc-bxivhb eyjcHp"
+        className="sc-bxivhb gryOGk"
       >
         20
       </div>
@@ -1000,12 +984,12 @@ exports[`DaySlots render correctly 1`] = `
       </div>
     </button>
     <button
-      className="sc-htpNat fyaUJv"
+      className="sc-htpNat fxEHpM"
       onClick={[Function]}
       selected={false}
     >
       <div
-        className="sc-bxivhb eyjcHp"
+        className="sc-bxivhb gryOGk"
       >
         21
       </div>
@@ -1016,12 +1000,12 @@ exports[`DaySlots render correctly 1`] = `
       </div>
     </button>
     <button
-      className="sc-htpNat fyaUJv"
+      className="sc-htpNat fxEHpM"
       onClick={[Function]}
       selected={false}
     >
       <div
-        className="sc-bxivhb eyjcHp"
+        className="sc-bxivhb gryOGk"
       >
         22
       </div>
@@ -1032,12 +1016,12 @@ exports[`DaySlots render correctly 1`] = `
       </div>
     </button>
     <button
-      className="sc-htpNat fyaUJv"
+      className="sc-htpNat fxEHpM"
       onClick={[Function]}
       selected={false}
     >
       <div
-        className="sc-bxivhb eyjcHp"
+        className="sc-bxivhb gryOGk"
       >
         23
       </div>
@@ -1048,12 +1032,12 @@ exports[`DaySlots render correctly 1`] = `
       </div>
     </button>
     <button
-      className="sc-htpNat fyaUJv"
+      className="sc-htpNat fxEHpM"
       onClick={[Function]}
       selected={false}
     >
       <div
-        className="sc-bxivhb eyjcHp"
+        className="sc-bxivhb gryOGk"
       >
         24
       </div>
@@ -1064,12 +1048,12 @@ exports[`DaySlots render correctly 1`] = `
       </div>
     </button>
     <button
-      className="sc-htpNat fyaUJv"
+      className="sc-htpNat fxEHpM"
       onClick={[Function]}
       selected={false}
     >
       <div
-        className="sc-bxivhb eyjcHp"
+        className="sc-bxivhb gryOGk"
       >
         25
       </div>
@@ -1080,12 +1064,12 @@ exports[`DaySlots render correctly 1`] = `
       </div>
     </button>
     <button
-      className="sc-htpNat fyaUJv"
+      className="sc-htpNat fxEHpM"
       onClick={[Function]}
       selected={false}
     >
       <div
-        className="sc-bxivhb eyjcHp"
+        className="sc-bxivhb gryOGk"
       >
         26
       </div>
@@ -1096,12 +1080,12 @@ exports[`DaySlots render correctly 1`] = `
       </div>
     </button>
     <button
-      className="sc-htpNat fyaUJv"
+      className="sc-htpNat fxEHpM"
       onClick={[Function]}
       selected={false}
     >
       <div
-        className="sc-bxivhb eyjcHp"
+        className="sc-bxivhb gryOGk"
       >
         27
       </div>
@@ -1112,12 +1096,12 @@ exports[`DaySlots render correctly 1`] = `
       </div>
     </button>
     <button
-      className="sc-htpNat fyaUJv"
+      className="sc-htpNat fxEHpM"
       onClick={[Function]}
       selected={false}
     >
       <div
-        className="sc-bxivhb eyjcHp"
+        className="sc-bxivhb gryOGk"
       >
         28
       </div>
@@ -1128,12 +1112,12 @@ exports[`DaySlots render correctly 1`] = `
       </div>
     </button>
     <button
-      className="sc-htpNat fyaUJv"
+      className="sc-htpNat fxEHpM"
       onClick={[Function]}
       selected={false}
     >
       <div
-        className="sc-bxivhb eyjcHp"
+        className="sc-bxivhb gryOGk"
       >
         29
       </div>
@@ -1144,12 +1128,12 @@ exports[`DaySlots render correctly 1`] = `
       </div>
     </button>
     <button
-      className="sc-htpNat fyaUJv"
+      className="sc-htpNat fxEHpM"
       onClick={[Function]}
       selected={false}
     >
       <div
-        className="sc-bxivhb eyjcHp"
+        className="sc-bxivhb gryOGk"
       >
         30
       </div>
@@ -1160,12 +1144,12 @@ exports[`DaySlots render correctly 1`] = `
       </div>
     </button>
     <button
-      className="sc-htpNat fyaUJv"
+      className="sc-htpNat fxEHpM"
       onClick={[Function]}
       selected={false}
     >
       <div
-        className="sc-bxivhb eyjcHp"
+        className="sc-bxivhb gryOGk"
       >
         31
       </div>

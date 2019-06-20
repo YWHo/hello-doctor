@@ -27,6 +27,7 @@ const Button = styled.button`
   border-style: ${props => (props.selected ? 'solid' : 'none')};
   border-radius: 50px;
   border-width: 1px;
+  font-family: 'Roboto', sans-serif;
   font-size: 18px;
   font-weight: 300;
 

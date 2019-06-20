@@ -17,6 +17,7 @@ const Container = styled.div`
 
 const Month = styled.div`
   color: #fff;
+  font-family: 'Roboto', sans-serif;
   font-size: 16px;
 `;
 

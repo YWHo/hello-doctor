@@ -37,6 +37,7 @@ const ButtonCircle = styled.button`
   }
 
   :active {
+    background-color: #1c98b0
     outline: none;
   }
 `;
@@ -46,6 +47,7 @@ const DateNum = styled.div`
   align-items: center;
   justify-content: center;
   height: 27px;
+  font-family: 'Roboto', sans-serif;
   font-size: 24px;
 `;
 
