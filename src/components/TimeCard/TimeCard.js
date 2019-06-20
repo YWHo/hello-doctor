@@ -22,7 +22,7 @@ const NameFrame = styled.div`
   color: #2a95bf;
   font-family: 'Roboto', sans-serif;
   font-size: 22px;
-  height: 29px;
+  min-height: 29px;
   line-height: 29px;
   vertical-align: middle;
 `;
