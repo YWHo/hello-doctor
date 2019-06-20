@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`NavBar render correctly 1`] = `
+exports[`DaySlots render correctly 1`] = `
 <div
   className="sc-bdVaJa cqEXRB"
 >

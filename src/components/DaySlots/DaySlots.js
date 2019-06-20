@@ -58,7 +58,7 @@ const WeekDayName = styled.div`
   font-weight: 300;
 `;
 
-export function DaysBar(props) {
+export function DaySlots(props) {
   const { selectedDate = dayjs() } = props;
 
   const days = dateHelper.getDatesInThreeMonthsFrom();
@@ -106,4 +106,4 @@ function mapDispatchToProps(dispatch) {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(DaysBar);
+)(DaySlots);

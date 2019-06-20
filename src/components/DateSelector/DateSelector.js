@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import DaysBar from '../DaysBar';
+import DaySlots from '../DaySlots';
 import PartsOfDayBar from '../PartsOfDayBar';
 
 const Container = styled.div`
@@ -14,7 +14,7 @@ const Container = styled.div`
 export default function DateSelector(props) {
   return (
     <Container>
-      <DaysBar />
+      <DaySlots />
       <PartsOfDayBar />
     </Container>
   );
