@@ -3,9 +3,10 @@ import { connect } from 'react-redux';
 import dayjs from 'dayjs';
 import styled from 'styled-components';
 import * as selectors from '../../state/selectors';
+import DateSelector from '../DateSelector';
 import NavBar from '../NavBar';
 import MonthBar from '../MonthBar';
-import DateSelector from '../DateSelector';
+import TimeCard from '../TimeCard';
 
 const Container = styled.div`
   background-color: #f5f5f5;
@@ -35,6 +36,7 @@ export function AppointmentPage(props) {
       <NavBar />
       <MonthBar />
       <DateSelector />
+      <TimeCard />
       {nameList}
     </Container>
   );
