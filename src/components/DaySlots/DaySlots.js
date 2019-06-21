@@ -37,7 +37,7 @@ const ButtonCircle = styled.button`
   }
 
   :active {
-    background-color: #1c98b0
+    background-color: #1c98b0;
     outline: none;
   }
 `;
