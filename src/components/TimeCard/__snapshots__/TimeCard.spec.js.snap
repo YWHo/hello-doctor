@@ -1,0 +1,102 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RegisterPage render default correctly 1`] = `
+<styled.div>
+  <styled.img
+    alt="Doctor's photo"
+    src="https://frontendchallenge2019.azurewebsites.net//api/Picture/40abb954-2f57-4106-61ec-ddf2acfbf8ed"
+  />
+  <styled.div>
+    <styled.div>
+      Dr. Mary Aniston
+    </styled.div>
+    <styled.div>
+      General Practitioner
+    </styled.div>
+  </styled.div>
+  <Connect(TimeSlots)
+    availableSlots={
+      Object {
+        "744022e0-54fb-41b5-b042-b4f8810d7e38": "2019-06-16T12:00:00",
+        "87e5128b-d134-4d67-aca2-eef56a800adc": "2019-06-16T17:00:00",
+        "9e7bbebf-92b7-4f1b-a6fc-35a72778cd77": "2019-06-16T08:00:00",
+      }
+    }
+  />
+</styled.div>
+`;
+
+exports[`RegisterPage render to start from afternoon correctly 1`] = `
+<styled.div>
+  <styled.img
+    alt="Doctor's photo"
+    src="https://frontendchallenge2019.azurewebsites.net//api/Picture/40abb954-2f57-4106-61ec-ddf2acfbf8ed"
+  />
+  <styled.div>
+    <styled.div>
+      Dr. Mary Aniston
+    </styled.div>
+    <styled.div>
+      General Practitioner
+    </styled.div>
+  </styled.div>
+  <Connect(TimeSlots)
+    availableSlots={
+      Object {
+        "744022e0-54fb-41b5-b042-b4f8810d7e38": "2019-06-16T12:00:00",
+        "87e5128b-d134-4d67-aca2-eef56a800adc": "2019-06-16T17:00:00",
+      }
+    }
+  />
+</styled.div>
+`;
+
+exports[`RegisterPage render to start from evening correctly 1`] = `
+<styled.div>
+  <styled.img
+    alt="Doctor's photo"
+    src="https://frontendchallenge2019.azurewebsites.net//api/Picture/40abb954-2f57-4106-61ec-ddf2acfbf8ed"
+  />
+  <styled.div>
+    <styled.div>
+      Dr. Mary Aniston
+    </styled.div>
+    <styled.div>
+      General Practitioner
+    </styled.div>
+  </styled.div>
+  <Connect(TimeSlots)
+    availableSlots={
+      Object {
+        "87e5128b-d134-4d67-aca2-eef56a800adc": "2019-06-16T17:00:00",
+      }
+    }
+  />
+</styled.div>
+`;
+
+exports[`RegisterPage render to start from morning correctly 1`] = `
+<styled.div>
+  <styled.img
+    alt="Doctor's photo"
+    src="https://frontendchallenge2019.azurewebsites.net//api/Picture/40abb954-2f57-4106-61ec-ddf2acfbf8ed"
+  />
+  <styled.div>
+    <styled.div>
+      Dr. Mary Aniston
+    </styled.div>
+    <styled.div>
+      General Practitioner
+    </styled.div>
+  </styled.div>
+  <Connect(TimeSlots)
+    availableSlots={
+      Object {
+        "744022e0-54fb-41b5-b042-b4f8810d7e38": "2019-06-16T12:00:00",
+        "87e5128b-d134-4d67-aca2-eef56a800adc": "2019-06-16T17:00:00",
+        "9e7bbebf-92b7-4f1b-a6fc-35a72778cd77": "2019-06-16T08:00:00",
+      }
+    }
+  />
+</styled.div>
+`;
