@@ -1,4 +1,5 @@
 import dayjs from 'dayjs';
+import { DAY_MORNING, DAY_AFTERNOON, DAY_EVENING } from '../constants';
 import customParseFormat from 'dayjs/plugin/customParseFormat';
 dayjs.extend(customParseFormat);
 
@@ -84,4 +85,32 @@ export function hasEveningTimeInSchedules(schedules = []) {
     }
   }
   return false;
+}
+
+export function filterTimeSlotByPartOfDay(
+  timeSlots = {},
+  partOfDay = DAY_MORNING
+) {
+  let startTime = dayjs('08:00', 'HH:mm');
+  switch (partOfDay) {
+    case DAY_AFTERNOON:
+      startTime = dayjs('12:00', 'HH:mm');
+      break;
+    case DAY_EVENING:
+      startTime = dayjs('17:00', 'HH:mm');
+      break;
+    default:
+      return timeSlots;
+  }
+
+  const newTimeSlot = {};
+  const timeKeys = Object.keys(timeSlots);
+  timeKeys.forEach(key => {
+    const availTime = dayjs(dayjs(timeSlots[key]).format('HH:mm'), 'HH:mm');
+    if (availTime.isSame(startTime) || availTime.isAfter(startTime)) {
+      newTimeSlot[key] = timeSlots[key];
+    }
+  });
+
+  return newTimeSlot;
 }

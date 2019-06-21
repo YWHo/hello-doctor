@@ -2,6 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
 import TimeSlots from '../TimeSlots';
+import { filterTimeSlotByPartOfDay } from '../../shared/dateHelper';
+import { getSelectedDayPart } from '../../state/selectors';
 
 const Container = styled.div`
   background-color: #fff;
@@ -40,7 +42,7 @@ const TextFrame = styled.div`
 `;
 
 export function TimeCard(props) {
-  const { meetSchedule } = props;
+  const { meetSchedule, selectedDayPart } = props;
   const {
     Name: name,
     Title: title,
@@ -48,6 +50,10 @@ export function TimeCard(props) {
     PictureURL: pictureURL = ''
   } = meetSchedule;
   const fullUrl = `https://frontendchallenge2019.azurewebsites.net/${pictureURL}`;
+  const filteredSlots = filterTimeSlotByPartOfDay(
+    availableSlots,
+    selectedDayPart
+  );
 
   return (
     <Container>
@@ -56,13 +62,15 @@ export function TimeCard(props) {
         <NameFrame>{name}</NameFrame>
         <TitleFrame>{title}</TitleFrame>
       </TextFrame>
-      <TimeSlots availableSlots={availableSlots} />
+      <TimeSlots availableSlots={filteredSlots} />
     </Container>
   );
 }
 
 const mapStateToProps = state => {
-  return {};
+  return {
+    selectedDayPart: getSelectedDayPart(state)
+  };
 };
 
 function mapDispatchToProps(dispatch) {

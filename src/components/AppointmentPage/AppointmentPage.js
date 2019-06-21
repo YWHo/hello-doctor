@@ -15,8 +15,8 @@ const Container = styled.div`
 
 export function AppointmentPage(props) {
   const { schedules = [] } = props;
-  const showTimeCards = Array.from(schedules).map((item, idx) => {
-    return <TimeCard meetSchedule={item} key={`tc_${idx}`} />;
+  const showTimeCards = Array.from(schedules).map((scheduleObj, idx) => {
+    return <TimeCard meetSchedule={scheduleObj} key={`tc_${idx}`} />;
   });
 
   return (

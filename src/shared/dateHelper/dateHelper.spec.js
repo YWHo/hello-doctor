@@ -1,5 +1,6 @@
 import dayjs from 'dayjs';
 import * as dateHelper from './dateHelper';
+import { DAY_MORNING, DAY_AFTERNOON, DAY_EVENING } from '../constants';
 import customParseFormat from 'dayjs/plugin/customParseFormat';
 dayjs.extend(customParseFormat);
 
@@ -71,26 +72,37 @@ describe('dateHelper', () => {
 
   /////////////////////////////
 
-  const morningOnly = {
+  const morningTime = {
+    'd6cbca46-e010-457d-8a7e-c6b3a28d729b': '2019-06-16T08:00:00',
+    '3ea1c27a-b0e5-4e25-af5e-8e0f9ad159a2': '2019-06-16T10:00:00'
+  };
+  const morningSessionOnly = {
     AvailableSlots: {
-      '357ea510-a2cb-41b6-a67a-d18a02a12260': '2019-06-16T09:15:00',
-      '2a306785-3093-4e47-829d-5342c66b5c51': '2019-06-16T09:30:00'
+      ...morningTime
     }
   };
 
-  const afternoonOnly = {
+  const afternoonTime = {
+    'c8f3f7fb-315d-4f13-a043-cba94c7c643b': '2019-06-16T12:00:00',
+    'b433b622-73ff-4062-aee4-4c6310e83a34': '2019-06-16T15:00:00'
+  };
+  const afternoonSessionOnly = {
     AvailableSlots: {
-      '95dee031-6cb7-4644-b32e-9714c6b3e59d': '2019-06-16T12:45:00',
-      '12cbdc25-9fc7-4f4e-85f0-04d9f5e84913': '2019-06-16T13:00:00'
+      ...afternoonTime
     }
   };
-  const eveningOnly = {
+
+  const eveningTime = {
+    'c6c5a1af-892c-4ece-b669-a13657b829a2': '2019-06-16T17:00:00',
+    '3a9319a6-2099-48fd-8e07-a33e883f4d7b': '2019-06-16T20:00:00',
+    '6b721dd9-1ec6-4961-adeb-507bfd91426f': '2019-06-16T19:00:00'
+  };
+  const eveningSessionOnly = {
     AvailableSlots: {
-      '44c145a5-aed1-4eca-81f4-4908a766a54f': '2019-06-16T18:30:00',
-      '9cb5b97c-203f-42be-a9e7-b8fda99c63f6': '2019-06-16T18:45:00'
+      ...eveningTime
     }
   };
-  const allThreeTime = {
+  const allThreeSessions = {
     AvailableSlots: {
       'a65fe281-708b-47ad-83aa-644afc76d1fb': '2019-06-16T10:30:00',
       '12cbdc25-9fc7-4f4e-85f0-04d9f5e84913': '2019-06-16T13:00:00',
@@ -105,12 +117,12 @@ describe('dateHelper', () => {
     });
 
     it('return false for no morning time', () => {
-      const list = [afternoonOnly, eveningOnly];
+      const list = [afternoonSessionOnly, eveningSessionOnly];
       expect(dateHelper.hasMorningTimeInSchedules(list)).toBeFalsy();
     });
 
     it('return true when has morning time', () => {
-      const list = [afternoonOnly, allThreeTime];
+      const list = [afternoonSessionOnly, allThreeSessions];
       expect(dateHelper.hasMorningTimeInSchedules(list)).toBeTruthy();
     });
   });
@@ -122,12 +134,12 @@ describe('dateHelper', () => {
     });
 
     it('return false for no afternoon time', () => {
-      const list = [morningOnly, eveningOnly];
+      const list = [morningSessionOnly, eveningSessionOnly];
       expect(dateHelper.hasAfternoonTimeInSchedules(list)).toBeFalsy();
     });
 
     it('return true when has afternoon time', () => {
-      const list = [eveningOnly, allThreeTime];
+      const list = [eveningSessionOnly, allThreeSessions];
       expect(dateHelper.hasAfternoonTimeInSchedules(list)).toBeTruthy();
     });
   });
@@ -139,13 +151,61 @@ describe('dateHelper', () => {
     });
 
     it('return false for no evening time', () => {
-      const list = [morningOnly, afternoonOnly];
+      const list = [morningSessionOnly, afternoonSessionOnly];
       expect(dateHelper.hasEveningTimeInSchedules(list)).toBeFalsy();
     });
 
     it('return true when has evening time', () => {
-      const list = [eveningOnly];
+      const list = [eveningSessionOnly];
       expect(dateHelper.hasEveningTimeInSchedules(list)).toBeTruthy();
+    });
+  });
+
+  describe('filterTimeSlotByPartOfDay', () => {
+    const timeSlots = {
+      ...morningTime,
+      ...afternoonTime,
+      ...eveningTime
+    };
+
+    it('return as it is when not specifying time', () => {
+      const actualObj = dateHelper.filterTimeSlotByPartOfDay(timeSlots);
+      expect(actualObj).toMatchObject(timeSlots);
+      expect(timeSlots).toMatchObject(actualObj); // reverse compare to ensure no extra key-value pairs
+    });
+
+    it('return as it is when specified to start from morning time', () => {
+      const actualObj = dateHelper.filterTimeSlotByPartOfDay(
+        timeSlots,
+        DAY_MORNING
+      );
+      expect(actualObj).toMatchObject(timeSlots);
+      expect(timeSlots).toMatchObject(actualObj);
+    });
+
+    it('return without morning time when specified to start from afternoon time', () => {
+      const expected = {
+        ...afternoonTime,
+        ...eveningTime
+      };
+      const actualObj = dateHelper.filterTimeSlotByPartOfDay(
+        timeSlots,
+        DAY_AFTERNOON
+      );
+      expect(actualObj).toMatchObject(expected);
+      expect(expected).toMatchObject(actualObj);
+    });
+
+    it('return only evening time when specified to start from evening time', () => {
+      const expected = {
+        ...eveningTime
+      };
+      const actualObj = dateHelper.filterTimeSlotByPartOfDay(
+        timeSlots,
+        DAY_EVENING
+      );
+      expect(actualObj).toMatchObject(expected);
+      expect(expected).toMatchObject(actualObj);
     });
   });
 });
