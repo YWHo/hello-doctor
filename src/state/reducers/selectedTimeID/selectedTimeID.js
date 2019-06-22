@@ -3,7 +3,7 @@ import {
   SAVE_SELECTED_TIME_ID
 } from '../../../shared/constants';
 
-const initialState = {};
+const initialState = 'NoIDWasGiven';
 
 export default function selectedTimeID(state = initialState, action) {
   const { type, payload = {} } = action;
