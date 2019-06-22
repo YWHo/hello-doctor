@@ -70,7 +70,7 @@ const TextOfTime = styled.div`
 `;
 
 export function TimeSlots(props) {
-  const { availableSlots = {}, selectedTimeID } = props;
+  const { availableSlots = {}, selectedTimeID = 'notAvailable' } = props;
   const slots = Object.keys(availableSlots).map((timeID, idx) => {
     const timeStr = dayjs(availableSlots[timeID]).format('H:mm');
     return (
@@ -107,7 +107,8 @@ function onButtonClicked(props, timeID) {
 }
 
 TimeSlots.propTypes = {
-  availableSlots: PropTypes.object
+  availableSlots: PropTypes.object,
+  selectedTimeID: PropTypes.string
 };
 
 const mapStateToProps = state => {
