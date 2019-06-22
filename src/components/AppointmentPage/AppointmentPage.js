@@ -14,19 +14,21 @@ const Container = styled.div`
 `;
 
 export function AppointmentPage(props) {
-  const { schedules = [] } = props;
-  const showTimeCards = Array.from(schedules).map((scheduleObj, idx) => {
-    return <TimeCard meetSchedule={scheduleObj} key={`tc_${idx}`} />;
-  });
-
   return (
     <Container>
       <NavBar />
       <MonthBar />
       <DateSelector />
-      {showTimeCards}
+      {showTimeCards(props)}
     </Container>
   );
+}
+
+function showTimeCards(props) {
+  const { schedules = [] } = props;
+  return Array.from(schedules).map((scheduleObj, idx) => {
+    return <TimeCard meetSchedule={scheduleObj} key={`tc_${idx}`} />;
+  });
 }
 
 const mapStateToProps = state => {
