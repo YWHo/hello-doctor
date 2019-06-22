@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import { getSchedules } from '../../state/selectors';
 import DateSelector from '../DateSelector';
 import NavBar from '../NavBar';
@@ -30,6 +31,10 @@ function showTimeCards(props) {
     return <TimeCard meetSchedule={scheduleObj} key={`tc_${idx}`} />;
   });
 }
+
+AppointmentPage.propTypes = {
+  schedules: PropTypes.arrayOf(PropTypes.object)
+};
 
 const mapStateToProps = state => {
   return {

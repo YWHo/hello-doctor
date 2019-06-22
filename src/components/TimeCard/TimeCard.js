@@ -1,9 +1,15 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import TimeSlots from '../TimeSlots';
 import { filterTimeSlotByPartOfDay } from '../../shared/dateHelper';
 import { getSelectedDayPart } from '../../state/selectors';
+import {
+  DAY_AFTERNOON,
+  DAY_EVENING,
+  DAY_MORNING
+} from '../../shared/constants';
 
 const Container = styled.div`
   background-color: #fff;
@@ -42,7 +48,7 @@ const TextFrame = styled.div`
 `;
 
 export function TimeCard(props) {
-  const { meetSchedule, selectedDayPart } = props;
+  const { meetSchedule, selectedDayPart = DAY_MORNING } = props;
   const {
     Name: name,
     Title: title,
@@ -66,6 +72,11 @@ export function TimeCard(props) {
     </Container>
   );
 }
+
+TimeCard.propTypes = {
+  meetSchedule: PropTypes.object.isRequired,
+  selectedDayPart: PropTypes.oneOf([DAY_MORNING, DAY_AFTERNOON, DAY_EVENING])
+};
 
 const mapStateToProps = state => {
   return {

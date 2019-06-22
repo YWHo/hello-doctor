@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
 import dayjs from 'dayjs';
+import PropTypes from 'prop-types';
 
 const ContainerNoAppointment = styled.div`
   margin-top: 25.19px;
@@ -91,6 +92,10 @@ export function TimeSlots(props) {
     );
   }
 }
+
+TimeSlots.propTypes = {
+  availableSlots: PropTypes.object
+};
 
 const mapStateToProps = state => {
   return {};

@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import {
   DAY_MORNING,
   DAY_AFTERNOON,
@@ -128,6 +129,13 @@ function onDayPartClicked(props, dayPart) {
   const { dSaveSelectedDayPart } = props;
   dSaveSelectedDayPart(dayPart);
 }
+
+PartsOfDayBar.propTypes = {
+  hasMorningTime: PropTypes.bool,
+  hasAfternoonTime: PropTypes.bool,
+  hasEveningTime: PropTypes.bool,
+  selectedDayPart: PropTypes.oneOf([DAY_MORNING, DAY_AFTERNOON, DAY_EVENING])
+};
 
 const mapStateToProps = state => {
   return {

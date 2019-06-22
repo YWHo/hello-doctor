@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
 import dayjs from 'dayjs';
+import PropTypes from 'prop-types';
 import * as actions from '../../state/actions';
 import * as selectors from '../../state/selectors';
 import * as dateHelper from '../../shared/dateHelper';
@@ -92,6 +93,11 @@ function onDayClicked(props, day) {
   const { dSaveSelectedDate } = props;
   dSaveSelectedDate(dayjs(day));
 }
+
+DaySlots.propTypes = {
+  selectedDate: PropTypes.object,
+  today: PropTypes.object
+};
 
 const mapStateToProps = state => {
   return {

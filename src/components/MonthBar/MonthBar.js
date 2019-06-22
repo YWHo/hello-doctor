@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
 import dayjs from 'dayjs';
+import PropTypes from 'prop-types';
 import calendarIcon from '../../assets/calendar_icon.svg';
 import * as selectors from '../../state/selectors';
 
@@ -38,6 +39,10 @@ export function MonthBar(props) {
     </Container>
   );
 }
+
+MonthBar.propTypes = {
+  selectedDate: PropTypes.object
+};
 
 const mapStateToProps = state => {
   return {
