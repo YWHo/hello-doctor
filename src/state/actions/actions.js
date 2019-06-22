@@ -86,6 +86,13 @@ export function saveSelectedDayPart(selectedDayPart) {
   };
 }
 
+export function saveselectedTimeID(selectedTimeID) {
+  return {
+    type: constants.SAVE_SELECTED_TIME_ID,
+    payload: { selectedTimeID }
+  };
+}
+
 export function toFetchSchedules(date) {
   return dispatch => {
     return fetchSchedule(date)

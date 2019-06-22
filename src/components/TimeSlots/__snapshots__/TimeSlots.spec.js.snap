@@ -13,6 +13,8 @@ exports[`DaySlots render based on the given schedule 1`] = `
   <styled.div>
     <styled.button
       key="tb_0"
+      onClick={[Function]}
+      selected={false}
     >
       <styled.div>
         9:45
@@ -20,6 +22,8 @@ exports[`DaySlots render based on the given schedule 1`] = `
     </styled.button>
     <styled.button
       key="tb_1"
+      onClick={[Function]}
+      selected={false}
     >
       <styled.div>
         10:00
@@ -27,6 +31,8 @@ exports[`DaySlots render based on the given schedule 1`] = `
     </styled.button>
     <styled.button
       key="tb_2"
+      onClick={[Function]}
+      selected={false}
     >
       <styled.div>
         10:15

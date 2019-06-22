@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import styled from 'styled-components';
 import dayjs from 'dayjs';
 import PropTypes from 'prop-types';
+import { getSelectedTimeID } from '../../state/selectors';
+import { saveselectedTimeID } from '../../state/actions';
 
 const ContainerNoAppointment = styled.div`
   margin-top: 25.19px;
@@ -44,7 +46,7 @@ const ContainerInner = styled.div`
 
 const ButtonOfTime = styled.button`
   background-color: #f7f7f7;
-  border: none;
+  border: ${props => (props.selected ? '1px solid #8d8d8d' : 'none')};
   border-radius: 25px;
   margin-right: 10px;
   height: 37.95px;
@@ -68,11 +70,17 @@ const TextOfTime = styled.div`
 `;
 
 export function TimeSlots(props) {
-  const { availableSlots = {} } = props;
-  const slots = Object.keys(availableSlots).map((keyID, idx) => {
-    const timeStr = dayjs(availableSlots[keyID]).format('H:mm');
+  const { availableSlots = {}, selectedTimeID } = props;
+  const slots = Object.keys(availableSlots).map((timeID, idx) => {
+    const timeStr = dayjs(availableSlots[timeID]).format('H:mm');
     return (
-      <ButtonOfTime key={`tb_${idx}`}>
+      <ButtonOfTime
+        key={`tb_${idx}`}
+        selected={timeID === selectedTimeID}
+        onClick={() => {
+          onButtonClicked(props, timeID);
+        }}
+      >
         <TextOfTime>{timeStr}</TextOfTime>
       </ButtonOfTime>
     );
@@ -93,16 +101,25 @@ export function TimeSlots(props) {
   }
 }
 
+function onButtonClicked(props, timeID) {
+  const { dSaveselectedTimeID } = props;
+  dSaveselectedTimeID(timeID);
+}
+
 TimeSlots.propTypes = {
   availableSlots: PropTypes.object
 };
 
 const mapStateToProps = state => {
-  return {};
+  return {
+    selectedTimeID: getSelectedTimeID(state)
+  };
 };
 
 function mapDispatchToProps(dispatch) {
-  return {};
+  return {
+    dSaveselectedTimeID: value => dispatch(saveselectedTimeID(value))
+  };
 }
 
 export default connect(

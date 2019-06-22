@@ -24,10 +24,8 @@ const Button = styled.button`
   height: 38px;
   background-color: inherit;
   color: #fff;
-  border-color: #fff;
-  border-style: ${props => (props.selected ? 'solid' : 'none')};
+  border: ${props => (props.selected ? '1px solid #fff' : 'none')};
   border-radius: 50px;
-  border-width: 1px;
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
   font-weight: 300;
