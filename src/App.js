@@ -37,7 +37,7 @@ const mapStateToProps = state => {
 
 function mapDispatchToProps(dispatch) {
   return {
-    dToFetchSchedules: dateStr => dispatch(actions.toFetchSchedules(dateStr))
+    dToFetchSchedules: date => dispatch(actions.toFetchSchedules(date))
   };
 }
 

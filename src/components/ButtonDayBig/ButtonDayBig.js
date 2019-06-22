@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
 import dayjs from 'dayjs';
+import assert from 'assert';
 import PropTypes from 'prop-types';
 import * as actions from '../../state/actions';
 import * as selectors from '../../state/selectors';
@@ -51,6 +52,10 @@ const WeekDayName = styled.div`
 
 export function ButtonDayBig(props) {
   const { dateStr, selectedDate = dayjs(), today = dayjs() } = props;
+  assert(
+    /^\d{4}-\d{2}-\d{2}$/.test(dateStr),
+    'must be in the format of YYYY-MM-DD'
+  );
   const nameRef = useRef(dateStr);
   const todayStr = dayjs(today).format('YYYY-MM-DD');
   const tmpDate = dayjs(dateStr);
