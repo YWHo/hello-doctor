@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
 import dayjs from 'dayjs';
@@ -51,12 +51,24 @@ const WeekDayName = styled.div`
 
 export function ButtonDayBig(props) {
   const { dateStr, selectedDate = dayjs(), today = dayjs() } = props;
+  const nameRef = useRef(dateStr);
   const todayStr = dayjs(today).format('YYYY-MM-DD');
   const tmpDate = dayjs(dateStr);
   const selected = dateStr === dayjs(selectedDate).format('YYYY-MM-DD');
   const disabled = dayjs(dateStr).isBefore(dayjs(todayStr));
+
+  useEffect(() => {
+    if (selected) {
+      nameRef.current.scrollIntoView({
+        behavior: 'auto',
+        block: 'nearest',
+        inline: 'center'
+      });
+    }
+  }, [selected, selectedDate]);
   return (
     <ButtonCircle
+      ref={nameRef}
       disabled={disabled}
       selected={selected}
       onClick={() => onDayClicked(props, dateStr)}
