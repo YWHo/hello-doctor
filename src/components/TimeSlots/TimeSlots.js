@@ -29,7 +29,7 @@ const ContainerOuter = styled.div`
   display: block;
   margin-top: 4px;
   padding-top: 12px;
-  height: 49.95px;
+  height: 50px;
   width: 100%;
   overflow: hidden;
   white-space: nowrap;
@@ -37,7 +37,7 @@ const ContainerOuter = styled.div`
 
 const ContainerInner = styled.div`
   display: block;
-  height: 53.95px;
+  height: 55px;
   overflow-x: auto;
   overflow-y: hidden;
   padding: 0;
