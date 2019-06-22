@@ -1,28 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`NavBar render correctly 1`] = `
-<div
-  className="sc-bdVaJa iHPEZw"
->
-  <button
-    className="sc-bwzfXH lbpgZt"
-  >
+<styled.div>
+  <styled.button>
     <img
       alt="Go Back"
       src="icon_go_back.svg"
     />
-  </button>
+  </styled.button>
   <img
     alt="Vensa"
     src="vensa_logo.svg"
   />
-  <button
-    className="sc-htpNat bnTCTa"
-  >
+  <styled.button>
     <img
       alt="Help"
       src="icon_help.svg"
     />
-  </button>
-</div>
+  </styled.button>
+</styled.div>
 `;

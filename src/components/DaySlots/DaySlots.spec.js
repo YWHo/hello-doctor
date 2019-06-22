@@ -1,13 +1,16 @@
 import React from 'react';
 import dayjs from 'dayjs';
+import { shallow } from 'enzyme';
 import { DaySlots } from './DaySlots';
-import renderer from 'react-test-renderer';
 
 describe('DaySlots', () => {
   it('render correctly', () => {
-    const component = renderer.create(
-      <DaySlots selectedDate={dayjs('2019-06-19')} />
+    const wrapper = shallow(
+      <DaySlots
+        selectedDate={dayjs('2019-06-19')}
+        today={dayjs('2019-06-16')}
+      />
     );
-    expect(component.toJSON()).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 });

@@ -61,9 +61,9 @@ const WeekDayName = styled.div`
 `;
 
 export function DaySlots(props) {
-  const { selectedDate = dayjs() } = props;
+  const { selectedDate = dayjs(), today = dayjs() } = props;
 
-  const days = dateHelper.getDatesInThreeMonthsFrom();
+  const days = dateHelper.getDatesInThreeMonthsFrom(today.format('YYYY-MM-DD'));
   const dateList = days.map((day, idx) => {
     const tmpDate = dayjs(day);
     const selected = day === dayjs(selectedDate).format('YYYY-MM-DD');

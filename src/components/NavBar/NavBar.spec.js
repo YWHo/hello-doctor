@@ -1,11 +1,10 @@
 import React from 'react';
+import { shallow } from 'enzyme';
 import NavBar from './NavBar';
-
-import renderer from 'react-test-renderer';
 
 describe('NavBar', () => {
   it('render correctly', () => {
-    const component = renderer.create(<NavBar />);
-    expect(component.toJSON()).toMatchSnapshot();
+    const wrapper = shallow(<NavBar />);
+    expect(wrapper).toMatchSnapshot();
   });
 });

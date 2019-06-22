@@ -1,18 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`NavBar render correctly 1`] = `
-<div
-  className="sc-bdVaJa bsHrhQ"
->
-  <div
-    className="sc-bwzfXH kmgaIr"
-  >
+<styled.div>
+  <styled.div>
     JUNE
-  </div>
-  <img
+  </styled.div>
+  <styled.img
     alt="Calendar"
-    className="sc-htpNat likzWq"
     src="calendar_icon.svg"
   />
-</div>
+</styled.div>
 `;

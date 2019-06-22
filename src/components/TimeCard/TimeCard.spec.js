@@ -45,4 +45,13 @@ describe('RegisterPage', () => {
     );
     expect(wrapper).toMatchSnapshot();
   });
+
+  it('render no time available correctly', () => {
+    const emptyScheduleObj = {
+      ...scheduleObj,
+      AvailableSlots: {}
+    };
+    const wrapper = shallow(<TimeCard meetSchedule={emptyScheduleObj} />);
+    expect(wrapper).toMatchSnapshot();
+  });
 });

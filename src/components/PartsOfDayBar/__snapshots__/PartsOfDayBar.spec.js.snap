@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DaySlots render correctly 1`] = `
+<styled.div>
+  <styled.button
+    disabled={true}
+    onClick={[Function]}
+  >
+    Morning
+  </styled.button>
+  <styled.button
+    disabled={true}
+    onClick={[Function]}
+  >
+    Afternoon
+  </styled.button>
+  <styled.button
+    disabled={true}
+    onClick={[Function]}
+  >
+    Evening
+  </styled.button>
+</styled.div>
+`;

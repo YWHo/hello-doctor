@@ -26,6 +26,26 @@ exports[`RegisterPage render default correctly 1`] = `
 </styled.div>
 `;
 
+exports[`RegisterPage render no time available correctly 1`] = `
+<styled.div>
+  <styled.img
+    alt="Doctor's photo"
+    src="https://frontendchallenge2019.azurewebsites.net//api/Picture/40abb954-2f57-4106-61ec-ddf2acfbf8ed"
+  />
+  <styled.div>
+    <styled.div>
+      Dr. Mary Aniston
+    </styled.div>
+    <styled.div>
+      General Practitioner
+    </styled.div>
+  </styled.div>
+  <Connect(TimeSlots)
+    availableSlots={Object {}}
+  />
+</styled.div>
+`;
+
 exports[`RegisterPage render to start from afternoon correctly 1`] = `
 <styled.div>
   <styled.img

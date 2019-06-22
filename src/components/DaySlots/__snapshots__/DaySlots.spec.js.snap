@@ -1,1148 +1,1240 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`DaySlots render correctly 1`] = `
-<div
-  className="sc-bdVaJa cqEXRB"
->
-  <div
-    className="sc-bwzfXH kfdVx"
-  >
-    <button
-      className="sc-htpNat icEART"
+<styled.div>
+  <styled.div>
+    <styled.button
+      key="dateCi_0"
       onClick={[Function]}
       selected={false}
     >
-      <div
-        className="sc-bxivhb gryOGk"
-      >
-        22
-      </div>
-      <div
-        className="sc-ifAKCX jyGSsx"
-      >
-        sat
-      </div>
-    </button>
-    <button
-      className="sc-htpNat icEART"
-      onClick={[Function]}
-      selected={false}
-    >
-      <div
-        className="sc-bxivhb gryOGk"
-      >
-        23
-      </div>
-      <div
-        className="sc-ifAKCX jyGSsx"
-      >
-        sun
-      </div>
-    </button>
-    <button
-      className="sc-htpNat icEART"
-      onClick={[Function]}
-      selected={false}
-    >
-      <div
-        className="sc-bxivhb gryOGk"
-      >
-        24
-      </div>
-      <div
-        className="sc-ifAKCX jyGSsx"
-      >
-        mon
-      </div>
-    </button>
-    <button
-      className="sc-htpNat icEART"
-      onClick={[Function]}
-      selected={false}
-    >
-      <div
-        className="sc-bxivhb gryOGk"
-      >
-        25
-      </div>
-      <div
-        className="sc-ifAKCX jyGSsx"
-      >
-        tue
-      </div>
-    </button>
-    <button
-      className="sc-htpNat icEART"
-      onClick={[Function]}
-      selected={false}
-    >
-      <div
-        className="sc-bxivhb gryOGk"
-      >
-        26
-      </div>
-      <div
-        className="sc-ifAKCX jyGSsx"
-      >
-        wed
-      </div>
-    </button>
-    <button
-      className="sc-htpNat icEART"
-      onClick={[Function]}
-      selected={false}
-    >
-      <div
-        className="sc-bxivhb gryOGk"
-      >
-        27
-      </div>
-      <div
-        className="sc-ifAKCX jyGSsx"
-      >
-        thu
-      </div>
-    </button>
-    <button
-      className="sc-htpNat icEART"
-      onClick={[Function]}
-      selected={false}
-    >
-      <div
-        className="sc-bxivhb gryOGk"
-      >
-        28
-      </div>
-      <div
-        className="sc-ifAKCX jyGSsx"
-      >
-        fri
-      </div>
-    </button>
-    <button
-      className="sc-htpNat icEART"
-      onClick={[Function]}
-      selected={false}
-    >
-      <div
-        className="sc-bxivhb gryOGk"
-      >
-        29
-      </div>
-      <div
-        className="sc-ifAKCX jyGSsx"
-      >
-        sat
-      </div>
-    </button>
-    <button
-      className="sc-htpNat icEART"
-      onClick={[Function]}
-      selected={false}
-    >
-      <div
-        className="sc-bxivhb gryOGk"
-      >
-        30
-      </div>
-      <div
-        className="sc-ifAKCX jyGSsx"
-      >
-        sun
-      </div>
-    </button>
-    <button
-      className="sc-htpNat icEART"
-      onClick={[Function]}
-      selected={false}
-    >
-      <div
-        className="sc-bxivhb gryOGk"
-      >
-        1
-      </div>
-      <div
-        className="sc-ifAKCX jyGSsx"
-      >
-        mon
-      </div>
-    </button>
-    <button
-      className="sc-htpNat icEART"
-      onClick={[Function]}
-      selected={false}
-    >
-      <div
-        className="sc-bxivhb gryOGk"
-      >
-        2
-      </div>
-      <div
-        className="sc-ifAKCX jyGSsx"
-      >
-        tue
-      </div>
-    </button>
-    <button
-      className="sc-htpNat icEART"
-      onClick={[Function]}
-      selected={false}
-    >
-      <div
-        className="sc-bxivhb gryOGk"
-      >
-        3
-      </div>
-      <div
-        className="sc-ifAKCX jyGSsx"
-      >
-        wed
-      </div>
-    </button>
-    <button
-      className="sc-htpNat icEART"
-      onClick={[Function]}
-      selected={false}
-    >
-      <div
-        className="sc-bxivhb gryOGk"
-      >
-        4
-      </div>
-      <div
-        className="sc-ifAKCX jyGSsx"
-      >
-        thu
-      </div>
-    </button>
-    <button
-      className="sc-htpNat icEART"
-      onClick={[Function]}
-      selected={false}
-    >
-      <div
-        className="sc-bxivhb gryOGk"
-      >
-        5
-      </div>
-      <div
-        className="sc-ifAKCX jyGSsx"
-      >
-        fri
-      </div>
-    </button>
-    <button
-      className="sc-htpNat icEART"
-      onClick={[Function]}
-      selected={false}
-    >
-      <div
-        className="sc-bxivhb gryOGk"
-      >
-        6
-      </div>
-      <div
-        className="sc-ifAKCX jyGSsx"
-      >
-        sat
-      </div>
-    </button>
-    <button
-      className="sc-htpNat icEART"
-      onClick={[Function]}
-      selected={false}
-    >
-      <div
-        className="sc-bxivhb gryOGk"
-      >
-        7
-      </div>
-      <div
-        className="sc-ifAKCX jyGSsx"
-      >
-        sun
-      </div>
-    </button>
-    <button
-      className="sc-htpNat icEART"
-      onClick={[Function]}
-      selected={false}
-    >
-      <div
-        className="sc-bxivhb gryOGk"
-      >
-        8
-      </div>
-      <div
-        className="sc-ifAKCX jyGSsx"
-      >
-        mon
-      </div>
-    </button>
-    <button
-      className="sc-htpNat icEART"
-      onClick={[Function]}
-      selected={false}
-    >
-      <div
-        className="sc-bxivhb gryOGk"
-      >
-        9
-      </div>
-      <div
-        className="sc-ifAKCX jyGSsx"
-      >
-        tue
-      </div>
-    </button>
-    <button
-      className="sc-htpNat icEART"
-      onClick={[Function]}
-      selected={false}
-    >
-      <div
-        className="sc-bxivhb gryOGk"
-      >
-        10
-      </div>
-      <div
-        className="sc-ifAKCX jyGSsx"
-      >
-        wed
-      </div>
-    </button>
-    <button
-      className="sc-htpNat icEART"
-      onClick={[Function]}
-      selected={false}
-    >
-      <div
-        className="sc-bxivhb gryOGk"
-      >
-        11
-      </div>
-      <div
-        className="sc-ifAKCX jyGSsx"
-      >
-        thu
-      </div>
-    </button>
-    <button
-      className="sc-htpNat icEART"
-      onClick={[Function]}
-      selected={false}
-    >
-      <div
-        className="sc-bxivhb gryOGk"
-      >
-        12
-      </div>
-      <div
-        className="sc-ifAKCX jyGSsx"
-      >
-        fri
-      </div>
-    </button>
-    <button
-      className="sc-htpNat icEART"
-      onClick={[Function]}
-      selected={false}
-    >
-      <div
-        className="sc-bxivhb gryOGk"
-      >
-        13
-      </div>
-      <div
-        className="sc-ifAKCX jyGSsx"
-      >
-        sat
-      </div>
-    </button>
-    <button
-      className="sc-htpNat icEART"
-      onClick={[Function]}
-      selected={false}
-    >
-      <div
-        className="sc-bxivhb gryOGk"
-      >
-        14
-      </div>
-      <div
-        className="sc-ifAKCX jyGSsx"
-      >
-        sun
-      </div>
-    </button>
-    <button
-      className="sc-htpNat icEART"
-      onClick={[Function]}
-      selected={false}
-    >
-      <div
-        className="sc-bxivhb gryOGk"
-      >
-        15
-      </div>
-      <div
-        className="sc-ifAKCX jyGSsx"
-      >
-        mon
-      </div>
-    </button>
-    <button
-      className="sc-htpNat icEART"
-      onClick={[Function]}
-      selected={false}
-    >
-      <div
-        className="sc-bxivhb gryOGk"
+      <styled.div
+        key="dateNu_0"
       >
         16
-      </div>
-      <div
-        className="sc-ifAKCX jyGSsx"
+      </styled.div>
+      <styled.div
+        key="weekDa_0"
       >
-        tue
-      </div>
-    </button>
-    <button
-      className="sc-htpNat icEART"
+        sun
+      </styled.div>
+    </styled.button>
+    <styled.button
+      key="dateCi_1"
       onClick={[Function]}
       selected={false}
     >
-      <div
-        className="sc-bxivhb gryOGk"
+      <styled.div
+        key="dateNu_1"
       >
         17
-      </div>
-      <div
-        className="sc-ifAKCX jyGSsx"
+      </styled.div>
+      <styled.div
+        key="weekDa_1"
       >
-        wed
-      </div>
-    </button>
-    <button
-      className="sc-htpNat icEART"
+        mon
+      </styled.div>
+    </styled.button>
+    <styled.button
+      key="dateCi_2"
       onClick={[Function]}
       selected={false}
     >
-      <div
-        className="sc-bxivhb gryOGk"
+      <styled.div
+        key="dateNu_2"
       >
         18
-      </div>
-      <div
-        className="sc-ifAKCX jyGSsx"
+      </styled.div>
+      <styled.div
+        key="weekDa_2"
       >
-        thu
-      </div>
-    </button>
-    <button
-      className="sc-htpNat icEART"
+        tue
+      </styled.div>
+    </styled.button>
+    <styled.button
+      key="dateCi_3"
       onClick={[Function]}
-      selected={false}
+      selected={true}
     >
-      <div
-        className="sc-bxivhb gryOGk"
+      <styled.div
+        key="dateNu_3"
       >
         19
-      </div>
-      <div
-        className="sc-ifAKCX jyGSsx"
+      </styled.div>
+      <styled.div
+        key="weekDa_3"
       >
-        fri
-      </div>
-    </button>
-    <button
-      className="sc-htpNat icEART"
+        wed
+      </styled.div>
+    </styled.button>
+    <styled.button
+      key="dateCi_4"
       onClick={[Function]}
       selected={false}
     >
-      <div
-        className="sc-bxivhb gryOGk"
+      <styled.div
+        key="dateNu_4"
       >
         20
-      </div>
-      <div
-        className="sc-ifAKCX jyGSsx"
-      >
-        sat
-      </div>
-    </button>
-    <button
-      className="sc-htpNat icEART"
-      onClick={[Function]}
-      selected={false}
-    >
-      <div
-        className="sc-bxivhb gryOGk"
-      >
-        21
-      </div>
-      <div
-        className="sc-ifAKCX jyGSsx"
-      >
-        sun
-      </div>
-    </button>
-    <button
-      className="sc-htpNat icEART"
-      onClick={[Function]}
-      selected={false}
-    >
-      <div
-        className="sc-bxivhb gryOGk"
-      >
-        22
-      </div>
-      <div
-        className="sc-ifAKCX jyGSsx"
-      >
-        mon
-      </div>
-    </button>
-    <button
-      className="sc-htpNat icEART"
-      onClick={[Function]}
-      selected={false}
-    >
-      <div
-        className="sc-bxivhb gryOGk"
-      >
-        23
-      </div>
-      <div
-        className="sc-ifAKCX jyGSsx"
-      >
-        tue
-      </div>
-    </button>
-    <button
-      className="sc-htpNat icEART"
-      onClick={[Function]}
-      selected={false}
-    >
-      <div
-        className="sc-bxivhb gryOGk"
-      >
-        24
-      </div>
-      <div
-        className="sc-ifAKCX jyGSsx"
-      >
-        wed
-      </div>
-    </button>
-    <button
-      className="sc-htpNat icEART"
-      onClick={[Function]}
-      selected={false}
-    >
-      <div
-        className="sc-bxivhb gryOGk"
-      >
-        25
-      </div>
-      <div
-        className="sc-ifAKCX jyGSsx"
+      </styled.div>
+      <styled.div
+        key="weekDa_4"
       >
         thu
-      </div>
-    </button>
-    <button
-      className="sc-htpNat icEART"
+      </styled.div>
+    </styled.button>
+    <styled.button
+      key="dateCi_5"
       onClick={[Function]}
       selected={false}
     >
-      <div
-        className="sc-bxivhb gryOGk"
+      <styled.div
+        key="dateNu_5"
       >
-        26
-      </div>
-      <div
-        className="sc-ifAKCX jyGSsx"
+        21
+      </styled.div>
+      <styled.div
+        key="weekDa_5"
       >
         fri
-      </div>
-    </button>
-    <button
-      className="sc-htpNat icEART"
+      </styled.div>
+    </styled.button>
+    <styled.button
+      key="dateCi_6"
       onClick={[Function]}
       selected={false}
     >
-      <div
-        className="sc-bxivhb gryOGk"
+      <styled.div
+        key="dateNu_6"
       >
-        27
-      </div>
-      <div
-        className="sc-ifAKCX jyGSsx"
+        22
+      </styled.div>
+      <styled.div
+        key="weekDa_6"
       >
         sat
-      </div>
-    </button>
-    <button
-      className="sc-htpNat icEART"
+      </styled.div>
+    </styled.button>
+    <styled.button
+      key="dateCi_7"
       onClick={[Function]}
       selected={false}
     >
-      <div
-        className="sc-bxivhb gryOGk"
+      <styled.div
+        key="dateNu_7"
       >
-        28
-      </div>
-      <div
-        className="sc-ifAKCX jyGSsx"
+        23
+      </styled.div>
+      <styled.div
+        key="weekDa_7"
       >
         sun
-      </div>
-    </button>
-    <button
-      className="sc-htpNat icEART"
+      </styled.div>
+    </styled.button>
+    <styled.button
+      key="dateCi_8"
       onClick={[Function]}
       selected={false}
     >
-      <div
-        className="sc-bxivhb gryOGk"
+      <styled.div
+        key="dateNu_8"
       >
-        29
-      </div>
-      <div
-        className="sc-ifAKCX jyGSsx"
+        24
+      </styled.div>
+      <styled.div
+        key="weekDa_8"
       >
         mon
-      </div>
-    </button>
-    <button
-      className="sc-htpNat icEART"
+      </styled.div>
+    </styled.button>
+    <styled.button
+      key="dateCi_9"
       onClick={[Function]}
       selected={false}
     >
-      <div
-        className="sc-bxivhb gryOGk"
+      <styled.div
+        key="dateNu_9"
       >
-        30
-      </div>
-      <div
-        className="sc-ifAKCX jyGSsx"
+        25
+      </styled.div>
+      <styled.div
+        key="weekDa_9"
       >
         tue
-      </div>
-    </button>
-    <button
-      className="sc-htpNat icEART"
+      </styled.div>
+    </styled.button>
+    <styled.button
+      key="dateCi_10"
       onClick={[Function]}
       selected={false}
     >
-      <div
-        className="sc-bxivhb gryOGk"
+      <styled.div
+        key="dateNu_10"
       >
-        31
-      </div>
-      <div
-        className="sc-ifAKCX jyGSsx"
+        26
+      </styled.div>
+      <styled.div
+        key="weekDa_10"
       >
         wed
-      </div>
-    </button>
-    <button
-      className="sc-htpNat icEART"
+      </styled.div>
+    </styled.button>
+    <styled.button
+      key="dateCi_11"
       onClick={[Function]}
       selected={false}
     >
-      <div
-        className="sc-bxivhb gryOGk"
+      <styled.div
+        key="dateNu_11"
+      >
+        27
+      </styled.div>
+      <styled.div
+        key="weekDa_11"
+      >
+        thu
+      </styled.div>
+    </styled.button>
+    <styled.button
+      key="dateCi_12"
+      onClick={[Function]}
+      selected={false}
+    >
+      <styled.div
+        key="dateNu_12"
+      >
+        28
+      </styled.div>
+      <styled.div
+        key="weekDa_12"
+      >
+        fri
+      </styled.div>
+    </styled.button>
+    <styled.button
+      key="dateCi_13"
+      onClick={[Function]}
+      selected={false}
+    >
+      <styled.div
+        key="dateNu_13"
+      >
+        29
+      </styled.div>
+      <styled.div
+        key="weekDa_13"
+      >
+        sat
+      </styled.div>
+    </styled.button>
+    <styled.button
+      key="dateCi_14"
+      onClick={[Function]}
+      selected={false}
+    >
+      <styled.div
+        key="dateNu_14"
+      >
+        30
+      </styled.div>
+      <styled.div
+        key="weekDa_14"
+      >
+        sun
+      </styled.div>
+    </styled.button>
+    <styled.button
+      key="dateCi_15"
+      onClick={[Function]}
+      selected={false}
+    >
+      <styled.div
+        key="dateNu_15"
       >
         1
-      </div>
-      <div
-        className="sc-ifAKCX jyGSsx"
+      </styled.div>
+      <styled.div
+        key="weekDa_15"
       >
-        thu
-      </div>
-    </button>
-    <button
-      className="sc-htpNat icEART"
+        mon
+      </styled.div>
+    </styled.button>
+    <styled.button
+      key="dateCi_16"
       onClick={[Function]}
       selected={false}
     >
-      <div
-        className="sc-bxivhb gryOGk"
+      <styled.div
+        key="dateNu_16"
       >
         2
-      </div>
-      <div
-        className="sc-ifAKCX jyGSsx"
+      </styled.div>
+      <styled.div
+        key="weekDa_16"
       >
-        fri
-      </div>
-    </button>
-    <button
-      className="sc-htpNat icEART"
+        tue
+      </styled.div>
+    </styled.button>
+    <styled.button
+      key="dateCi_17"
       onClick={[Function]}
       selected={false}
     >
-      <div
-        className="sc-bxivhb gryOGk"
+      <styled.div
+        key="dateNu_17"
       >
         3
-      </div>
-      <div
-        className="sc-ifAKCX jyGSsx"
+      </styled.div>
+      <styled.div
+        key="weekDa_17"
       >
-        sat
-      </div>
-    </button>
-    <button
-      className="sc-htpNat icEART"
+        wed
+      </styled.div>
+    </styled.button>
+    <styled.button
+      key="dateCi_18"
       onClick={[Function]}
       selected={false}
     >
-      <div
-        className="sc-bxivhb gryOGk"
+      <styled.div
+        key="dateNu_18"
       >
         4
-      </div>
-      <div
-        className="sc-ifAKCX jyGSsx"
+      </styled.div>
+      <styled.div
+        key="weekDa_18"
       >
-        sun
-      </div>
-    </button>
-    <button
-      className="sc-htpNat icEART"
+        thu
+      </styled.div>
+    </styled.button>
+    <styled.button
+      key="dateCi_19"
       onClick={[Function]}
       selected={false}
     >
-      <div
-        className="sc-bxivhb gryOGk"
+      <styled.div
+        key="dateNu_19"
       >
         5
-      </div>
-      <div
-        className="sc-ifAKCX jyGSsx"
+      </styled.div>
+      <styled.div
+        key="weekDa_19"
       >
-        mon
-      </div>
-    </button>
-    <button
-      className="sc-htpNat icEART"
+        fri
+      </styled.div>
+    </styled.button>
+    <styled.button
+      key="dateCi_20"
       onClick={[Function]}
       selected={false}
     >
-      <div
-        className="sc-bxivhb gryOGk"
+      <styled.div
+        key="dateNu_20"
       >
         6
-      </div>
-      <div
-        className="sc-ifAKCX jyGSsx"
+      </styled.div>
+      <styled.div
+        key="weekDa_20"
       >
-        tue
-      </div>
-    </button>
-    <button
-      className="sc-htpNat icEART"
+        sat
+      </styled.div>
+    </styled.button>
+    <styled.button
+      key="dateCi_21"
       onClick={[Function]}
       selected={false}
     >
-      <div
-        className="sc-bxivhb gryOGk"
+      <styled.div
+        key="dateNu_21"
       >
         7
-      </div>
-      <div
-        className="sc-ifAKCX jyGSsx"
+      </styled.div>
+      <styled.div
+        key="weekDa_21"
       >
-        wed
-      </div>
-    </button>
-    <button
-      className="sc-htpNat icEART"
+        sun
+      </styled.div>
+    </styled.button>
+    <styled.button
+      key="dateCi_22"
       onClick={[Function]}
       selected={false}
     >
-      <div
-        className="sc-bxivhb gryOGk"
+      <styled.div
+        key="dateNu_22"
       >
         8
-      </div>
-      <div
-        className="sc-ifAKCX jyGSsx"
+      </styled.div>
+      <styled.div
+        key="weekDa_22"
       >
-        thu
-      </div>
-    </button>
-    <button
-      className="sc-htpNat icEART"
+        mon
+      </styled.div>
+    </styled.button>
+    <styled.button
+      key="dateCi_23"
       onClick={[Function]}
       selected={false}
     >
-      <div
-        className="sc-bxivhb gryOGk"
+      <styled.div
+        key="dateNu_23"
       >
         9
-      </div>
-      <div
-        className="sc-ifAKCX jyGSsx"
+      </styled.div>
+      <styled.div
+        key="weekDa_23"
       >
-        fri
-      </div>
-    </button>
-    <button
-      className="sc-htpNat icEART"
+        tue
+      </styled.div>
+    </styled.button>
+    <styled.button
+      key="dateCi_24"
       onClick={[Function]}
       selected={false}
     >
-      <div
-        className="sc-bxivhb gryOGk"
+      <styled.div
+        key="dateNu_24"
       >
         10
-      </div>
-      <div
-        className="sc-ifAKCX jyGSsx"
+      </styled.div>
+      <styled.div
+        key="weekDa_24"
       >
-        sat
-      </div>
-    </button>
-    <button
-      className="sc-htpNat icEART"
+        wed
+      </styled.div>
+    </styled.button>
+    <styled.button
+      key="dateCi_25"
       onClick={[Function]}
       selected={false}
     >
-      <div
-        className="sc-bxivhb gryOGk"
+      <styled.div
+        key="dateNu_25"
       >
         11
-      </div>
-      <div
-        className="sc-ifAKCX jyGSsx"
+      </styled.div>
+      <styled.div
+        key="weekDa_25"
       >
-        sun
-      </div>
-    </button>
-    <button
-      className="sc-htpNat icEART"
+        thu
+      </styled.div>
+    </styled.button>
+    <styled.button
+      key="dateCi_26"
       onClick={[Function]}
       selected={false}
     >
-      <div
-        className="sc-bxivhb gryOGk"
+      <styled.div
+        key="dateNu_26"
       >
         12
-      </div>
-      <div
-        className="sc-ifAKCX jyGSsx"
+      </styled.div>
+      <styled.div
+        key="weekDa_26"
       >
-        mon
-      </div>
-    </button>
-    <button
-      className="sc-htpNat icEART"
+        fri
+      </styled.div>
+    </styled.button>
+    <styled.button
+      key="dateCi_27"
       onClick={[Function]}
       selected={false}
     >
-      <div
-        className="sc-bxivhb gryOGk"
+      <styled.div
+        key="dateNu_27"
       >
         13
-      </div>
-      <div
-        className="sc-ifAKCX jyGSsx"
+      </styled.div>
+      <styled.div
+        key="weekDa_27"
       >
-        tue
-      </div>
-    </button>
-    <button
-      className="sc-htpNat icEART"
+        sat
+      </styled.div>
+    </styled.button>
+    <styled.button
+      key="dateCi_28"
       onClick={[Function]}
       selected={false}
     >
-      <div
-        className="sc-bxivhb gryOGk"
+      <styled.div
+        key="dateNu_28"
       >
         14
-      </div>
-      <div
-        className="sc-ifAKCX jyGSsx"
+      </styled.div>
+      <styled.div
+        key="weekDa_28"
       >
-        wed
-      </div>
-    </button>
-    <button
-      className="sc-htpNat icEART"
+        sun
+      </styled.div>
+    </styled.button>
+    <styled.button
+      key="dateCi_29"
       onClick={[Function]}
       selected={false}
     >
-      <div
-        className="sc-bxivhb gryOGk"
+      <styled.div
+        key="dateNu_29"
       >
         15
-      </div>
-      <div
-        className="sc-ifAKCX jyGSsx"
+      </styled.div>
+      <styled.div
+        key="weekDa_29"
       >
-        thu
-      </div>
-    </button>
-    <button
-      className="sc-htpNat icEART"
+        mon
+      </styled.div>
+    </styled.button>
+    <styled.button
+      key="dateCi_30"
       onClick={[Function]}
       selected={false}
     >
-      <div
-        className="sc-bxivhb gryOGk"
+      <styled.div
+        key="dateNu_30"
       >
         16
-      </div>
-      <div
-        className="sc-ifAKCX jyGSsx"
+      </styled.div>
+      <styled.div
+        key="weekDa_30"
       >
-        fri
-      </div>
-    </button>
-    <button
-      className="sc-htpNat icEART"
+        tue
+      </styled.div>
+    </styled.button>
+    <styled.button
+      key="dateCi_31"
       onClick={[Function]}
       selected={false}
     >
-      <div
-        className="sc-bxivhb gryOGk"
+      <styled.div
+        key="dateNu_31"
       >
         17
-      </div>
-      <div
-        className="sc-ifAKCX jyGSsx"
+      </styled.div>
+      <styled.div
+        key="weekDa_31"
       >
-        sat
-      </div>
-    </button>
-    <button
-      className="sc-htpNat icEART"
+        wed
+      </styled.div>
+    </styled.button>
+    <styled.button
+      key="dateCi_32"
       onClick={[Function]}
       selected={false}
     >
-      <div
-        className="sc-bxivhb gryOGk"
+      <styled.div
+        key="dateNu_32"
       >
         18
-      </div>
-      <div
-        className="sc-ifAKCX jyGSsx"
+      </styled.div>
+      <styled.div
+        key="weekDa_32"
       >
-        sun
-      </div>
-    </button>
-    <button
-      className="sc-htpNat icEART"
+        thu
+      </styled.div>
+    </styled.button>
+    <styled.button
+      key="dateCi_33"
       onClick={[Function]}
       selected={false}
     >
-      <div
-        className="sc-bxivhb gryOGk"
+      <styled.div
+        key="dateNu_33"
       >
         19
-      </div>
-      <div
-        className="sc-ifAKCX jyGSsx"
+      </styled.div>
+      <styled.div
+        key="weekDa_33"
       >
-        mon
-      </div>
-    </button>
-    <button
-      className="sc-htpNat icEART"
+        fri
+      </styled.div>
+    </styled.button>
+    <styled.button
+      key="dateCi_34"
       onClick={[Function]}
       selected={false}
     >
-      <div
-        className="sc-bxivhb gryOGk"
+      <styled.div
+        key="dateNu_34"
       >
         20
-      </div>
-      <div
-        className="sc-ifAKCX jyGSsx"
+      </styled.div>
+      <styled.div
+        key="weekDa_34"
       >
-        tue
-      </div>
-    </button>
-    <button
-      className="sc-htpNat icEART"
+        sat
+      </styled.div>
+    </styled.button>
+    <styled.button
+      key="dateCi_35"
       onClick={[Function]}
       selected={false}
     >
-      <div
-        className="sc-bxivhb gryOGk"
+      <styled.div
+        key="dateNu_35"
       >
         21
-      </div>
-      <div
-        className="sc-ifAKCX jyGSsx"
-      >
-        wed
-      </div>
-    </button>
-    <button
-      className="sc-htpNat icEART"
-      onClick={[Function]}
-      selected={false}
-    >
-      <div
-        className="sc-bxivhb gryOGk"
-      >
-        22
-      </div>
-      <div
-        className="sc-ifAKCX jyGSsx"
-      >
-        thu
-      </div>
-    </button>
-    <button
-      className="sc-htpNat icEART"
-      onClick={[Function]}
-      selected={false}
-    >
-      <div
-        className="sc-bxivhb gryOGk"
-      >
-        23
-      </div>
-      <div
-        className="sc-ifAKCX jyGSsx"
-      >
-        fri
-      </div>
-    </button>
-    <button
-      className="sc-htpNat icEART"
-      onClick={[Function]}
-      selected={false}
-    >
-      <div
-        className="sc-bxivhb gryOGk"
-      >
-        24
-      </div>
-      <div
-        className="sc-ifAKCX jyGSsx"
-      >
-        sat
-      </div>
-    </button>
-    <button
-      className="sc-htpNat icEART"
-      onClick={[Function]}
-      selected={false}
-    >
-      <div
-        className="sc-bxivhb gryOGk"
-      >
-        25
-      </div>
-      <div
-        className="sc-ifAKCX jyGSsx"
+      </styled.div>
+      <styled.div
+        key="weekDa_35"
       >
         sun
-      </div>
-    </button>
-    <button
-      className="sc-htpNat icEART"
+      </styled.div>
+    </styled.button>
+    <styled.button
+      key="dateCi_36"
       onClick={[Function]}
       selected={false}
     >
-      <div
-        className="sc-bxivhb gryOGk"
+      <styled.div
+        key="dateNu_36"
       >
-        26
-      </div>
-      <div
-        className="sc-ifAKCX jyGSsx"
+        22
+      </styled.div>
+      <styled.div
+        key="weekDa_36"
       >
         mon
-      </div>
-    </button>
-    <button
-      className="sc-htpNat icEART"
+      </styled.div>
+    </styled.button>
+    <styled.button
+      key="dateCi_37"
       onClick={[Function]}
       selected={false}
     >
-      <div
-        className="sc-bxivhb gryOGk"
+      <styled.div
+        key="dateNu_37"
       >
-        27
-      </div>
-      <div
-        className="sc-ifAKCX jyGSsx"
+        23
+      </styled.div>
+      <styled.div
+        key="weekDa_37"
       >
         tue
-      </div>
-    </button>
-    <button
-      className="sc-htpNat icEART"
+      </styled.div>
+    </styled.button>
+    <styled.button
+      key="dateCi_38"
       onClick={[Function]}
       selected={false}
     >
-      <div
-        className="sc-bxivhb gryOGk"
+      <styled.div
+        key="dateNu_38"
       >
-        28
-      </div>
-      <div
-        className="sc-ifAKCX jyGSsx"
+        24
+      </styled.div>
+      <styled.div
+        key="weekDa_38"
       >
         wed
-      </div>
-    </button>
-    <button
-      className="sc-htpNat icEART"
+      </styled.div>
+    </styled.button>
+    <styled.button
+      key="dateCi_39"
       onClick={[Function]}
       selected={false}
     >
-      <div
-        className="sc-bxivhb gryOGk"
+      <styled.div
+        key="dateNu_39"
       >
-        29
-      </div>
-      <div
-        className="sc-ifAKCX jyGSsx"
+        25
+      </styled.div>
+      <styled.div
+        key="weekDa_39"
       >
         thu
-      </div>
-    </button>
-    <button
-      className="sc-htpNat icEART"
+      </styled.div>
+    </styled.button>
+    <styled.button
+      key="dateCi_40"
       onClick={[Function]}
       selected={false}
     >
-      <div
-        className="sc-bxivhb gryOGk"
+      <styled.div
+        key="dateNu_40"
       >
-        30
-      </div>
-      <div
-        className="sc-ifAKCX jyGSsx"
+        26
+      </styled.div>
+      <styled.div
+        key="weekDa_40"
       >
         fri
-      </div>
-    </button>
-    <button
-      className="sc-htpNat icEART"
+      </styled.div>
+    </styled.button>
+    <styled.button
+      key="dateCi_41"
       onClick={[Function]}
       selected={false}
     >
-      <div
-        className="sc-bxivhb gryOGk"
+      <styled.div
+        key="dateNu_41"
       >
-        31
-      </div>
-      <div
-        className="sc-ifAKCX jyGSsx"
+        27
+      </styled.div>
+      <styled.div
+        key="weekDa_41"
       >
         sat
-      </div>
-    </button>
-  </div>
-</div>
+      </styled.div>
+    </styled.button>
+    <styled.button
+      key="dateCi_42"
+      onClick={[Function]}
+      selected={false}
+    >
+      <styled.div
+        key="dateNu_42"
+      >
+        28
+      </styled.div>
+      <styled.div
+        key="weekDa_42"
+      >
+        sun
+      </styled.div>
+    </styled.button>
+    <styled.button
+      key="dateCi_43"
+      onClick={[Function]}
+      selected={false}
+    >
+      <styled.div
+        key="dateNu_43"
+      >
+        29
+      </styled.div>
+      <styled.div
+        key="weekDa_43"
+      >
+        mon
+      </styled.div>
+    </styled.button>
+    <styled.button
+      key="dateCi_44"
+      onClick={[Function]}
+      selected={false}
+    >
+      <styled.div
+        key="dateNu_44"
+      >
+        30
+      </styled.div>
+      <styled.div
+        key="weekDa_44"
+      >
+        tue
+      </styled.div>
+    </styled.button>
+    <styled.button
+      key="dateCi_45"
+      onClick={[Function]}
+      selected={false}
+    >
+      <styled.div
+        key="dateNu_45"
+      >
+        31
+      </styled.div>
+      <styled.div
+        key="weekDa_45"
+      >
+        wed
+      </styled.div>
+    </styled.button>
+    <styled.button
+      key="dateCi_46"
+      onClick={[Function]}
+      selected={false}
+    >
+      <styled.div
+        key="dateNu_46"
+      >
+        1
+      </styled.div>
+      <styled.div
+        key="weekDa_46"
+      >
+        thu
+      </styled.div>
+    </styled.button>
+    <styled.button
+      key="dateCi_47"
+      onClick={[Function]}
+      selected={false}
+    >
+      <styled.div
+        key="dateNu_47"
+      >
+        2
+      </styled.div>
+      <styled.div
+        key="weekDa_47"
+      >
+        fri
+      </styled.div>
+    </styled.button>
+    <styled.button
+      key="dateCi_48"
+      onClick={[Function]}
+      selected={false}
+    >
+      <styled.div
+        key="dateNu_48"
+      >
+        3
+      </styled.div>
+      <styled.div
+        key="weekDa_48"
+      >
+        sat
+      </styled.div>
+    </styled.button>
+    <styled.button
+      key="dateCi_49"
+      onClick={[Function]}
+      selected={false}
+    >
+      <styled.div
+        key="dateNu_49"
+      >
+        4
+      </styled.div>
+      <styled.div
+        key="weekDa_49"
+      >
+        sun
+      </styled.div>
+    </styled.button>
+    <styled.button
+      key="dateCi_50"
+      onClick={[Function]}
+      selected={false}
+    >
+      <styled.div
+        key="dateNu_50"
+      >
+        5
+      </styled.div>
+      <styled.div
+        key="weekDa_50"
+      >
+        mon
+      </styled.div>
+    </styled.button>
+    <styled.button
+      key="dateCi_51"
+      onClick={[Function]}
+      selected={false}
+    >
+      <styled.div
+        key="dateNu_51"
+      >
+        6
+      </styled.div>
+      <styled.div
+        key="weekDa_51"
+      >
+        tue
+      </styled.div>
+    </styled.button>
+    <styled.button
+      key="dateCi_52"
+      onClick={[Function]}
+      selected={false}
+    >
+      <styled.div
+        key="dateNu_52"
+      >
+        7
+      </styled.div>
+      <styled.div
+        key="weekDa_52"
+      >
+        wed
+      </styled.div>
+    </styled.button>
+    <styled.button
+      key="dateCi_53"
+      onClick={[Function]}
+      selected={false}
+    >
+      <styled.div
+        key="dateNu_53"
+      >
+        8
+      </styled.div>
+      <styled.div
+        key="weekDa_53"
+      >
+        thu
+      </styled.div>
+    </styled.button>
+    <styled.button
+      key="dateCi_54"
+      onClick={[Function]}
+      selected={false}
+    >
+      <styled.div
+        key="dateNu_54"
+      >
+        9
+      </styled.div>
+      <styled.div
+        key="weekDa_54"
+      >
+        fri
+      </styled.div>
+    </styled.button>
+    <styled.button
+      key="dateCi_55"
+      onClick={[Function]}
+      selected={false}
+    >
+      <styled.div
+        key="dateNu_55"
+      >
+        10
+      </styled.div>
+      <styled.div
+        key="weekDa_55"
+      >
+        sat
+      </styled.div>
+    </styled.button>
+    <styled.button
+      key="dateCi_56"
+      onClick={[Function]}
+      selected={false}
+    >
+      <styled.div
+        key="dateNu_56"
+      >
+        11
+      </styled.div>
+      <styled.div
+        key="weekDa_56"
+      >
+        sun
+      </styled.div>
+    </styled.button>
+    <styled.button
+      key="dateCi_57"
+      onClick={[Function]}
+      selected={false}
+    >
+      <styled.div
+        key="dateNu_57"
+      >
+        12
+      </styled.div>
+      <styled.div
+        key="weekDa_57"
+      >
+        mon
+      </styled.div>
+    </styled.button>
+    <styled.button
+      key="dateCi_58"
+      onClick={[Function]}
+      selected={false}
+    >
+      <styled.div
+        key="dateNu_58"
+      >
+        13
+      </styled.div>
+      <styled.div
+        key="weekDa_58"
+      >
+        tue
+      </styled.div>
+    </styled.button>
+    <styled.button
+      key="dateCi_59"
+      onClick={[Function]}
+      selected={false}
+    >
+      <styled.div
+        key="dateNu_59"
+      >
+        14
+      </styled.div>
+      <styled.div
+        key="weekDa_59"
+      >
+        wed
+      </styled.div>
+    </styled.button>
+    <styled.button
+      key="dateCi_60"
+      onClick={[Function]}
+      selected={false}
+    >
+      <styled.div
+        key="dateNu_60"
+      >
+        15
+      </styled.div>
+      <styled.div
+        key="weekDa_60"
+      >
+        thu
+      </styled.div>
+    </styled.button>
+    <styled.button
+      key="dateCi_61"
+      onClick={[Function]}
+      selected={false}
+    >
+      <styled.div
+        key="dateNu_61"
+      >
+        16
+      </styled.div>
+      <styled.div
+        key="weekDa_61"
+      >
+        fri
+      </styled.div>
+    </styled.button>
+    <styled.button
+      key="dateCi_62"
+      onClick={[Function]}
+      selected={false}
+    >
+      <styled.div
+        key="dateNu_62"
+      >
+        17
+      </styled.div>
+      <styled.div
+        key="weekDa_62"
+      >
+        sat
+      </styled.div>
+    </styled.button>
+    <styled.button
+      key="dateCi_63"
+      onClick={[Function]}
+      selected={false}
+    >
+      <styled.div
+        key="dateNu_63"
+      >
+        18
+      </styled.div>
+      <styled.div
+        key="weekDa_63"
+      >
+        sun
+      </styled.div>
+    </styled.button>
+    <styled.button
+      key="dateCi_64"
+      onClick={[Function]}
+      selected={false}
+    >
+      <styled.div
+        key="dateNu_64"
+      >
+        19
+      </styled.div>
+      <styled.div
+        key="weekDa_64"
+      >
+        mon
+      </styled.div>
+    </styled.button>
+    <styled.button
+      key="dateCi_65"
+      onClick={[Function]}
+      selected={false}
+    >
+      <styled.div
+        key="dateNu_65"
+      >
+        20
+      </styled.div>
+      <styled.div
+        key="weekDa_65"
+      >
+        tue
+      </styled.div>
+    </styled.button>
+    <styled.button
+      key="dateCi_66"
+      onClick={[Function]}
+      selected={false}
+    >
+      <styled.div
+        key="dateNu_66"
+      >
+        21
+      </styled.div>
+      <styled.div
+        key="weekDa_66"
+      >
+        wed
+      </styled.div>
+    </styled.button>
+    <styled.button
+      key="dateCi_67"
+      onClick={[Function]}
+      selected={false}
+    >
+      <styled.div
+        key="dateNu_67"
+      >
+        22
+      </styled.div>
+      <styled.div
+        key="weekDa_67"
+      >
+        thu
+      </styled.div>
+    </styled.button>
+    <styled.button
+      key="dateCi_68"
+      onClick={[Function]}
+      selected={false}
+    >
+      <styled.div
+        key="dateNu_68"
+      >
+        23
+      </styled.div>
+      <styled.div
+        key="weekDa_68"
+      >
+        fri
+      </styled.div>
+    </styled.button>
+    <styled.button
+      key="dateCi_69"
+      onClick={[Function]}
+      selected={false}
+    >
+      <styled.div
+        key="dateNu_69"
+      >
+        24
+      </styled.div>
+      <styled.div
+        key="weekDa_69"
+      >
+        sat
+      </styled.div>
+    </styled.button>
+    <styled.button
+      key="dateCi_70"
+      onClick={[Function]}
+      selected={false}
+    >
+      <styled.div
+        key="dateNu_70"
+      >
+        25
+      </styled.div>
+      <styled.div
+        key="weekDa_70"
+      >
+        sun
+      </styled.div>
+    </styled.button>
+    <styled.button
+      key="dateCi_71"
+      onClick={[Function]}
+      selected={false}
+    >
+      <styled.div
+        key="dateNu_71"
+      >
+        26
+      </styled.div>
+      <styled.div
+        key="weekDa_71"
+      >
+        mon
+      </styled.div>
+    </styled.button>
+    <styled.button
+      key="dateCi_72"
+      onClick={[Function]}
+      selected={false}
+    >
+      <styled.div
+        key="dateNu_72"
+      >
+        27
+      </styled.div>
+      <styled.div
+        key="weekDa_72"
+      >
+        tue
+      </styled.div>
+    </styled.button>
+    <styled.button
+      key="dateCi_73"
+      onClick={[Function]}
+      selected={false}
+    >
+      <styled.div
+        key="dateNu_73"
+      >
+        28
+      </styled.div>
+      <styled.div
+        key="weekDa_73"
+      >
+        wed
+      </styled.div>
+    </styled.button>
+    <styled.button
+      key="dateCi_74"
+      onClick={[Function]}
+      selected={false}
+    >
+      <styled.div
+        key="dateNu_74"
+      >
+        29
+      </styled.div>
+      <styled.div
+        key="weekDa_74"
+      >
+        thu
+      </styled.div>
+    </styled.button>
+    <styled.button
+      key="dateCi_75"
+      onClick={[Function]}
+      selected={false}
+    >
+      <styled.div
+        key="dateNu_75"
+      >
+        30
+      </styled.div>
+      <styled.div
+        key="weekDa_75"
+      >
+        fri
+      </styled.div>
+    </styled.button>
+    <styled.button
+      key="dateCi_76"
+      onClick={[Function]}
+      selected={false}
+    >
+      <styled.div
+        key="dateNu_76"
+      >
+        31
+      </styled.div>
+      <styled.div
+        key="weekDa_76"
+      >
+        sat
+      </styled.div>
+    </styled.button>
+  </styled.div>
+</styled.div>
 `;

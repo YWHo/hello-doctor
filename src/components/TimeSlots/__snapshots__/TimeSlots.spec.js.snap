@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DaySlots render "No Appointment Available" 1`] = `
+<styled.div>
+  <styled.div>
+    No appointment available for this date
+  </styled.div>
+</styled.div>
+`;
+
+exports[`DaySlots render based on the given schedule 1`] = `
+<styled.div>
+  <styled.div>
+    <styled.button
+      key="tb_0"
+    >
+      <styled.div>
+        9:45
+      </styled.div>
+    </styled.button>
+    <styled.button
+      key="tb_1"
+    >
+      <styled.div>
+        10:00
+      </styled.div>
+    </styled.button>
+    <styled.button
+      key="tb_2"
+    >
+      <styled.div>
+        10:15
+      </styled.div>
+    </styled.button>
+  </styled.div>
+</styled.div>
+`;
