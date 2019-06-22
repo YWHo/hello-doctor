@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ButtonDayBig render on after today 1`] = `
+<styled.button
+  disabled={false}
+  onClick={[Function]}
+  selected={true}
+>
+  <styled.div>
+    17
+  </styled.div>
+  <styled.div>
+    mon
+  </styled.div>
+</styled.button>
+`;
+
+exports[`ButtonDayBig render on before today 1`] = `
+<styled.button
+  disabled={true}
+  onClick={[Function]}
+  selected={false}
+>
+  <styled.div>
+    15
+  </styled.div>
+  <styled.div>
+    sat
+  </styled.div>
+</styled.button>
+`;
+
+exports[`ButtonDayBig render on today 1`] = `
+<styled.button
+  disabled={false}
+  onClick={[Function]}
+  selected={false}
+>
+  <styled.div>
+    16
+  </styled.div>
+  <styled.div>
+    sun
+  </styled.div>
+</styled.button>
+`;

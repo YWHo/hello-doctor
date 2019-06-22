@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import styled from 'styled-components';
 import dayjs from 'dayjs';
 import PropTypes from 'prop-types';
-import * as actions from '../../state/actions';
+import ButtonDayBig from '../ButtonDayBig';
 import * as selectors from '../../state/selectors';
 import * as dateHelper from '../../shared/dateHelper';
 
@@ -24,72 +24,14 @@ const ContainerInner = styled.div`
   white-space: nowrap;
 `;
 
-const ButtonCircle = styled.button`
-  background-color: ${props => (props.selected ? '#177d91' : 'transparent')};
-  border: none;
-  border-radius: 50%;
-  color: #fff;
-  height: 66px;
-  width: 66px;
-  margin-right: 8px;
-
-  :focus {
-    outline: none;
-  }
-
-  :active {
-    background-color: #1c98b0;
-    outline: none;
-  }
-
-  :disabled {
-    background: transparent;
-    color: #7bcadb;
-    outline: none;
-  }
-`;
-
-const DateNum = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 27px;
-  font-family: 'Roboto', sans-serif;
-  font-size: 24px;
-`;
-
-const WeekDayName = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 16px;
-  font-size: 14px;
-  font-weight: 300;
-`;
-
 export function DaySlots(props) {
-  const { selectedDate = dayjs(), today = dayjs() } = props;
+  const { today = dayjs() } = props;
   const todayStr = today.format('YYYY-MM-DD');
   const last2Days = dateHelper.getDatesOfPreviousTwoDaysFrom(todayStr);
   const daysIn3Months = dateHelper.getDatesInThreeMonthsFrom(todayStr);
   const days = last2Days.concat(daysIn3Months);
   const dateList = days.map((dateStr, idx) => {
-    const tmpDate = dayjs(dateStr);
-    const selected = dateStr === dayjs(selectedDate).format('YYYY-MM-DD');
-    const disabled = dayjs(dateStr).isBefore(dayjs(todayStr));
-    return (
-      <ButtonCircle
-        disabled={disabled}
-        key={`dateCi_${idx}`}
-        selected={selected}
-        onClick={() => onDayClicked(props, dateStr)}
-      >
-        <DateNum key={`dateNu_${idx}`}>{tmpDate.format('D')}</DateNum>
-        <WeekDayName key={`weekDa_${idx}`}>
-          {tmpDate.format('ddd').toLowerCase()}
-        </WeekDayName>
-      </ButtonCircle>
-    );
+    return <ButtonDayBig key={`btnB_${idx}`} dateStr={dateStr} today={today} />;
   });
 
   return (
@@ -99,13 +41,7 @@ export function DaySlots(props) {
   );
 }
 
-function onDayClicked(props, dateStr) {
-  const { dSaveSelectedDate } = props;
-  dSaveSelectedDate(dayjs(dateStr));
-}
-
 DaySlots.propTypes = {
-  selectedDate: PropTypes.object,
   today: PropTypes.object
 };
 
@@ -116,9 +52,7 @@ const mapStateToProps = state => {
 };
 
 function mapDispatchToProps(dispatch) {
-  return {
-    dSaveSelectedDate: value => dispatch(actions.saveSelectedDate(value))
-  };
+  return {};
 }
 
 export default connect(
