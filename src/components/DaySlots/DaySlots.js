@@ -41,6 +41,12 @@ const ButtonCircle = styled.button`
     background-color: #1c98b0;
     outline: none;
   }
+
+  :disabled {
+    background: transparent;
+    color: #7bcadb;
+    outline: none;
+  }
 `;
 
 const DateNum = styled.div`
@@ -63,16 +69,20 @@ const WeekDayName = styled.div`
 
 export function DaySlots(props) {
   const { selectedDate = dayjs(), today = dayjs() } = props;
-
-  const days = dateHelper.getDatesInThreeMonthsFrom(today.format('YYYY-MM-DD'));
-  const dateList = days.map((day, idx) => {
-    const tmpDate = dayjs(day);
-    const selected = day === dayjs(selectedDate).format('YYYY-MM-DD');
+  const todayStr = today.format('YYYY-MM-DD');
+  const last2Days = dateHelper.getDatesOfPreviousTwoDaysFrom(todayStr);
+  const daysIn3Months = dateHelper.getDatesInThreeMonthsFrom(todayStr);
+  const days = last2Days.concat(daysIn3Months);
+  const dateList = days.map((dateStr, idx) => {
+    const tmpDate = dayjs(dateStr);
+    const selected = dateStr === dayjs(selectedDate).format('YYYY-MM-DD');
+    const disabled = dayjs(dateStr).isBefore(dayjs(todayStr));
     return (
       <ButtonCircle
+        disabled={disabled}
         key={`dateCi_${idx}`}
         selected={selected}
-        onClick={() => onDayClicked(props, day)}
+        onClick={() => onDayClicked(props, dateStr)}
       >
         <DateNum key={`dateNu_${idx}`}>{tmpDate.format('D')}</DateNum>
         <WeekDayName key={`weekDa_${idx}`}>
@@ -89,9 +99,9 @@ export function DaySlots(props) {
   );
 }
 
-function onDayClicked(props, day) {
+function onDayClicked(props, dateStr) {
   const { dSaveSelectedDate } = props;
-  dSaveSelectedDate(dayjs(day));
+  dSaveSelectedDate(dayjs(dateStr));
 }
 
 DaySlots.propTypes = {

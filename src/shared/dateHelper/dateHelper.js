@@ -3,6 +3,13 @@ import { DAY_MORNING, DAY_AFTERNOON, DAY_EVENING } from '../constants';
 import customParseFormat from 'dayjs/plugin/customParseFormat';
 dayjs.extend(customParseFormat);
 
+export function getDatesOfPreviousTwoDaysFrom(givenDate) {
+  const startDate = dayjs(givenDate);
+  const previous1stDay = startDate.add(-1, 'days').format('YYYY-MM-DD');
+  const previous2ndDay = startDate.add(-2, 'days').format('YYYY-MM-DD');
+  return [previous2ndDay, previous1stDay];
+}
+
 export function getDatesInThreeMonthsFrom(givenDate) {
   const startDate = dayjs(givenDate);
   const daysThisMonth = startDate.daysInMonth() - startDate.format('D');

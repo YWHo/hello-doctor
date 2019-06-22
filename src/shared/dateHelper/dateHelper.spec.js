@@ -5,6 +5,17 @@ import customParseFormat from 'dayjs/plugin/customParseFormat';
 dayjs.extend(customParseFormat);
 
 describe('dateHelper', () => {
+  describe('getDatesOfPreviousTwoDaysFrom', () => {
+    it('work as expected', () => {
+      const list = dateHelper.getDatesOfPreviousTwoDaysFrom(
+        dayjs('2019-06-18')
+      );
+      expect(list.length).toBe(2);
+      expect(list[0]).toBe('2019-06-16');
+      expect(list[1]).toBe('2019-06-17');
+    });
+  });
+
   describe('getDatesInThreeMonthsFrom', () => {
     it('work as expected', () => {
       const list = dateHelper.getDatesInThreeMonthsFrom(dayjs('2019-06-18'));

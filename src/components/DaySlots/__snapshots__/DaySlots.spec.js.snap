@@ -4,6 +4,7 @@ exports[`DaySlots render correctly 1`] = `
 <styled.div>
   <styled.div>
     <styled.button
+      disabled={true}
       key="dateCi_0"
       onClick={[Function]}
       selected={false}
@@ -11,15 +12,16 @@ exports[`DaySlots render correctly 1`] = `
       <styled.div
         key="dateNu_0"
       >
-        16
+        14
       </styled.div>
       <styled.div
         key="weekDa_0"
       >
-        sun
+        fri
       </styled.div>
     </styled.button>
     <styled.button
+      disabled={true}
       key="dateCi_1"
       onClick={[Function]}
       selected={false}
@@ -27,15 +29,16 @@ exports[`DaySlots render correctly 1`] = `
       <styled.div
         key="dateNu_1"
       >
-        17
+        15
       </styled.div>
       <styled.div
         key="weekDa_1"
       >
-        mon
+        sat
       </styled.div>
     </styled.button>
     <styled.button
+      disabled={false}
       key="dateCi_2"
       onClick={[Function]}
       selected={false}
@@ -43,31 +46,33 @@ exports[`DaySlots render correctly 1`] = `
       <styled.div
         key="dateNu_2"
       >
-        18
+        16
       </styled.div>
       <styled.div
         key="weekDa_2"
       >
-        tue
+        sun
       </styled.div>
     </styled.button>
     <styled.button
+      disabled={false}
       key="dateCi_3"
       onClick={[Function]}
-      selected={true}
+      selected={false}
     >
       <styled.div
         key="dateNu_3"
       >
-        19
+        17
       </styled.div>
       <styled.div
         key="weekDa_3"
       >
-        wed
+        mon
       </styled.div>
     </styled.button>
     <styled.button
+      disabled={false}
       key="dateCi_4"
       onClick={[Function]}
       selected={false}
@@ -75,31 +80,33 @@ exports[`DaySlots render correctly 1`] = `
       <styled.div
         key="dateNu_4"
       >
-        20
+        18
       </styled.div>
       <styled.div
         key="weekDa_4"
       >
-        thu
+        tue
       </styled.div>
     </styled.button>
     <styled.button
+      disabled={false}
       key="dateCi_5"
       onClick={[Function]}
-      selected={false}
+      selected={true}
     >
       <styled.div
         key="dateNu_5"
       >
-        21
+        19
       </styled.div>
       <styled.div
         key="weekDa_5"
       >
-        fri
+        wed
       </styled.div>
     </styled.button>
     <styled.button
+      disabled={false}
       key="dateCi_6"
       onClick={[Function]}
       selected={false}
@@ -107,15 +114,16 @@ exports[`DaySlots render correctly 1`] = `
       <styled.div
         key="dateNu_6"
       >
-        22
+        20
       </styled.div>
       <styled.div
         key="weekDa_6"
       >
-        sat
+        thu
       </styled.div>
     </styled.button>
     <styled.button
+      disabled={false}
       key="dateCi_7"
       onClick={[Function]}
       selected={false}
@@ -123,15 +131,16 @@ exports[`DaySlots render correctly 1`] = `
       <styled.div
         key="dateNu_7"
       >
-        23
+        21
       </styled.div>
       <styled.div
         key="weekDa_7"
       >
-        sun
+        fri
       </styled.div>
     </styled.button>
     <styled.button
+      disabled={false}
       key="dateCi_8"
       onClick={[Function]}
       selected={false}
@@ -139,15 +148,16 @@ exports[`DaySlots render correctly 1`] = `
       <styled.div
         key="dateNu_8"
       >
-        24
+        22
       </styled.div>
       <styled.div
         key="weekDa_8"
       >
-        mon
+        sat
       </styled.div>
     </styled.button>
     <styled.button
+      disabled={false}
       key="dateCi_9"
       onClick={[Function]}
       selected={false}
@@ -155,15 +165,16 @@ exports[`DaySlots render correctly 1`] = `
       <styled.div
         key="dateNu_9"
       >
-        25
+        23
       </styled.div>
       <styled.div
         key="weekDa_9"
       >
-        tue
+        sun
       </styled.div>
     </styled.button>
     <styled.button
+      disabled={false}
       key="dateCi_10"
       onClick={[Function]}
       selected={false}
@@ -171,15 +182,16 @@ exports[`DaySlots render correctly 1`] = `
       <styled.div
         key="dateNu_10"
       >
-        26
+        24
       </styled.div>
       <styled.div
         key="weekDa_10"
       >
-        wed
+        mon
       </styled.div>
     </styled.button>
     <styled.button
+      disabled={false}
       key="dateCi_11"
       onClick={[Function]}
       selected={false}
@@ -187,15 +199,16 @@ exports[`DaySlots render correctly 1`] = `
       <styled.div
         key="dateNu_11"
       >
-        27
+        25
       </styled.div>
       <styled.div
         key="weekDa_11"
       >
-        thu
+        tue
       </styled.div>
     </styled.button>
     <styled.button
+      disabled={false}
       key="dateCi_12"
       onClick={[Function]}
       selected={false}
@@ -203,15 +216,16 @@ exports[`DaySlots render correctly 1`] = `
       <styled.div
         key="dateNu_12"
       >
-        28
+        26
       </styled.div>
       <styled.div
         key="weekDa_12"
       >
-        fri
+        wed
       </styled.div>
     </styled.button>
     <styled.button
+      disabled={false}
       key="dateCi_13"
       onClick={[Function]}
       selected={false}
@@ -219,15 +233,16 @@ exports[`DaySlots render correctly 1`] = `
       <styled.div
         key="dateNu_13"
       >
-        29
+        27
       </styled.div>
       <styled.div
         key="weekDa_13"
       >
-        sat
+        thu
       </styled.div>
     </styled.button>
     <styled.button
+      disabled={false}
       key="dateCi_14"
       onClick={[Function]}
       selected={false}
@@ -235,15 +250,16 @@ exports[`DaySlots render correctly 1`] = `
       <styled.div
         key="dateNu_14"
       >
-        30
+        28
       </styled.div>
       <styled.div
         key="weekDa_14"
       >
-        sun
+        fri
       </styled.div>
     </styled.button>
     <styled.button
+      disabled={false}
       key="dateCi_15"
       onClick={[Function]}
       selected={false}
@@ -251,15 +267,16 @@ exports[`DaySlots render correctly 1`] = `
       <styled.div
         key="dateNu_15"
       >
-        1
+        29
       </styled.div>
       <styled.div
         key="weekDa_15"
       >
-        mon
+        sat
       </styled.div>
     </styled.button>
     <styled.button
+      disabled={false}
       key="dateCi_16"
       onClick={[Function]}
       selected={false}
@@ -267,15 +284,16 @@ exports[`DaySlots render correctly 1`] = `
       <styled.div
         key="dateNu_16"
       >
-        2
+        30
       </styled.div>
       <styled.div
         key="weekDa_16"
       >
-        tue
+        sun
       </styled.div>
     </styled.button>
     <styled.button
+      disabled={false}
       key="dateCi_17"
       onClick={[Function]}
       selected={false}
@@ -283,15 +301,16 @@ exports[`DaySlots render correctly 1`] = `
       <styled.div
         key="dateNu_17"
       >
-        3
+        1
       </styled.div>
       <styled.div
         key="weekDa_17"
       >
-        wed
+        mon
       </styled.div>
     </styled.button>
     <styled.button
+      disabled={false}
       key="dateCi_18"
       onClick={[Function]}
       selected={false}
@@ -299,15 +318,16 @@ exports[`DaySlots render correctly 1`] = `
       <styled.div
         key="dateNu_18"
       >
-        4
+        2
       </styled.div>
       <styled.div
         key="weekDa_18"
       >
-        thu
+        tue
       </styled.div>
     </styled.button>
     <styled.button
+      disabled={false}
       key="dateCi_19"
       onClick={[Function]}
       selected={false}
@@ -315,15 +335,16 @@ exports[`DaySlots render correctly 1`] = `
       <styled.div
         key="dateNu_19"
       >
-        5
+        3
       </styled.div>
       <styled.div
         key="weekDa_19"
       >
-        fri
+        wed
       </styled.div>
     </styled.button>
     <styled.button
+      disabled={false}
       key="dateCi_20"
       onClick={[Function]}
       selected={false}
@@ -331,15 +352,16 @@ exports[`DaySlots render correctly 1`] = `
       <styled.div
         key="dateNu_20"
       >
-        6
+        4
       </styled.div>
       <styled.div
         key="weekDa_20"
       >
-        sat
+        thu
       </styled.div>
     </styled.button>
     <styled.button
+      disabled={false}
       key="dateCi_21"
       onClick={[Function]}
       selected={false}
@@ -347,15 +369,16 @@ exports[`DaySlots render correctly 1`] = `
       <styled.div
         key="dateNu_21"
       >
-        7
+        5
       </styled.div>
       <styled.div
         key="weekDa_21"
       >
-        sun
+        fri
       </styled.div>
     </styled.button>
     <styled.button
+      disabled={false}
       key="dateCi_22"
       onClick={[Function]}
       selected={false}
@@ -363,15 +386,16 @@ exports[`DaySlots render correctly 1`] = `
       <styled.div
         key="dateNu_22"
       >
-        8
+        6
       </styled.div>
       <styled.div
         key="weekDa_22"
       >
-        mon
+        sat
       </styled.div>
     </styled.button>
     <styled.button
+      disabled={false}
       key="dateCi_23"
       onClick={[Function]}
       selected={false}
@@ -379,15 +403,16 @@ exports[`DaySlots render correctly 1`] = `
       <styled.div
         key="dateNu_23"
       >
-        9
+        7
       </styled.div>
       <styled.div
         key="weekDa_23"
       >
-        tue
+        sun
       </styled.div>
     </styled.button>
     <styled.button
+      disabled={false}
       key="dateCi_24"
       onClick={[Function]}
       selected={false}
@@ -395,15 +420,16 @@ exports[`DaySlots render correctly 1`] = `
       <styled.div
         key="dateNu_24"
       >
-        10
+        8
       </styled.div>
       <styled.div
         key="weekDa_24"
       >
-        wed
+        mon
       </styled.div>
     </styled.button>
     <styled.button
+      disabled={false}
       key="dateCi_25"
       onClick={[Function]}
       selected={false}
@@ -411,15 +437,16 @@ exports[`DaySlots render correctly 1`] = `
       <styled.div
         key="dateNu_25"
       >
-        11
+        9
       </styled.div>
       <styled.div
         key="weekDa_25"
       >
-        thu
+        tue
       </styled.div>
     </styled.button>
     <styled.button
+      disabled={false}
       key="dateCi_26"
       onClick={[Function]}
       selected={false}
@@ -427,15 +454,16 @@ exports[`DaySlots render correctly 1`] = `
       <styled.div
         key="dateNu_26"
       >
-        12
+        10
       </styled.div>
       <styled.div
         key="weekDa_26"
       >
-        fri
+        wed
       </styled.div>
     </styled.button>
     <styled.button
+      disabled={false}
       key="dateCi_27"
       onClick={[Function]}
       selected={false}
@@ -443,15 +471,16 @@ exports[`DaySlots render correctly 1`] = `
       <styled.div
         key="dateNu_27"
       >
-        13
+        11
       </styled.div>
       <styled.div
         key="weekDa_27"
       >
-        sat
+        thu
       </styled.div>
     </styled.button>
     <styled.button
+      disabled={false}
       key="dateCi_28"
       onClick={[Function]}
       selected={false}
@@ -459,15 +488,16 @@ exports[`DaySlots render correctly 1`] = `
       <styled.div
         key="dateNu_28"
       >
-        14
+        12
       </styled.div>
       <styled.div
         key="weekDa_28"
       >
-        sun
+        fri
       </styled.div>
     </styled.button>
     <styled.button
+      disabled={false}
       key="dateCi_29"
       onClick={[Function]}
       selected={false}
@@ -475,15 +505,16 @@ exports[`DaySlots render correctly 1`] = `
       <styled.div
         key="dateNu_29"
       >
-        15
+        13
       </styled.div>
       <styled.div
         key="weekDa_29"
       >
-        mon
+        sat
       </styled.div>
     </styled.button>
     <styled.button
+      disabled={false}
       key="dateCi_30"
       onClick={[Function]}
       selected={false}
@@ -491,15 +522,16 @@ exports[`DaySlots render correctly 1`] = `
       <styled.div
         key="dateNu_30"
       >
-        16
+        14
       </styled.div>
       <styled.div
         key="weekDa_30"
       >
-        tue
+        sun
       </styled.div>
     </styled.button>
     <styled.button
+      disabled={false}
       key="dateCi_31"
       onClick={[Function]}
       selected={false}
@@ -507,15 +539,16 @@ exports[`DaySlots render correctly 1`] = `
       <styled.div
         key="dateNu_31"
       >
-        17
+        15
       </styled.div>
       <styled.div
         key="weekDa_31"
       >
-        wed
+        mon
       </styled.div>
     </styled.button>
     <styled.button
+      disabled={false}
       key="dateCi_32"
       onClick={[Function]}
       selected={false}
@@ -523,15 +556,16 @@ exports[`DaySlots render correctly 1`] = `
       <styled.div
         key="dateNu_32"
       >
-        18
+        16
       </styled.div>
       <styled.div
         key="weekDa_32"
       >
-        thu
+        tue
       </styled.div>
     </styled.button>
     <styled.button
+      disabled={false}
       key="dateCi_33"
       onClick={[Function]}
       selected={false}
@@ -539,15 +573,16 @@ exports[`DaySlots render correctly 1`] = `
       <styled.div
         key="dateNu_33"
       >
-        19
+        17
       </styled.div>
       <styled.div
         key="weekDa_33"
       >
-        fri
+        wed
       </styled.div>
     </styled.button>
     <styled.button
+      disabled={false}
       key="dateCi_34"
       onClick={[Function]}
       selected={false}
@@ -555,15 +590,16 @@ exports[`DaySlots render correctly 1`] = `
       <styled.div
         key="dateNu_34"
       >
-        20
+        18
       </styled.div>
       <styled.div
         key="weekDa_34"
       >
-        sat
+        thu
       </styled.div>
     </styled.button>
     <styled.button
+      disabled={false}
       key="dateCi_35"
       onClick={[Function]}
       selected={false}
@@ -571,15 +607,16 @@ exports[`DaySlots render correctly 1`] = `
       <styled.div
         key="dateNu_35"
       >
-        21
+        19
       </styled.div>
       <styled.div
         key="weekDa_35"
       >
-        sun
+        fri
       </styled.div>
     </styled.button>
     <styled.button
+      disabled={false}
       key="dateCi_36"
       onClick={[Function]}
       selected={false}
@@ -587,15 +624,16 @@ exports[`DaySlots render correctly 1`] = `
       <styled.div
         key="dateNu_36"
       >
-        22
+        20
       </styled.div>
       <styled.div
         key="weekDa_36"
       >
-        mon
+        sat
       </styled.div>
     </styled.button>
     <styled.button
+      disabled={false}
       key="dateCi_37"
       onClick={[Function]}
       selected={false}
@@ -603,15 +641,16 @@ exports[`DaySlots render correctly 1`] = `
       <styled.div
         key="dateNu_37"
       >
-        23
+        21
       </styled.div>
       <styled.div
         key="weekDa_37"
       >
-        tue
+        sun
       </styled.div>
     </styled.button>
     <styled.button
+      disabled={false}
       key="dateCi_38"
       onClick={[Function]}
       selected={false}
@@ -619,15 +658,16 @@ exports[`DaySlots render correctly 1`] = `
       <styled.div
         key="dateNu_38"
       >
-        24
+        22
       </styled.div>
       <styled.div
         key="weekDa_38"
       >
-        wed
+        mon
       </styled.div>
     </styled.button>
     <styled.button
+      disabled={false}
       key="dateCi_39"
       onClick={[Function]}
       selected={false}
@@ -635,15 +675,16 @@ exports[`DaySlots render correctly 1`] = `
       <styled.div
         key="dateNu_39"
       >
-        25
+        23
       </styled.div>
       <styled.div
         key="weekDa_39"
       >
-        thu
+        tue
       </styled.div>
     </styled.button>
     <styled.button
+      disabled={false}
       key="dateCi_40"
       onClick={[Function]}
       selected={false}
@@ -651,15 +692,16 @@ exports[`DaySlots render correctly 1`] = `
       <styled.div
         key="dateNu_40"
       >
-        26
+        24
       </styled.div>
       <styled.div
         key="weekDa_40"
       >
-        fri
+        wed
       </styled.div>
     </styled.button>
     <styled.button
+      disabled={false}
       key="dateCi_41"
       onClick={[Function]}
       selected={false}
@@ -667,15 +709,16 @@ exports[`DaySlots render correctly 1`] = `
       <styled.div
         key="dateNu_41"
       >
-        27
+        25
       </styled.div>
       <styled.div
         key="weekDa_41"
       >
-        sat
+        thu
       </styled.div>
     </styled.button>
     <styled.button
+      disabled={false}
       key="dateCi_42"
       onClick={[Function]}
       selected={false}
@@ -683,15 +726,16 @@ exports[`DaySlots render correctly 1`] = `
       <styled.div
         key="dateNu_42"
       >
-        28
+        26
       </styled.div>
       <styled.div
         key="weekDa_42"
       >
-        sun
+        fri
       </styled.div>
     </styled.button>
     <styled.button
+      disabled={false}
       key="dateCi_43"
       onClick={[Function]}
       selected={false}
@@ -699,15 +743,16 @@ exports[`DaySlots render correctly 1`] = `
       <styled.div
         key="dateNu_43"
       >
-        29
+        27
       </styled.div>
       <styled.div
         key="weekDa_43"
       >
-        mon
+        sat
       </styled.div>
     </styled.button>
     <styled.button
+      disabled={false}
       key="dateCi_44"
       onClick={[Function]}
       selected={false}
@@ -715,15 +760,16 @@ exports[`DaySlots render correctly 1`] = `
       <styled.div
         key="dateNu_44"
       >
-        30
+        28
       </styled.div>
       <styled.div
         key="weekDa_44"
       >
-        tue
+        sun
       </styled.div>
     </styled.button>
     <styled.button
+      disabled={false}
       key="dateCi_45"
       onClick={[Function]}
       selected={false}
@@ -731,15 +777,16 @@ exports[`DaySlots render correctly 1`] = `
       <styled.div
         key="dateNu_45"
       >
-        31
+        29
       </styled.div>
       <styled.div
         key="weekDa_45"
       >
-        wed
+        mon
       </styled.div>
     </styled.button>
     <styled.button
+      disabled={false}
       key="dateCi_46"
       onClick={[Function]}
       selected={false}
@@ -747,15 +794,16 @@ exports[`DaySlots render correctly 1`] = `
       <styled.div
         key="dateNu_46"
       >
-        1
+        30
       </styled.div>
       <styled.div
         key="weekDa_46"
       >
-        thu
+        tue
       </styled.div>
     </styled.button>
     <styled.button
+      disabled={false}
       key="dateCi_47"
       onClick={[Function]}
       selected={false}
@@ -763,15 +811,16 @@ exports[`DaySlots render correctly 1`] = `
       <styled.div
         key="dateNu_47"
       >
-        2
+        31
       </styled.div>
       <styled.div
         key="weekDa_47"
       >
-        fri
+        wed
       </styled.div>
     </styled.button>
     <styled.button
+      disabled={false}
       key="dateCi_48"
       onClick={[Function]}
       selected={false}
@@ -779,15 +828,16 @@ exports[`DaySlots render correctly 1`] = `
       <styled.div
         key="dateNu_48"
       >
-        3
+        1
       </styled.div>
       <styled.div
         key="weekDa_48"
       >
-        sat
+        thu
       </styled.div>
     </styled.button>
     <styled.button
+      disabled={false}
       key="dateCi_49"
       onClick={[Function]}
       selected={false}
@@ -795,15 +845,16 @@ exports[`DaySlots render correctly 1`] = `
       <styled.div
         key="dateNu_49"
       >
-        4
+        2
       </styled.div>
       <styled.div
         key="weekDa_49"
       >
-        sun
+        fri
       </styled.div>
     </styled.button>
     <styled.button
+      disabled={false}
       key="dateCi_50"
       onClick={[Function]}
       selected={false}
@@ -811,15 +862,16 @@ exports[`DaySlots render correctly 1`] = `
       <styled.div
         key="dateNu_50"
       >
-        5
+        3
       </styled.div>
       <styled.div
         key="weekDa_50"
       >
-        mon
+        sat
       </styled.div>
     </styled.button>
     <styled.button
+      disabled={false}
       key="dateCi_51"
       onClick={[Function]}
       selected={false}
@@ -827,15 +879,16 @@ exports[`DaySlots render correctly 1`] = `
       <styled.div
         key="dateNu_51"
       >
-        6
+        4
       </styled.div>
       <styled.div
         key="weekDa_51"
       >
-        tue
+        sun
       </styled.div>
     </styled.button>
     <styled.button
+      disabled={false}
       key="dateCi_52"
       onClick={[Function]}
       selected={false}
@@ -843,15 +896,16 @@ exports[`DaySlots render correctly 1`] = `
       <styled.div
         key="dateNu_52"
       >
-        7
+        5
       </styled.div>
       <styled.div
         key="weekDa_52"
       >
-        wed
+        mon
       </styled.div>
     </styled.button>
     <styled.button
+      disabled={false}
       key="dateCi_53"
       onClick={[Function]}
       selected={false}
@@ -859,15 +913,16 @@ exports[`DaySlots render correctly 1`] = `
       <styled.div
         key="dateNu_53"
       >
-        8
+        6
       </styled.div>
       <styled.div
         key="weekDa_53"
       >
-        thu
+        tue
       </styled.div>
     </styled.button>
     <styled.button
+      disabled={false}
       key="dateCi_54"
       onClick={[Function]}
       selected={false}
@@ -875,15 +930,16 @@ exports[`DaySlots render correctly 1`] = `
       <styled.div
         key="dateNu_54"
       >
-        9
+        7
       </styled.div>
       <styled.div
         key="weekDa_54"
       >
-        fri
+        wed
       </styled.div>
     </styled.button>
     <styled.button
+      disabled={false}
       key="dateCi_55"
       onClick={[Function]}
       selected={false}
@@ -891,15 +947,16 @@ exports[`DaySlots render correctly 1`] = `
       <styled.div
         key="dateNu_55"
       >
-        10
+        8
       </styled.div>
       <styled.div
         key="weekDa_55"
       >
-        sat
+        thu
       </styled.div>
     </styled.button>
     <styled.button
+      disabled={false}
       key="dateCi_56"
       onClick={[Function]}
       selected={false}
@@ -907,15 +964,16 @@ exports[`DaySlots render correctly 1`] = `
       <styled.div
         key="dateNu_56"
       >
-        11
+        9
       </styled.div>
       <styled.div
         key="weekDa_56"
       >
-        sun
+        fri
       </styled.div>
     </styled.button>
     <styled.button
+      disabled={false}
       key="dateCi_57"
       onClick={[Function]}
       selected={false}
@@ -923,15 +981,16 @@ exports[`DaySlots render correctly 1`] = `
       <styled.div
         key="dateNu_57"
       >
-        12
+        10
       </styled.div>
       <styled.div
         key="weekDa_57"
       >
-        mon
+        sat
       </styled.div>
     </styled.button>
     <styled.button
+      disabled={false}
       key="dateCi_58"
       onClick={[Function]}
       selected={false}
@@ -939,15 +998,16 @@ exports[`DaySlots render correctly 1`] = `
       <styled.div
         key="dateNu_58"
       >
-        13
+        11
       </styled.div>
       <styled.div
         key="weekDa_58"
       >
-        tue
+        sun
       </styled.div>
     </styled.button>
     <styled.button
+      disabled={false}
       key="dateCi_59"
       onClick={[Function]}
       selected={false}
@@ -955,15 +1015,16 @@ exports[`DaySlots render correctly 1`] = `
       <styled.div
         key="dateNu_59"
       >
-        14
+        12
       </styled.div>
       <styled.div
         key="weekDa_59"
       >
-        wed
+        mon
       </styled.div>
     </styled.button>
     <styled.button
+      disabled={false}
       key="dateCi_60"
       onClick={[Function]}
       selected={false}
@@ -971,15 +1032,16 @@ exports[`DaySlots render correctly 1`] = `
       <styled.div
         key="dateNu_60"
       >
-        15
+        13
       </styled.div>
       <styled.div
         key="weekDa_60"
       >
-        thu
+        tue
       </styled.div>
     </styled.button>
     <styled.button
+      disabled={false}
       key="dateCi_61"
       onClick={[Function]}
       selected={false}
@@ -987,15 +1049,16 @@ exports[`DaySlots render correctly 1`] = `
       <styled.div
         key="dateNu_61"
       >
-        16
+        14
       </styled.div>
       <styled.div
         key="weekDa_61"
       >
-        fri
+        wed
       </styled.div>
     </styled.button>
     <styled.button
+      disabled={false}
       key="dateCi_62"
       onClick={[Function]}
       selected={false}
@@ -1003,15 +1066,16 @@ exports[`DaySlots render correctly 1`] = `
       <styled.div
         key="dateNu_62"
       >
-        17
+        15
       </styled.div>
       <styled.div
         key="weekDa_62"
       >
-        sat
+        thu
       </styled.div>
     </styled.button>
     <styled.button
+      disabled={false}
       key="dateCi_63"
       onClick={[Function]}
       selected={false}
@@ -1019,15 +1083,16 @@ exports[`DaySlots render correctly 1`] = `
       <styled.div
         key="dateNu_63"
       >
-        18
+        16
       </styled.div>
       <styled.div
         key="weekDa_63"
       >
-        sun
+        fri
       </styled.div>
     </styled.button>
     <styled.button
+      disabled={false}
       key="dateCi_64"
       onClick={[Function]}
       selected={false}
@@ -1035,15 +1100,16 @@ exports[`DaySlots render correctly 1`] = `
       <styled.div
         key="dateNu_64"
       >
-        19
+        17
       </styled.div>
       <styled.div
         key="weekDa_64"
       >
-        mon
+        sat
       </styled.div>
     </styled.button>
     <styled.button
+      disabled={false}
       key="dateCi_65"
       onClick={[Function]}
       selected={false}
@@ -1051,15 +1117,16 @@ exports[`DaySlots render correctly 1`] = `
       <styled.div
         key="dateNu_65"
       >
-        20
+        18
       </styled.div>
       <styled.div
         key="weekDa_65"
       >
-        tue
+        sun
       </styled.div>
     </styled.button>
     <styled.button
+      disabled={false}
       key="dateCi_66"
       onClick={[Function]}
       selected={false}
@@ -1067,15 +1134,16 @@ exports[`DaySlots render correctly 1`] = `
       <styled.div
         key="dateNu_66"
       >
-        21
+        19
       </styled.div>
       <styled.div
         key="weekDa_66"
       >
-        wed
+        mon
       </styled.div>
     </styled.button>
     <styled.button
+      disabled={false}
       key="dateCi_67"
       onClick={[Function]}
       selected={false}
@@ -1083,15 +1151,16 @@ exports[`DaySlots render correctly 1`] = `
       <styled.div
         key="dateNu_67"
       >
-        22
+        20
       </styled.div>
       <styled.div
         key="weekDa_67"
       >
-        thu
+        tue
       </styled.div>
     </styled.button>
     <styled.button
+      disabled={false}
       key="dateCi_68"
       onClick={[Function]}
       selected={false}
@@ -1099,15 +1168,16 @@ exports[`DaySlots render correctly 1`] = `
       <styled.div
         key="dateNu_68"
       >
-        23
+        21
       </styled.div>
       <styled.div
         key="weekDa_68"
       >
-        fri
+        wed
       </styled.div>
     </styled.button>
     <styled.button
+      disabled={false}
       key="dateCi_69"
       onClick={[Function]}
       selected={false}
@@ -1115,15 +1185,16 @@ exports[`DaySlots render correctly 1`] = `
       <styled.div
         key="dateNu_69"
       >
-        24
+        22
       </styled.div>
       <styled.div
         key="weekDa_69"
       >
-        sat
+        thu
       </styled.div>
     </styled.button>
     <styled.button
+      disabled={false}
       key="dateCi_70"
       onClick={[Function]}
       selected={false}
@@ -1131,15 +1202,16 @@ exports[`DaySlots render correctly 1`] = `
       <styled.div
         key="dateNu_70"
       >
-        25
+        23
       </styled.div>
       <styled.div
         key="weekDa_70"
       >
-        sun
+        fri
       </styled.div>
     </styled.button>
     <styled.button
+      disabled={false}
       key="dateCi_71"
       onClick={[Function]}
       selected={false}
@@ -1147,15 +1219,16 @@ exports[`DaySlots render correctly 1`] = `
       <styled.div
         key="dateNu_71"
       >
-        26
+        24
       </styled.div>
       <styled.div
         key="weekDa_71"
       >
-        mon
+        sat
       </styled.div>
     </styled.button>
     <styled.button
+      disabled={false}
       key="dateCi_72"
       onClick={[Function]}
       selected={false}
@@ -1163,15 +1236,16 @@ exports[`DaySlots render correctly 1`] = `
       <styled.div
         key="dateNu_72"
       >
-        27
+        25
       </styled.div>
       <styled.div
         key="weekDa_72"
       >
-        tue
+        sun
       </styled.div>
     </styled.button>
     <styled.button
+      disabled={false}
       key="dateCi_73"
       onClick={[Function]}
       selected={false}
@@ -1179,15 +1253,16 @@ exports[`DaySlots render correctly 1`] = `
       <styled.div
         key="dateNu_73"
       >
-        28
+        26
       </styled.div>
       <styled.div
         key="weekDa_73"
       >
-        wed
+        mon
       </styled.div>
     </styled.button>
     <styled.button
+      disabled={false}
       key="dateCi_74"
       onClick={[Function]}
       selected={false}
@@ -1195,15 +1270,16 @@ exports[`DaySlots render correctly 1`] = `
       <styled.div
         key="dateNu_74"
       >
-        29
+        27
       </styled.div>
       <styled.div
         key="weekDa_74"
       >
-        thu
+        tue
       </styled.div>
     </styled.button>
     <styled.button
+      disabled={false}
       key="dateCi_75"
       onClick={[Function]}
       selected={false}
@@ -1211,15 +1287,16 @@ exports[`DaySlots render correctly 1`] = `
       <styled.div
         key="dateNu_75"
       >
-        30
+        28
       </styled.div>
       <styled.div
         key="weekDa_75"
       >
-        fri
+        wed
       </styled.div>
     </styled.button>
     <styled.button
+      disabled={false}
       key="dateCi_76"
       onClick={[Function]}
       selected={false}
@@ -1227,10 +1304,44 @@ exports[`DaySlots render correctly 1`] = `
       <styled.div
         key="dateNu_76"
       >
-        31
+        29
       </styled.div>
       <styled.div
         key="weekDa_76"
+      >
+        thu
+      </styled.div>
+    </styled.button>
+    <styled.button
+      disabled={false}
+      key="dateCi_77"
+      onClick={[Function]}
+      selected={false}
+    >
+      <styled.div
+        key="dateNu_77"
+      >
+        30
+      </styled.div>
+      <styled.div
+        key="weekDa_77"
+      >
+        fri
+      </styled.div>
+    </styled.button>
+    <styled.button
+      disabled={false}
+      key="dateCi_78"
+      onClick={[Function]}
+      selected={false}
+    >
+      <styled.div
+        key="dateNu_78"
+      >
+        31
+      </styled.div>
+      <styled.div
+        key="weekDa_78"
       >
         sat
       </styled.div>
