@@ -4,7 +4,8 @@ import customParseFormat from 'dayjs/plugin/customParseFormat';
 dayjs.extend(customParseFormat);
 
 const memCache = {
-  datesInThreeMonths: {}
+  datesInThreeMonths: {},
+  monthArray2d: {}
 };
 
 export function getDatesOfPreviousTwoDaysFrom(givenDate) {
@@ -155,6 +156,10 @@ export function getFirstDayOfMonthOf(date) {
 }
 
 export function getMonthArray2dOf(date) {
+  const uniqueID = dayjs(date).format('YYYY-MM');
+  if (memCache.monthArray2d[uniqueID]) {
+    return memCache.monthArray2d[uniqueID];
+  }
   const blank = [];
   for (let i = 0; i < getFirstDayOfMonthOf(date); i++) {
     blank.push('');
@@ -178,5 +183,6 @@ export function getMonthArray2dOf(date) {
       rows.push(cells);
     }
   }
+  memCache.monthArray2d[uniqueID] = rows;
   return rows;
 }
