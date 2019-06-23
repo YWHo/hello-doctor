@@ -147,3 +147,36 @@ export function filterTimePassedNow(timeSlots = {}, today = dayjs()) {
 export function getWeekdayLabels() {
   return ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
 }
+
+export function getFirstDayOfMonthOf(date) {
+  return dayjs(date)
+    .startOf('month')
+    .format('d');
+}
+
+export function getMonthArray2dOf(date) {
+  const blank = [];
+  for (let i = 0; i < getFirstDayOfMonthOf(date); i++) {
+    blank.push('');
+  }
+  const days = [];
+  for (let i = 1; i <= dayjs(date).daysInMonth(); i++) {
+    days.push(`${i}`);
+  }
+  const list = blank.concat(days);
+  const rows = [];
+  let cells = [];
+  for (let i = 0; i < list.length; i++) {
+    if (i !== 0 && i % 7 === 0) {
+      rows.push(cells);
+      cells = [];
+      cells.push(list[i]);
+    } else {
+      cells.push(list[i]);
+    }
+    if (i === list.length - 1) {
+      rows.push(cells);
+    }
+  }
+  return rows;
+}

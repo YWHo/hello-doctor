@@ -249,4 +249,25 @@ describe('dateHelper', () => {
       expect(dateHelper.getWeekdayLabels()).toEqual(expected);
     });
   });
+
+  describe('getFirstDayOfMonthOf', () => {
+    it('return correct value', () => {
+      const expected = '6';
+      expect(dateHelper.getFirstDayOfMonthOf('2019-06-23')).toBe(expected);
+    });
+  });
+
+  describe('getMonthArray2dOf', () => {
+    it('return correct value', () => {
+      const expected = [
+        ['', '', '', '', '', '', '1'],
+        ['2', '3', '4', '5', '6', '7', '8'],
+        ['9', '10', '11', '12', '13', '14', '15'],
+        ['16', '17', '18', '19', '20', '21', '22'],
+        ['23', '24', '25', '26', '27', '28', '29'],
+        ['30']
+      ];
+      expect(dateHelper.getMonthArray2dOf('2019-06-23')).toEqual(expected);
+    });
+  });
 });
