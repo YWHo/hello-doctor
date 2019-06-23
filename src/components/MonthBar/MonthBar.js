@@ -4,16 +4,20 @@ import styled from 'styled-components';
 import dayjs from 'dayjs';
 import PropTypes from 'prop-types';
 import calendarIcon from '../../assets/calendar_icon.svg';
-import * as selectors from '../../state/selectors';
+import MonthCalendar from '../MonthCalendar';
+import { getSelectedDate } from '../../state/selectors';
 
 const Container = styled.div`
   background-color: #177d91;
+  padding: 0.4rem;
+`;
+
+const ContainerTop = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   height: 39px;
-  padding: 0.4rem;
 `;
 
 const Month = styled.div`
@@ -34,8 +38,11 @@ export function MonthBar(props) {
 
   return (
     <Container>
-      <Month>{month}</Month>
-      <Icon src={calendarIcon} alt='Calendar' />
+      <ContainerTop>
+        <Month>{month}</Month>
+        <Icon src={calendarIcon} alt='Calendar' />
+      </ContainerTop>
+      <MonthCalendar />
     </Container>
   );
 }
@@ -46,7 +53,7 @@ MonthBar.propTypes = {
 
 const mapStateToProps = state => {
   return {
-    selectedDate: selectors.getSelectedDate(state)
+    selectedDate: getSelectedDate(state)
   };
 };
 

@@ -3,11 +3,14 @@
 exports[`NavBar render correctly 1`] = `
 <styled.div>
   <styled.div>
-    JUNE
+    <styled.div>
+      JUNE
+    </styled.div>
+    <styled.img
+      alt="Calendar"
+      src="calendar_icon.svg"
+    />
   </styled.div>
-  <styled.img
-    alt="Calendar"
-    src="calendar_icon.svg"
-  />
+  <Connect(MonthCalendar) />
 </styled.div>
 `;
