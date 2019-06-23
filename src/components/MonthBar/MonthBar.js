@@ -10,7 +10,7 @@ import { toggleShowingCalendar } from '../../state/actions';
 
 const Container = styled.div`
   background-color: #177d91;
-  padding: 0.4rem;
+  padding: 0.2rem 16px;
 `;
 
 const ContainerTop = styled.div`
