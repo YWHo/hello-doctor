@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import dayjs from 'dayjs';
 import PropTypes from 'prop-types';
 import { getSelectedDate, getShowingCalendar } from '../../state/selectors';
+import { saveSelectedDate, toggleShowingCalendar } from '../../state/actions';
 import { getWeekdayLabels, getMonthArray2dOf } from '../../shared/dateHelper';
 
 const Container = styled.div`
@@ -78,19 +79,21 @@ function showWeekLabels() {
 }
 
 function showCalendarRows(props) {
-  const { selectedDate } = props;
+  const { selectedDate, today = dayjs() } = props;
   const selectedValue = dayjs(selectedDate).format('D');
   const adjacent = getAdjacentDict(selectedValue);
+  const todayValue = dayjs(today).format('D');
 
   return getMonthArray2dOf(selectedDate).map((row, idxA) => {
     const singleRow = row.map((val, idxB) => {
-      const enabled = Number(val) >= Number(selectedValue);
+      const enabled = Number(val) >= Number(todayValue);
       return (
         <TableData key={`tc_${idxA}_${idxB}`}>
           <DateLabel
             selected={selectedValue === val}
             isAdjacent={adjacent[val]}
             enabled={enabled}
+            onClick={() => onDateSelected(props, enabled, val)}
           >
             {val}
           </DateLabel>
@@ -100,6 +103,24 @@ function showCalendarRows(props) {
 
     return <tr key={`tr_${idxA}`}>{singleRow}</tr>;
   });
+}
+
+function onDateSelected(props, enabled, val) {
+  const {
+    dSaveSelectedDate,
+    dToggleShowingCalendar,
+    isShowingCalendar
+  } = props;
+  if (!enabled) return;
+
+  const { selectedDate } = props;
+  const day = val.length > 1 ? val : `0${val}`;
+  const newDateStr = dayjs(selectedDate).format('YYYY-MM-') + day;
+  dSaveSelectedDate(dayjs(newDateStr));
+
+  // Using setTimeout as a workaround to solve the problem of immediately
+  // hide calendar due to CSS animation failed to work for an unknown reason
+  setTimeout(() => dToggleShowingCalendar(!isShowingCalendar), 100);
 }
 
 function getAdjacentDict(refValue) {
@@ -122,7 +143,10 @@ const mapStateToProps = state => {
 };
 
 function mapDispatchToProps(dispatch) {
-  return {};
+  return {
+    dSaveSelectedDate: value => dispatch(saveSelectedDate(value)),
+    dToggleShowingCalendar: status => dispatch(toggleShowingCalendar(status))
+  };
 }
 
 export default connect(
