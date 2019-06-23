@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { TimeSlots } from './TimeSlots';
 
-describe('DaySlots', () => {
+describe('TimeSlots', () => {
   it('render "No Appointment Available"', () => {
     const wrapper = shallow(<TimeSlots />);
     expect(wrapper).toMatchSnapshot();

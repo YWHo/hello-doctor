@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`NavBar render correctly 1`] = `
+exports[`MonthBar render correctly 1`] = `
 <styled.div>
   <styled.div
     onClick={[Function]}

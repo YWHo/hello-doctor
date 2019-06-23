@@ -43,7 +43,7 @@ const DateLabel = styled.div`
     props.isHeader || props.selected
       ? '#fff'
       : props.enabled
-      ? '#ddecee'
+      ? '#bbd9dd'
       : '#8bbcc6'};
   line-height: 38px;
   height: 38px;
@@ -80,22 +80,24 @@ function showWeekLabels() {
 
 function showCalendarRows(props) {
   const { selectedDate, today = dayjs() } = props;
-  const selectedValue = dayjs(selectedDate).format('D');
-  const adjacent = getAdjacentDict(selectedValue);
-  const todayValue = dayjs(today).format('D');
+  const adjacent = getAdjacentDateDict(selectedDate);
 
   return getMonthArray2dOf(selectedDate).map((row, idxA) => {
-    const singleRow = row.map((val, idxB) => {
-      const enabled = Number(val) >= Number(todayValue);
+    const singleRow = row.map((dateStr, idxB) => {
+      const selected = dayjs(dateStr).isSame(dayjs(selectedDate), 'day');
+      const enabled =
+        dateStr.length > 0 && !dayjs(dateStr).isBefore(dayjs(today), 'day');
+      const isAdjacent = adjacent[dayjs(dateStr).format('YYYY-MM-DD')];
+      const dateVal = dateStr.length > 0 ? dayjs(dateStr).format('D') : '';
       return (
         <TableData key={`tc_${idxA}_${idxB}`}>
           <DateLabel
-            selected={selectedValue === val}
-            isAdjacent={adjacent[val]}
+            selected={selected}
+            isAdjacent={isAdjacent}
             enabled={enabled}
-            onClick={() => onDateSelected(props, enabled, val)}
+            onClick={() => onDateSelected(props, dateStr, enabled)}
           >
-            {val}
+            {dateVal}
           </DateLabel>
         </TableData>
       );
@@ -105,7 +107,7 @@ function showCalendarRows(props) {
   });
 }
 
-function onDateSelected(props, enabled, val) {
+function onDateSelected(props, dateStr, enabled) {
   const {
     dSaveSelectedDate,
     dToggleShowingCalendar,
@@ -113,9 +115,7 @@ function onDateSelected(props, enabled, val) {
   } = props;
   if (!enabled) return;
 
-  const { selectedDate } = props;
-  const day = val.length > 1 ? val : `0${val}`;
-  const newDateStr = dayjs(selectedDate).format('YYYY-MM-') + day;
+  const newDateStr = dayjs(dateStr).format('YYYY-MM-DD');
   dSaveSelectedDate(dayjs(newDateStr));
 
   // Using setTimeout as a workaround to solve the problem of immediately
@@ -123,16 +123,20 @@ function onDateSelected(props, enabled, val) {
   setTimeout(() => dToggleShowingCalendar(!isShowingCalendar), 100);
 }
 
-function getAdjacentDict(refValue) {
-  const value = Number(refValue);
+function getAdjacentDateDict(refDate) {
   const adjacent = {};
-  [-2, -1, 1, 2].forEach(val => (adjacent[`${value + val}`] = true));
-
+  [-2, -1, 1, 2].forEach(val => {
+    const dateStr = dayjs(refDate)
+      .add(val, 'day')
+      .format('YYYY-MM-DD');
+    adjacent[dateStr] = true;
+  });
   return adjacent;
 }
 
 MonthCalendar.propTypes = {
-  selectedDate: PropTypes.object.isRequired
+  selectedDate: PropTypes.object.isRequired,
+  today: PropTypes.object
 };
 
 const mapStateToProps = state => {

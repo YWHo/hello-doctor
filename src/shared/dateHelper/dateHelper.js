@@ -10,8 +10,8 @@ const memCache = {
 
 export function getDatesOfPreviousTwoDaysFrom(givenDate) {
   const startDate = dayjs(givenDate);
-  const previous1stDay = startDate.add(-1, 'days').format('YYYY-MM-DD');
-  const previous2ndDay = startDate.add(-2, 'days').format('YYYY-MM-DD');
+  const previous1stDay = startDate.add(-1, 'day').format('YYYY-MM-DD');
+  const previous2ndDay = startDate.add(-2, 'day').format('YYYY-MM-DD');
   return [previous2ndDay, previous1stDay];
 }
 
@@ -156,9 +156,9 @@ export function getFirstDayOfMonthOf(date) {
 }
 
 export function getMonthArray2dOf(date) {
-  const uniqueID = dayjs(date).format('YYYY-MM');
-  if (memCache.monthArray2d[uniqueID]) {
-    return memCache.monthArray2d[uniqueID];
+  const monthYear = dayjs(date).format('YYYY-MM');
+  if (memCache.monthArray2d[monthYear]) {
+    return memCache.monthArray2d[monthYear];
   }
   const blank = [];
   for (let i = 0; i < getFirstDayOfMonthOf(date); i++) {
@@ -166,7 +166,11 @@ export function getMonthArray2dOf(date) {
   }
   const days = [];
   for (let i = 1; i <= dayjs(date).daysInMonth(); i++) {
-    days.push(`${i}`);
+    if (i >= 10) {
+      days.push(`${monthYear}-${i}`);
+    } else {
+      days.push(`${monthYear}-0${i}`);
+    }
   }
   const list = blank.concat(days);
   const rows = [];
@@ -183,6 +187,6 @@ export function getMonthArray2dOf(date) {
       rows.push(cells);
     }
   }
-  memCache.monthArray2d[uniqueID] = rows;
+  memCache.monthArray2d[monthYear] = rows;
   return rows;
 }
