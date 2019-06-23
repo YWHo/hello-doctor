@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`RegisterPage render default correctly 1`] = `
+exports[`TimeCard render default correctly 1`] = `
 <styled.div>
   <styled.img
     alt="Doctor's photo"
@@ -26,7 +26,7 @@ exports[`RegisterPage render default correctly 1`] = `
 </styled.div>
 `;
 
-exports[`RegisterPage render no time available correctly 1`] = `
+exports[`TimeCard render no time available correctly 1`] = `
 <styled.div>
   <styled.img
     alt="Doctor's photo"
@@ -46,7 +46,31 @@ exports[`RegisterPage render no time available correctly 1`] = `
 </styled.div>
 `;
 
-exports[`RegisterPage render to start from afternoon correctly 1`] = `
+exports[`TimeCard render only those time that are not in the past 1`] = `
+<styled.div>
+  <styled.img
+    alt="Doctor's photo"
+    src="https://frontendchallenge2019.azurewebsites.net//api/Picture/40abb954-2f57-4106-61ec-ddf2acfbf8ed"
+  />
+  <styled.div>
+    <styled.div>
+      Dr. Mary Aniston
+    </styled.div>
+    <styled.div>
+      General Practitioner
+    </styled.div>
+  </styled.div>
+  <Connect(TimeSlots)
+    availableSlots={
+      Object {
+        "87e5128b-d134-4d67-aca2-eef56a800adc": "2019-06-16T17:00:00",
+      }
+    }
+  />
+</styled.div>
+`;
+
+exports[`TimeCard render to start from afternoon correctly 1`] = `
 <styled.div>
   <styled.img
     alt="Doctor's photo"
@@ -71,7 +95,7 @@ exports[`RegisterPage render to start from afternoon correctly 1`] = `
 </styled.div>
 `;
 
-exports[`RegisterPage render to start from evening correctly 1`] = `
+exports[`TimeCard render to start from evening correctly 1`] = `
 <styled.div>
   <styled.img
     alt="Doctor's photo"
@@ -95,7 +119,7 @@ exports[`RegisterPage render to start from evening correctly 1`] = `
 </styled.div>
 `;
 
-exports[`RegisterPage render to start from morning correctly 1`] = `
+exports[`TimeCard render to start from morning correctly 1`] = `
 <styled.div>
   <styled.img
     alt="Doctor's photo"

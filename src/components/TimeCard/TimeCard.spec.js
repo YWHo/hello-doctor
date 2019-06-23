@@ -1,4 +1,5 @@
 import React from 'react';
+import dayjs from 'dayjs';
 import { shallow } from 'enzyme';
 import { TimeCard } from './TimeCard';
 import {
@@ -7,7 +8,8 @@ import {
   DAY_EVENING
 } from '../../shared/constants';
 
-describe('RegisterPage', () => {
+describe('TimeCard', () => {
+  const today = dayjs('2019-06-16T07:59:00');
   const scheduleObj = {
     Id: '40abb954-2f57-4106-61ec-ddf2acfbf8ed',
     Title: 'General Practitioner',
@@ -21,27 +23,41 @@ describe('RegisterPage', () => {
   };
 
   it('render default correctly', () => {
-    const wrapper = shallow(<TimeCard meetSchedule={scheduleObj} />);
+    const wrapper = shallow(
+      <TimeCard meetSchedule={scheduleObj} today={today} />
+    );
     expect(wrapper).toMatchSnapshot();
   });
 
   it('render to start from morning correctly', () => {
     const wrapper = shallow(
-      <TimeCard meetSchedule={scheduleObj} selectedDayPart={DAY_MORNING} />
+      <TimeCard
+        meetSchedule={scheduleObj}
+        selectedDayPart={DAY_MORNING}
+        today={today}
+      />
     );
     expect(wrapper).toMatchSnapshot();
   });
 
   it('render to start from afternoon correctly', () => {
     const wrapper = shallow(
-      <TimeCard meetSchedule={scheduleObj} selectedDayPart={DAY_AFTERNOON} />
+      <TimeCard
+        meetSchedule={scheduleObj}
+        selectedDayPart={DAY_AFTERNOON}
+        today={today}
+      />
     );
     expect(wrapper).toMatchSnapshot();
   });
 
   it('render to start from evening correctly', () => {
     const wrapper = shallow(
-      <TimeCard meetSchedule={scheduleObj} selectedDayPart={DAY_EVENING} />
+      <TimeCard
+        meetSchedule={scheduleObj}
+        selectedDayPart={DAY_EVENING}
+        today={today}
+      />
     );
     expect(wrapper).toMatchSnapshot();
   });
@@ -51,7 +67,17 @@ describe('RegisterPage', () => {
       ...scheduleObj,
       AvailableSlots: {}
     };
-    const wrapper = shallow(<TimeCard meetSchedule={emptyScheduleObj} />);
+    const wrapper = shallow(
+      <TimeCard meetSchedule={emptyScheduleObj} today={today} />
+    );
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('render only those time that are not in the past', () => {
+    const currentTime = dayjs('2019-06-16T12:00:00');
+    const wrapper = shallow(
+      <TimeCard meetSchedule={scheduleObj} today={currentTime} />
+    );
     expect(wrapper).toMatchSnapshot();
   });
 });

@@ -112,10 +112,23 @@ export function filterTimeSlotByPartOfDay(
 
   const newTimeSlot = {};
   const timeKeys = Object.keys(timeSlots);
-  timeKeys.forEach(key => {
-    const availTime = dayjs(dayjs(timeSlots[key]).format('HH:mm'), 'HH:mm');
+  timeKeys.forEach(timeID => {
+    const availTime = dayjs(dayjs(timeSlots[timeID]).format('HH:mm'), 'HH:mm');
     if (availTime.isSame(startTime) || availTime.isAfter(startTime)) {
-      newTimeSlot[key] = timeSlots[key];
+      newTimeSlot[timeID] = timeSlots[timeID];
+    }
+  });
+
+  return newTimeSlot;
+}
+
+export function filterTimePassedNow(timeSlots = {}, today = dayjs()) {
+  const newTimeSlot = {};
+  const timeKeys = Object.keys(timeSlots);
+  timeKeys.forEach(timeID => {
+    const availTime = dayjs(timeSlots[timeID]);
+    if (availTime.isAfter(dayjs(today))) {
+      newTimeSlot[timeID] = timeSlots[timeID];
     }
   });
 

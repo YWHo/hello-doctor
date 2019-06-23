@@ -7,8 +7,8 @@ import ErrorBoundary from './ErrorBoundary';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import AppointmentPage from './components/AppointmentPage';
 import RegisterPage from './components/RegisterPage';
-import * as actions from './state/actions';
-import * as selectors from './state/selectors';
+import { toFetchSchedules } from './state/actions';
+import { getSelectedDate } from './state/selectors';
 
 export function App(props) {
   const { dToFetchSchedules, selectedDate } = props;
@@ -31,13 +31,13 @@ export function App(props) {
 
 const mapStateToProps = state => {
   return {
-    selectedDate: selectors.getSelectedDate(state)
+    selectedDate: getSelectedDate(state)
   };
 };
 
 function mapDispatchToProps(dispatch) {
   return {
-    dToFetchSchedules: date => dispatch(actions.toFetchSchedules(date))
+    dToFetchSchedules: date => dispatch(toFetchSchedules(date))
   };
 }
 

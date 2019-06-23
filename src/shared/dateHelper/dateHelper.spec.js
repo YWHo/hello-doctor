@@ -219,4 +219,27 @@ describe('dateHelper', () => {
       expect(expected).toMatchObject(actualObj);
     });
   });
+
+  describe('filterTimePassedNow', () => {
+    const currentTime = '2019-06-16T11:00:00';
+    const pastTime = {
+      time1: '2019-06-16T09:00:00',
+      time2: '2019-06-16T10:00:00',
+      time3: '2019-06-16T11:00:00'
+    };
+    const futureTime = {
+      time4: '2019-06-16T12:00:00',
+      time5: '2019-06-16T13:00:00'
+    };
+    const timeSlots = {
+      ...pastTime,
+      ...futureTime
+    };
+
+    it('filters past time', () => {
+      const actualObj = dateHelper.filterTimePassedNow(timeSlots, currentTime);
+      expect(actualObj).toMatchObject(futureTime);
+      expect(futureTime).toMatchObject(actualObj);
+    });
+  });
 });

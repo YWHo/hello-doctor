@@ -2,8 +2,12 @@ import React from 'react';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
+import dayjs from 'dayjs';
 import TimeSlots from '../TimeSlots';
-import { filterTimeSlotByPartOfDay } from '../../shared/dateHelper';
+import {
+  filterTimeSlotByPartOfDay,
+  filterTimePassedNow
+} from '../../shared/dateHelper';
 import { getSelectedDayPart } from '../../state/selectors';
 import {
   DAY_AFTERNOON,
@@ -48,7 +52,11 @@ const TextFrame = styled.div`
 `;
 
 export function TimeCard(props) {
-  const { meetSchedule, selectedDayPart = DAY_MORNING } = props;
+  const {
+    meetSchedule,
+    selectedDayPart = DAY_MORNING,
+    today = dayjs()
+  } = props;
   const {
     Name: name,
     Title: title,
@@ -56,10 +64,11 @@ export function TimeCard(props) {
     PictureURL: pictureURL = ''
   } = meetSchedule;
   const fullUrl = `https://frontendchallenge2019.azurewebsites.net/${pictureURL}`;
-  const filteredSlots = filterTimeSlotByPartOfDay(
+  const filteredSlotsByPart = filterTimeSlotByPartOfDay(
     availableSlots,
     selectedDayPart
   );
+  const filteredSlots = filterTimePassedNow(filteredSlotsByPart, today);
 
   return (
     <Container>
@@ -75,7 +84,8 @@ export function TimeCard(props) {
 
 TimeCard.propTypes = {
   meetSchedule: PropTypes.object.isRequired,
-  selectedDayPart: PropTypes.oneOf([DAY_MORNING, DAY_AFTERNOON, DAY_EVENING])
+  selectedDayPart: PropTypes.oneOf([DAY_MORNING, DAY_AFTERNOON, DAY_EVENING]),
+  today: PropTypes.object
 };
 
 const mapStateToProps = state => {
