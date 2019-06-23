@@ -25,3 +25,7 @@ export function getSelectedDayPart({ selectedDayPart }) {
 export function getSelectedTimeID({ selectedTimeID }) {
   return selectedTimeID;
 }
+
+export function getShowingCalendar({ showingCalendar }) {
+  return showingCalendar;
+}

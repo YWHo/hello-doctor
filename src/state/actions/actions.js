@@ -86,10 +86,17 @@ export function saveSelectedDayPart(selectedDayPart) {
   };
 }
 
-export function saveselectedTimeID(selectedTimeID) {
+export function saveSelectedTimeID(selectedTimeID) {
   return {
     type: constants.SAVE_SELECTED_TIME_ID,
     payload: { selectedTimeID }
+  };
+}
+
+export function toggleShowingCalendar(showingCalendar) {
+  return {
+    type: constants.TOGGLE_SHOWING_CALENDAR,
+    payload: { showingCalendar }
   };
 }
 

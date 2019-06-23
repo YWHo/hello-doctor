@@ -5,7 +5,8 @@ import dayjs from 'dayjs';
 import PropTypes from 'prop-types';
 import calendarIcon from '../../assets/calendar_icon.svg';
 import MonthCalendar from '../MonthCalendar';
-import { getSelectedDate } from '../../state/selectors';
+import { getSelectedDate, getShowingCalendar } from '../../state/selectors';
+import { toggleShowingCalendar } from '../../state/actions';
 
 const Container = styled.div`
   background-color: #177d91;
@@ -38,7 +39,7 @@ export function MonthBar(props) {
 
   return (
     <Container>
-      <ContainerTop>
+      <ContainerTop onClick={() => onMonthBarClicked(props)}>
         <Month>{month}</Month>
         <Icon src={calendarIcon} alt='Calendar' />
       </ContainerTop>
@@ -47,18 +48,26 @@ export function MonthBar(props) {
   );
 }
 
+function onMonthBarClicked(props) {
+  const { dToggleShowingCalendar, isShowingCalendar } = props;
+  dToggleShowingCalendar(!isShowingCalendar);
+}
+
 MonthBar.propTypes = {
   selectedDate: PropTypes.object
 };
 
 const mapStateToProps = state => {
   return {
+    isShowingCalendar: getShowingCalendar(state),
     selectedDate: getSelectedDate(state)
   };
 };
 
 function mapDispatchToProps(dispatch) {
-  return {};
+  return {
+    dToggleShowingCalendar: status => dispatch(toggleShowingCalendar(status))
+  };
 }
 
 export default connect(

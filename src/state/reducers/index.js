@@ -6,6 +6,7 @@ import schedules from './schedules';
 import selectedDate from './selectedDate';
 import selectedDayPart from './selectedDayPart';
 import selectedTimeID from './selectedTimeID';
+import showingCalendar from './showingCalendar';
 
 export default combineReducers({
   hasAfternoonTime,
@@ -14,5 +15,6 @@ export default combineReducers({
   schedules,
   selectedDate,
   selectedDayPart,
-  selectedTimeID
+  selectedTimeID,
+  showingCalendar
 });

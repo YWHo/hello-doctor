@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import dayjs from 'dayjs';
 import PropTypes from 'prop-types';
 import { getSelectedTimeID } from '../../state/selectors';
-import { saveselectedTimeID } from '../../state/actions';
+import { saveSelectedTimeID } from '../../state/actions';
 
 const ContainerNoAppointment = styled.div`
   margin-top: 25.19px;
@@ -102,8 +102,8 @@ export function TimeSlots(props) {
 }
 
 function onButtonClicked(props, timeID) {
-  const { dSaveselectedTimeID } = props;
-  dSaveselectedTimeID(timeID);
+  const { dSaveSelectedTimeID } = props;
+  dSaveSelectedTimeID(timeID);
 }
 
 TimeSlots.propTypes = {
@@ -119,7 +119,7 @@ const mapStateToProps = state => {
 
 function mapDispatchToProps(dispatch) {
   return {
-    dSaveselectedTimeID: value => dispatch(saveselectedTimeID(value))
+    dSaveSelectedTimeID: value => dispatch(saveSelectedTimeID(value))
   };
 }
 

@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import styled from 'styled-components';
 import dayjs from 'dayjs';
 import PropTypes from 'prop-types';
-import { getSelectedDate } from '../../state/selectors';
+import { getSelectedDate, getShowingCalendar } from '../../state/selectors';
 import { getWeekdayLabels, getMonthArray2dOf } from '../../shared/dateHelper';
 
 const Container = styled.div`
@@ -38,17 +38,20 @@ const DateLabel = styled.div`
 `;
 
 export function MonthCalendar(props) {
-  return null;
-  // return (
-  //   <Container>
-  //     <TableView>
-  //       <tbody>
-  //         {showWeekLabels()}
-  //         {showCalendarRows(props)}
-  //       </tbody>
-  //     </TableView>
-  //   </Container>
-  // );
+  const { isShowingCalendar = false } = props;
+
+  if (!isShowingCalendar) return null;
+
+  return (
+    <Container>
+      <TableView>
+        <tbody>
+          {showWeekLabels()}
+          {showCalendarRows(props)}
+        </tbody>
+      </TableView>
+    </Container>
+  );
 }
 
 function showWeekLabels() {
@@ -93,8 +96,13 @@ function getAdjacentDict(refValue) {
   return adjacent;
 }
 
+MonthCalendar.propTypes = {
+  selectedDate: PropTypes.object.isRequired
+};
+
 const mapStateToProps = state => {
   return {
+    isShowingCalendar: getShowingCalendar(state),
     selectedDate: getSelectedDate(state)
   };
 };
