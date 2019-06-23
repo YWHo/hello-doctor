@@ -2,7 +2,9 @@
 
 exports[`NavBar render correctly 1`] = `
 <styled.div>
-  <styled.div>
+  <styled.div
+    onClick={[Function]}
+  >
     <styled.div>
       JUNE
     </styled.div>

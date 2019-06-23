@@ -7,13 +7,22 @@ import { getSelectedDate, getShowingCalendar } from '../../state/selectors';
 import { getWeekdayLabels, getMonthArray2dOf } from '../../shared/dateHelper';
 
 const Container = styled.div`
+  display: block;
   background-color: #177d91;
-  margin-top: 20px;
-  padding-bottom: 16px;
+  margin-top: ${props => (props.show ? '20px' : 0)};
+  padding-bottom: ${props => (props.show ? '16px' : 0)};
+  height: 100%;
+  max-height: ${props => (props.show ? '294px' : 0)};
+  transition: max-height 1s, margin-top 1s, padding-bottom 1s;
+  transition-delay: ${props => (props.show ? 0 : '1s')};
 `;
 
 const TableView = styled.table`
   margin: auto;
+  visibility: ${props => (props.show ? 'visible' : 'hidden')};
+  opacity: ${props => (props.show ? 1 : 0)};
+  transition: visibility 1.5s, opacity 1.5s;
+  transition-delay: ${props => (props.show ? '0.5s' : 0)};
 `;
 
 const TableData = styled.td`
@@ -23,7 +32,7 @@ const TableData = styled.td`
 
 const DateLabel = styled.div`
   background-color: ${props =>
-    props.selected ? '#0E6171' : props.isAdjacent ? '#147487' : '#177d91'};
+    props.selected ? '#0E6171' : props.isAdjacent ? '#147487' : 'transparent'};
   border-radius: ${props =>
     props.selected || props.isAdjacent ? '50%' : '100%'};
   font-family: 'Roboto', sans-serif;
@@ -40,11 +49,9 @@ const DateLabel = styled.div`
 export function MonthCalendar(props) {
   const { isShowingCalendar = false } = props;
 
-  if (!isShowingCalendar) return null;
-
   return (
-    <Container>
-      <TableView>
+    <Container show={isShowingCalendar}>
+      <TableView show={isShowingCalendar}>
         <tbody>
           {showWeekLabels()}
           {showCalendarRows(props)}

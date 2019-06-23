@@ -4,7 +4,7 @@ exports[`AppointmentPage render correctly 1`] = `
 <styled.div>
   <NavBar />
   <Connect(MonthBar) />
-  <DateSelector />
+  <Connect(DateSelector) />
   <Connect(TimeCard)
     key="tc_0"
     meetSchedule={

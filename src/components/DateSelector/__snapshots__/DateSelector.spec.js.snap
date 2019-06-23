@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`DateSelector render default correctly,  1`] = `
-<styled.div>
+<styled.div
+  show={true}
+>
   <Connect(DaySlots) />
   <Connect(PartsOfDayBar) />
 </styled.div>
