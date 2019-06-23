@@ -3,6 +3,10 @@ import { DAY_MORNING, DAY_AFTERNOON, DAY_EVENING } from '../constants';
 import customParseFormat from 'dayjs/plugin/customParseFormat';
 dayjs.extend(customParseFormat);
 
+const memCache = {
+  datesInThreeMonths: {}
+};
+
 export function getDatesOfPreviousTwoDaysFrom(givenDate) {
   const startDate = dayjs(givenDate);
   const previous1stDay = startDate.add(-1, 'days').format('YYYY-MM-DD');
@@ -11,6 +15,10 @@ export function getDatesOfPreviousTwoDaysFrom(givenDate) {
 }
 
 export function getDatesInThreeMonthsFrom(givenDate) {
+  if (memCache.datesInThreeMonths[givenDate]) {
+    return memCache.datesInThreeMonths[givenDate];
+  }
+
   const startDate = dayjs(givenDate);
   const daysThisMonth = startDate.daysInMonth() - startDate.format('D');
   const daysNextMonth = startDate.add(1, 'month').daysInMonth();
@@ -21,6 +29,7 @@ export function getDatesInThreeMonthsFrom(givenDate) {
     const tmpDate = startDate.add(i, 'days').format('YYYY-MM-DD');
     dates.push(tmpDate);
   }
+  memCache.datesInThreeMonths[givenDate] = dates;
   return dates;
 }
 
@@ -133,4 +142,8 @@ export function filterTimePassedNow(timeSlots = {}, today = dayjs()) {
   });
 
   return newTimeSlot;
+}
+
+export function getWeekdayLabels() {
+  return ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
 }

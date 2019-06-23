@@ -242,4 +242,11 @@ describe('dateHelper', () => {
       expect(futureTime).toMatchObject(actualObj);
     });
   });
+
+  describe('getWeekdayLabels', () => {
+    it('return correct data', () => {
+      const expected = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
+      expect(dateHelper.getWeekdayLabels()).toEqual(expected);
+    });
+  });
 });
