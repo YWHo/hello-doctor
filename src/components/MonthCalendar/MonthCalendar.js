@@ -38,7 +38,12 @@ const DateLabel = styled.div`
   font-family: 'Roboto', sans-serif;
   font-weight: ${props => (props.selected ? 500 : 300)};
   font-size: 20px;
-  color: ${props => (props.isHeader || props.selected ? '#fff' : '#8bbcc6')};
+  color: ${props =>
+    props.isHeader || props.selected
+      ? '#fff'
+      : props.enabled
+      ? '#ddecee'
+      : '#8bbcc6'};
   line-height: 38px;
   height: 38px;
   width: 38px;
@@ -79,11 +84,13 @@ function showCalendarRows(props) {
 
   return getMonthArray2dOf(selectedDate).map((row, idxA) => {
     const singleRow = row.map((val, idxB) => {
+      const enabled = Number(val) >= Number(selectedValue);
       return (
         <TableData key={`tc_${idxA}_${idxB}`}>
           <DateLabel
             selected={selectedValue === val}
             isAdjacent={adjacent[val]}
+            enabled={enabled}
           >
             {val}
           </DateLabel>
