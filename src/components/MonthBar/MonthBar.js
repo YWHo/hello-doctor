@@ -4,7 +4,6 @@ import styled from 'styled-components';
 import dayjs from 'dayjs';
 import PropTypes from 'prop-types';
 import calendarIcon from '../../assets/calendar_icon.svg';
-import MonthCalendar from '../MonthCalendar';
 import { getSelectedDate, getShowingCalendar } from '../../state/selectors';
 import { toggleShowingCalendar } from '../../state/actions';
 
@@ -43,7 +42,6 @@ export function MonthBar(props) {
         <Month>{month}</Month>
         <Icon src={calendarIcon} alt='Calendar' />
       </ContainerTop>
-      <MonthCalendar />
     </Container>
   );
 }

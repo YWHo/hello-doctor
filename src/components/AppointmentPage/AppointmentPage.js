@@ -6,6 +6,7 @@ import { getSchedules } from '../../state/selectors';
 import DateSelector from '../DateSelector';
 import NavBar from '../NavBar';
 import MonthBar from '../MonthBar';
+import MonthCalendar from '../MonthCalendar';
 import TimeCard from '../TimeCard';
 
 const Container = styled.div`
@@ -19,6 +20,7 @@ export function AppointmentPage(props) {
     <Container>
       <NavBar />
       <MonthBar />
+      <MonthCalendar />
       <DateSelector />
       {showTimeCards(props)}
     </Container>

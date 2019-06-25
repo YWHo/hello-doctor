@@ -10,11 +10,11 @@ import { getWeekdayLabels, getMonthArray2dOf } from '../../shared/dateHelper';
 const Container = styled.div`
   display: block;
   background-color: #177d91;
-  margin-top: ${props => (props.show ? '20px' : 0)};
+  padding-top: ${props => (props.show ? '20px' : 0)};
   padding-bottom: ${props => (props.show ? '16px' : 0)};
   height: 100%;
-  max-height: ${props => (props.show ? '294px' : 0)};
-  transition: max-height 1s, margin-top 1s, padding-bottom 1s;
+  max-height: ${props => (props.show ? '328px' : 0)};
+  transition: max-height 1s, padding-top 1s, padding-bottom 1s;
   transition-delay: ${props => (props.show ? 0 : '1s')};
 `;
 

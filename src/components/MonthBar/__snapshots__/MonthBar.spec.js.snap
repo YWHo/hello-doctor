@@ -13,6 +13,5 @@ exports[`MonthBar render correctly 1`] = `
       src="calendar_icon.svg"
     />
   </styled.div>
-  <Connect(MonthCalendar) />
 </styled.div>
 `;
