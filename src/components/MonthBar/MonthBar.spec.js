@@ -11,7 +11,11 @@ describe('MonthBar', () => {
 
   it('render when showing calendar', () => {
     const wrapper = shallow(
-      <MonthBar selectedDate={dayjs('2019-06-19')} isShowingCalendar={true} />
+      <MonthBar
+        selectedDate={dayjs('2019-07-19')}
+        isShowingCalendar={true}
+        today={dayjs('2019-06-18')}
+      />
     );
     expect(wrapper).toMatchSnapshot();
   });

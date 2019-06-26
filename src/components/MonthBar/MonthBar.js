@@ -109,7 +109,9 @@ function onMonthBarClicked(props) {
 }
 
 MonthBar.propTypes = {
-  selectedDate: PropTypes.object
+  isShowingCalendar: PropTypes.bool,
+  selectedDate: PropTypes.object,
+  today: PropTypes.object
 };
 
 const mapStateToProps = state => {

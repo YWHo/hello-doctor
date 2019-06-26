@@ -24,7 +24,7 @@ exports[`MonthBar render when showing calendar 1`] = `
         expanded={true}
         key="selMonth_0"
         onClick={[Function]}
-        selected={true}
+        selected={false}
       >
         JUNE
       </styled.div>
@@ -32,7 +32,7 @@ exports[`MonthBar render when showing calendar 1`] = `
         expanded={true}
         key="selMonth_1"
         onClick={[Function]}
-        selected={false}
+        selected={true}
       >
         JULY
       </styled.div>

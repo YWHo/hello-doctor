@@ -3,8 +3,10 @@
 exports[`AppointmentPage render correctly 1`] = `
 <styled.div>
   <NavBar />
-  <Connect(MonthBar) />
-  <Connect(MonthCalendar) />
+  <MonthContainer>
+    <Connect(MonthBar) />
+    <Connect(MonthCalendar) />
+  </MonthContainer>
   <Connect(DateSelector) />
   <Connect(TimeCard)
     key="tc_0"
