@@ -15,3 +15,40 @@ exports[`MonthBar render correctly 1`] = `
   </styled.div>
 </styled.div>
 `;
+
+exports[`MonthBar render when showing calendar 1`] = `
+<styled.div>
+  <styled.div>
+    <styled.div>
+      <styled.div
+        expanded={true}
+        key="selMonth_0"
+        onClick={[Function]}
+        selected={true}
+      >
+        JUNE
+      </styled.div>
+      <styled.div
+        expanded={true}
+        key="selMonth_1"
+        onClick={[Function]}
+        selected={false}
+      >
+        JULY
+      </styled.div>
+      <styled.div
+        expanded={true}
+        key="selMonth_2"
+        onClick={[Function]}
+        selected={false}
+      >
+        AUGUST
+      </styled.div>
+    </styled.div>
+    <styled.img
+      alt="Calendar"
+      src="calendar_icon.svg"
+    />
+  </styled.div>
+</styled.div>
+`;
