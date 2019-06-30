@@ -9,6 +9,7 @@ import MonthBar from '../MonthBar';
 import MonthCalendar from '../MonthCalendar';
 import MonthContainer from '../MonthContainer';
 import TimeCard from '../TimeCard';
+import DoctorProfile from '../DoctorProfile';
 
 const Container = styled.div`
   background-color: #f5f5f5;
@@ -26,6 +27,7 @@ export function AppointmentPage(props) {
       </MonthContainer>
       <DateSelector />
       {showTimeCards(props)}
+      <DoctorProfile />
     </Container>
   );
 }
