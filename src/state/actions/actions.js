@@ -100,6 +100,13 @@ export function toggleShowingCalendar(showingCalendar) {
   };
 }
 
+export function toggleShowingProfile(showingProfile) {
+  return {
+    type: constants.TOGGLE_SHOWING_PROFILE,
+    payload: { showingProfile }
+  };
+}
+
 export function toFetchSchedules(date) {
   return dispatch => {
     return fetchSchedule(date)

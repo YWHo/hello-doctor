@@ -1,6 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
+import { toggleShowingProfile } from '../../state/actions';
+import { getShowingProfile } from '../../state/selectors';
 
 const Container = styled.div`
   background-color: #fff;
@@ -43,20 +45,25 @@ const ButtonX = styled.button`
 `;
 
 export function DoctorProfile(props) {
+  const { dToggleShowingProfile, showingProfile } = props;
   return (
-    <Container show={false}>
+    <Container show={showingProfile}>
       Hello World!
-      <ButtonX>&#10005;</ButtonX>
+      <ButtonX onClick={() => dToggleShowingProfile(false)}>&#10005;</ButtonX>
     </Container>
   );
 }
 
 const mapStateToProps = state => {
-  return {};
+  return {
+    showingProfile: getShowingProfile(state)
+  };
 };
 
 function mapDispatchToProps(dispatch) {
-  return {};
+  return {
+    dToggleShowingProfile: status => dispatch(toggleShowingProfile(status))
+  };
 }
 
 export default connect(

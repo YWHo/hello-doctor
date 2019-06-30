@@ -29,3 +29,7 @@ export function getSelectedTimeID({ selectedTimeID }) {
 export function getShowingCalendar({ showingCalendar }) {
   return showingCalendar;
 }
+
+export function getShowingProfile({ showingProfile }) {
+  return showingProfile;
+}
