@@ -10,6 +10,10 @@ export function getHasMorningTime({ hasMorningTime }) {
   return hasMorningTime;
 }
 
+export function getProviderProfile({ providerProfile }) {
+  return providerProfile;
+}
+
 export function getSchedules({ schedules }) {
   return schedules;
 }

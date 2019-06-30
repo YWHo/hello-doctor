@@ -8,6 +8,7 @@ import {
   filterTimeSlotByPartOfDay,
   filterTimePassedNow
 } from '../../shared/dateHelper';
+import { toFetchProvider, toggleShowingProfile } from '../../state/actions';
 import { getSelectedDayPart } from '../../state/selectors';
 import {
   DAY_AFTERNOON,
@@ -58,6 +59,7 @@ export function TimeCard(props) {
     today = dayjs()
   } = props;
   const {
+    Id: doctorId,
     Name: name,
     Title: title,
     AvailableSlots: availableSlots = [],
@@ -72,14 +74,28 @@ export function TimeCard(props) {
 
   return (
     <Container>
-      <Photo src={fullUrl} alt="Doctor's photo" />
+      <Photo
+        src={fullUrl}
+        alt="Doctor's photo"
+        onClick={() => onOpeningProfile(props, doctorId)}
+      />
       <TextFrame>
-        <NameFrame>{name}</NameFrame>
-        <TitleFrame>{title}</TitleFrame>
+        <NameFrame onClick={() => onOpeningProfile(props, doctorId)}>
+          {name}
+        </NameFrame>
+        <TitleFrame onClick={() => onOpeningProfile(props, doctorId)}>
+          {title}
+        </TitleFrame>
       </TextFrame>
       <TimeSlots availableSlots={filteredSlots} />
     </Container>
   );
+}
+
+function onOpeningProfile(props, doctorID) {
+  const { dToFetchProvider, dToggleShowingProfile } = props;
+  dToFetchProvider(doctorID);
+  dToggleShowingProfile(true);
 }
 
 TimeCard.propTypes = {
@@ -95,7 +111,10 @@ const mapStateToProps = state => {
 };
 
 function mapDispatchToProps(dispatch) {
-  return {};
+  return {
+    dToFetchProvider: id => dispatch(toFetchProvider(id)),
+    dToggleShowingProfile: status => dispatch(toggleShowingProfile(status))
+  };
 }
 
 export default connect(

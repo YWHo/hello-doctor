@@ -1,5 +1,5 @@
 import * as constants from '../../shared/constants';
-import { fetchSchedule } from '../../shared/apiRequester';
+import { fetchProvider, fetchSchedule } from '../../shared/apiRequester';
 import * as dateHelper from '../../shared/dateHelper';
 
 export function clearHasAfternoonTime() {
@@ -19,6 +19,13 @@ export function clearHasEveningTime() {
 export function clearHasMorningTime() {
   return {
     type: constants.CLEAR_HAS_MORNING_TIME,
+    payload: {}
+  };
+}
+
+export function clearProviderProfile() {
+  return {
+    type: constants.CLEAR_PROVIDER_PROFILE,
     payload: {}
   };
 }
@@ -65,6 +72,13 @@ export function saveHasMorningTime(hasMorningTime) {
   };
 }
 
+export function saveProviderProfile(providerProfile) {
+  return {
+    type: constants.SAVE_PROVIDER_PROFILE,
+    payload: { providerProfile }
+  };
+}
+
 export function saveSchedules(schedules) {
   return {
     type: constants.SAVE_SCHEDULES,
@@ -104,6 +118,19 @@ export function toggleShowingProfile(showingProfile) {
   return {
     type: constants.TOGGLE_SHOWING_PROFILE,
     payload: { showingProfile }
+  };
+}
+
+export function toFetchProvider(id) {
+  return dispatch => {
+    return fetchProvider(id)
+      .then(dict => {
+        dispatch(saveProviderProfile(dict));
+      })
+      .catch(err => {
+        console.log('Failed to fetch provider: ', err);
+        dispatch(clearProviderProfile());
+      });
   };
 }
 
