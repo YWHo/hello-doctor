@@ -20,7 +20,7 @@ const ButtonX = styled.button`
   background-color: #3cb9c0;
   border-radius: 50%;
   color: #fff;
-  display: inline-block;
+  display: block;
   position: fixed;
   z-index: 20;
   top: 48%;
