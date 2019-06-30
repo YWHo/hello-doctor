@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
+import ButtonXBig from '../ButtonXBig';
 import { toggleShowingProfile } from '../../state/actions';
 import { getProviderProfile, getShowingProfile } from '../../state/selectors';
 
@@ -14,34 +15,6 @@ const Container = styled.div`
   width: 100%;
   height: 100%;
   overflow: auto;
-`;
-
-const ButtonX = styled.button`
-  background-color: #3cb9c0;
-  border-radius: 50%;
-  color: #fff;
-  display: block;
-  position: fixed;
-  z-index: 20;
-  top: 48%;
-  left: 48%;
-  height: 72px;
-  width: 72px;
-  font-size: 45px;
-  line-height: 72px;
-  outline: none;
-
-  @media (max-width: 650px) {
-    left: 45%;
-  }
-
-  @media (max-width: 450px) {
-    left: 43%;
-  }
-
-  @media (max-width: 345px) {
-    left: 40%;
-  }
 `;
 
 const Photo = styled.img`
@@ -151,7 +124,7 @@ export function DoctorProfile(props) {
         <ButtonBookingBig>Book an Appointment</ButtonBookingBig>
       </ContainerButtonBookingBig>
       <DescriptionBox>{description}</DescriptionBox>
-      <ButtonX onClick={() => dToggleShowingProfile(false)}>&#10005;</ButtonX>
+      <ButtonXBig onClick={() => dToggleShowingProfile(false)} />
       <LanguageHeading>Languages Spoken</LanguageHeading>
       <LanguagesFrame>{languageList}</LanguagesFrame>
     </Container>
