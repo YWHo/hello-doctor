@@ -9,8 +9,8 @@ exports[`NavBar render correctly 1`] = `
     />
   </styled.button>
   <img
-    alt="Vensa"
-    src="vensa_logo.svg"
+    alt="Hello Doctor"
+    src="Hello_Doctor.svg"
   />
   <styled.button>
     <img

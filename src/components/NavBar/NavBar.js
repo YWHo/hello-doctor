@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import iconGoBack from '../../assets/icon_go_back.svg';
 import iconHelp from '../../assets/icon_help.svg';
-import vensaLogo from '../../assets/vensa_logo.svg';
+import Hello_Doctor from '../../assets/Hello_Doctor.svg';
 
 const Container = styled.div`
   background-color: #3cb9c0;
@@ -36,7 +36,7 @@ export default function NavBar(props) {
       <ButtonBack>
         <img src={iconGoBack} alt='Go Back' />
       </ButtonBack>
-      <img src={vensaLogo} alt='Vensa' />
+      <img src={Hello_Doctor} alt='Hello Doctor' />
       <ButtonHelp>
         <img src={iconHelp} alt='Help' />
       </ButtonHelp>
