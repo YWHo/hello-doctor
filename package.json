@@ -42,8 +42,7 @@
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
-      "prettier --jsx-single-quote --single-quote --write",
-      "git add"
+      "prettier --jsx-single-quote --single-quote --write"
     ]
   },
   "browserslist": {
