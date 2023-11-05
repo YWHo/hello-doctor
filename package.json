@@ -40,6 +40,7 @@
   "scripts": {
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
+    "prepare": "husky install" ,
     "test": "react-app-rewired test --transformIgnorePatterns \"node_modules/(?!axios)/\"",
     "testNoWatch": "react-app-rewired test --watchAll=false --transformIgnorePatterns \"node_modules/(?!axios)/\"",
     "eject": "react-app-rewired eject",
