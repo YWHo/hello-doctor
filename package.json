@@ -25,7 +25,7 @@
     "enzyme": "^3.11.0",
     "enzyme-to-json": "^3.6.2",
     "https-browserify": "^1.0.0",
-    "husky": "^8.0.3",
+    "husky": "^8.0.0",
     "lint-staged": "^15.0.2",
     "os-browserify": "^0.3.0",
     "prettier": "^3.0.3",
@@ -40,7 +40,8 @@
   "scripts": {
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
-    "prepare": "husky install" ,
+    "pre-commit": "lint-staged",
+    "prepare": "husky install",
     "test": "react-app-rewired test --transformIgnorePatterns \"node_modules/(?!axios)/\"",
     "testNoWatch": "react-app-rewired test --watchAll=false --transformIgnorePatterns \"node_modules/(?!axios)/\"",
     "eject": "react-app-rewired eject",
@@ -48,11 +49,6 @@
   },
   "eslintConfig": {
     "extends": "react-app"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged && npm run testNoWatch"
-    }
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
