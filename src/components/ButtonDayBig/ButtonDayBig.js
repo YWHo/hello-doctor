@@ -8,7 +8,7 @@ import * as actions from '../../state/actions';
 import * as selectors from '../../state/selectors';
 
 const ButtonCircle = styled.button`
-  background-color: ${props => (props.selected ? '#177d91' : 'transparent')};
+  background-color: ${(props) => (props.selected ? '#177d91' : 'transparent')};
   border: none;
   border-radius: 50%;
   color: #fff;
@@ -54,7 +54,7 @@ export function ButtonDayBig(props) {
   const { dateStr, selectedDate = dayjs(), today = dayjs() } = props;
   assert(
     /^\d{4}-\d{2}-\d{2}$/.test(dateStr),
-    'must be in the format of YYYY-MM-DD'
+    'must be in the format of YYYY-MM-DD',
   );
   const nameRef = useRef(dateStr);
   const todayStr = dayjs(today).format('YYYY-MM-DD');
@@ -67,7 +67,7 @@ export function ButtonDayBig(props) {
       nameRef.current.scrollIntoView({
         behavior: 'auto',
         block: 'nearest',
-        inline: 'center'
+        inline: 'center',
       });
     }
   }, [selected, selectedDate]);
@@ -91,22 +91,19 @@ function onDayClicked(props, dateStr) {
 
 ButtonDayBig.propTypes = {
   selectedDate: PropTypes.object,
-  today: PropTypes.object
+  today: PropTypes.object,
 };
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
-    selectedDate: selectors.getSelectedDate(state)
+    selectedDate: selectors.getSelectedDate(state),
   };
 };
 
 function mapDispatchToProps(dispatch) {
   return {
-    dSaveSelectedDate: value => dispatch(actions.saveSelectedDate(value))
+    dSaveSelectedDate: (value) => dispatch(actions.saveSelectedDate(value)),
   };
 }
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(ButtonDayBig);
+export default connect(mapStateToProps, mapDispatchToProps)(ButtonDayBig);

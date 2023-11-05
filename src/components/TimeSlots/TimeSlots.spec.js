@@ -12,7 +12,7 @@ describe('TimeSlots', () => {
     const schedules = {
       '546ad6da-1fe7-4081-a820-3c9e838aa453': '2019-06-16T09:45:00',
       '3ea1c27a-b0e5-4e25-af5e-8e0f9ad159a2': '2019-06-16T10:00:00',
-      '426c2477-5cda-44a1-9354-14c33c5e90a7': '2019-06-16T10:15:00'
+      '426c2477-5cda-44a1-9354-14c33c5e90a7': '2019-06-16T10:15:00',
     };
     const wrapper = shallow(<TimeSlots availableSlots={schedules} />);
     expect(wrapper).toMatchSnapshot();
@@ -22,11 +22,11 @@ describe('TimeSlots', () => {
     const schedules = {
       '546ad6da-1fe7-4081-a820-3c9e838aa453': '2019-06-16T09:45:00',
       '3ea1c27a-b0e5-4e25-af5e-8e0f9ad159a2': '2019-06-16T10:00:00',
-      '426c2477-5cda-44a1-9354-14c33c5e90a7': '2019-06-16T10:15:00'
+      '426c2477-5cda-44a1-9354-14c33c5e90a7': '2019-06-16T10:15:00',
     };
     const selectedID = '3ea1c27a-b0e5-4e25-af5e-8e0f9ad159a2';
     const wrapper = shallow(
-      <TimeSlots availableSlots={schedules} selectedTimeID={selectedID} />
+      <TimeSlots availableSlots={schedules} selectedTimeID={selectedID} />,
     );
     expect(wrapper).toMatchSnapshot();
   });

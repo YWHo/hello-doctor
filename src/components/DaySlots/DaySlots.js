@@ -42,12 +42,12 @@ export function DaySlots(props) {
 }
 
 DaySlots.propTypes = {
-  today: PropTypes.object
+  today: PropTypes.object,
 };
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
-    selectedDate: selectors.getSelectedDate(state)
+    selectedDate: selectors.getSelectedDate(state),
   };
 };
 
@@ -55,7 +55,4 @@ function mapDispatchToProps(dispatch) {
   return {};
 }
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(DaySlots);
+export default connect(mapStateToProps, mapDispatchToProps)(DaySlots);

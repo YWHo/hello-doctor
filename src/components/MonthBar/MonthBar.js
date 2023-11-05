@@ -32,10 +32,10 @@ const Month = styled.div`
   color: #fff;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
-  border-bottom: ${props =>
+  border-bottom: ${(props) =>
     props.selected ? '3px solid #33CCCC' : '3px solid #177d91'};
   margin-right: 24px;
-  padding-bottom: ${props => (props.expanded ? '5.5px' : 0)};
+  padding-bottom: ${(props) => (props.expanded ? '5.5px' : 0)};
 `;
 
 const Icon = styled.img`
@@ -53,9 +53,7 @@ export function MonthBar(props) {
 
 function showCollapseView(props) {
   const { isShowingCalendar, selectedDate = dayjs() } = props;
-  const selectedMonth = dayjs(selectedDate)
-    .format('MMMM')
-    .toUpperCase();
+  const selectedMonth = dayjs(selectedDate).format('MMMM').toUpperCase();
 
   return (
     <ContainerView onClick={() => onMonthBarClicked(props)}>
@@ -67,13 +65,11 @@ function showCollapseView(props) {
 
 function showExpandView(props) {
   const { isShowingCalendar, selectedDate = dayjs(), today = dayjs() } = props;
-  const selectedMonth = dayjs(selectedDate)
-    .format('MMMM')
-    .toUpperCase();
+  const selectedMonth = dayjs(selectedDate).format('MMMM').toUpperCase();
   const threeMonths = [
     dayjs(today),
     dayjs(today).add(1, 'month'),
-    dayjs(today).add(2, 'month')
+    dayjs(today).add(2, 'month'),
   ];
   const monthsDisplay = threeMonths.map((month, idx) => {
     const monthName = month.format('MMMM').toUpperCase();
@@ -111,24 +107,21 @@ function onMonthBarClicked(props) {
 MonthBar.propTypes = {
   isShowingCalendar: PropTypes.bool,
   selectedDate: PropTypes.object,
-  today: PropTypes.object
+  today: PropTypes.object,
 };
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
     isShowingCalendar: getShowingCalendar(state),
-    selectedDate: getSelectedDate(state)
+    selectedDate: getSelectedDate(state),
   };
 };
 
 function mapDispatchToProps(dispatch) {
   return {
-    dSaveSelectedDate: date => dispatch(saveSelectedDate(date)),
-    dToggleShowingCalendar: status => dispatch(toggleShowingCalendar(status))
+    dSaveSelectedDate: (date) => dispatch(saveSelectedDate(date)),
+    dToggleShowingCalendar: (status) => dispatch(toggleShowingCalendar(status)),
   };
 }
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(MonthBar);
+export default connect(mapStateToProps, mapDispatchToProps)(MonthBar);

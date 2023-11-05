@@ -10,20 +10,25 @@ import { getWeekdayLabels, getMonthArray2dOf } from '../../shared/dateHelper';
 const Container = styled.div`
   display: block;
   background-color: #177d91;
-  padding-top: ${props => (props.show ? '20px' : 0)};
-  padding-bottom: ${props => (props.show ? '16px' : 0)};
+  padding-top: ${(props) => (props.show ? '20px' : 0)};
+  padding-bottom: ${(props) => (props.show ? '16px' : 0)};
   height: 100%;
-  max-height: ${props => (props.show ? '328px' : 0)};
-  transition: max-height 1s, padding-top 1s, padding-bottom 1s;
-  transition-delay: ${props => (props.show ? 0 : '1s')};
+  max-height: ${(props) => (props.show ? '328px' : 0)};
+  transition:
+    max-height 1s,
+    padding-top 1s,
+    padding-bottom 1s;
+  transition-delay: ${(props) => (props.show ? 0 : '1s')};
 `;
 
 const TableView = styled.table`
   margin: auto;
-  visibility: ${props => (props.show ? 'visible' : 'hidden')};
-  opacity: ${props => (props.show ? 1 : 0)};
-  transition: visibility 1.5s, opacity 1.5s;
-  transition-delay: ${props => (props.show ? '0.5s' : 0)};
+  visibility: ${(props) => (props.show ? 'visible' : 'hidden')};
+  opacity: ${(props) => (props.show ? 1 : 0)};
+  transition:
+    visibility 1.5s,
+    opacity 1.5s;
+  transition-delay: ${(props) => (props.show ? '0.5s' : 0)};
 `;
 
 const TableData = styled.td`
@@ -32,14 +37,14 @@ const TableData = styled.td`
 `;
 
 const DateLabel = styled.div`
-  background-color: ${props =>
+  background-color: ${(props) =>
     props.selected ? '#0E6171' : props.isAdjacent ? '#147487' : 'transparent'};
-  border-radius: ${props =>
+  border-radius: ${(props) =>
     props.selected || props.isAdjacent ? '50%' : '100%'};
   font-family: 'Roboto', sans-serif;
-  font-weight: ${props => (props.selected ? 500 : 300)};
+  font-weight: ${(props) => (props.selected ? 500 : 300)};
   font-size: 20px;
-  color: ${props =>
+  color: ${(props) =>
     props.isHeader || props.selected
       ? '#fff'
       : props.enabled
@@ -108,11 +113,8 @@ function showCalendarRows(props) {
 }
 
 function onDateSelected(props, dateStr, enabled) {
-  const {
-    dSaveSelectedDate,
-    dToggleShowingCalendar,
-    isShowingCalendar
-  } = props;
+  const { dSaveSelectedDate, dToggleShowingCalendar, isShowingCalendar } =
+    props;
   if (!enabled) return;
 
   const newDateStr = dayjs(dateStr).format('YYYY-MM-DD');
@@ -125,10 +127,8 @@ function onDateSelected(props, dateStr, enabled) {
 
 function getAdjacentDateDict(refDate) {
   const adjacent = {};
-  [-2, -1, 1, 2].forEach(val => {
-    const dateStr = dayjs(refDate)
-      .add(val, 'day')
-      .format('YYYY-MM-DD');
+  [-2, -1, 1, 2].forEach((val) => {
+    const dateStr = dayjs(refDate).add(val, 'day').format('YYYY-MM-DD');
     adjacent[dateStr] = true;
   });
   return adjacent;
@@ -136,24 +136,21 @@ function getAdjacentDateDict(refDate) {
 
 MonthCalendar.propTypes = {
   selectedDate: PropTypes.object.isRequired,
-  today: PropTypes.object
+  today: PropTypes.object,
 };
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
     isShowingCalendar: getShowingCalendar(state),
-    selectedDate: getSelectedDate(state)
+    selectedDate: getSelectedDate(state),
   };
 };
 
 function mapDispatchToProps(dispatch) {
   return {
-    dSaveSelectedDate: value => dispatch(saveSelectedDate(value)),
-    dToggleShowingCalendar: status => dispatch(toggleShowingCalendar(status))
+    dSaveSelectedDate: (value) => dispatch(saveSelectedDate(value)),
+    dToggleShowingCalendar: (status) => dispatch(toggleShowingCalendar(status)),
   };
 }
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(MonthCalendar);
+export default connect(mapStateToProps, mapDispatchToProps)(MonthCalendar);

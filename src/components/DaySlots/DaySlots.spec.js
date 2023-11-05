@@ -9,7 +9,7 @@ describe('DaySlots', () => {
       <DaySlots
         selectedDate={dayjs('2019-06-19')}
         today={dayjs('2019-06-16')}
-      />
+      />,
     );
     expect(wrapper).toMatchSnapshot();
   });

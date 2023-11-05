@@ -5,7 +5,7 @@ dayjs.extend(customParseFormat);
 
 const memCache = {
   datesInThreeMonths: {},
-  monthArray2d: {}
+  monthArray2d: {},
 };
 
 export function getDatesOfPreviousTwoDaysFrom(givenDate) {
@@ -106,7 +106,7 @@ export function hasEveningTimeInSchedules(schedules = []) {
 
 export function filterTimeSlotByPartOfDay(
   timeSlots = {},
-  partOfDay = DAY_MORNING
+  partOfDay = DAY_MORNING,
 ) {
   let startTime = dayjs('08:00', 'HH:mm');
   switch (partOfDay) {
@@ -122,7 +122,7 @@ export function filterTimeSlotByPartOfDay(
 
   const newTimeSlot = {};
   const timeKeys = Object.keys(timeSlots);
-  timeKeys.forEach(timeID => {
+  timeKeys.forEach((timeID) => {
     const availTime = dayjs(dayjs(timeSlots[timeID]).format('HH:mm'), 'HH:mm');
     if (availTime.isSame(startTime) || availTime.isAfter(startTime)) {
       newTimeSlot[timeID] = timeSlots[timeID];
@@ -135,7 +135,7 @@ export function filterTimeSlotByPartOfDay(
 export function filterTimePassedNow(timeSlots = {}, today = dayjs()) {
   const newTimeSlot = {};
   const timeKeys = Object.keys(timeSlots);
-  timeKeys.forEach(timeID => {
+  timeKeys.forEach((timeID) => {
     const availTime = dayjs(timeSlots[timeID]);
     if (availTime.isAfter(dayjs(today))) {
       newTimeSlot[timeID] = timeSlots[timeID];
@@ -150,9 +150,7 @@ export function getWeekdayLabels() {
 }
 
 export function getFirstDayOfMonthOf(date) {
-  return dayjs(date)
-    .startOf('month')
-    .format('d');
+  return dayjs(date).startOf('month').format('d');
 }
 
 export function getMonthArray2dOf(date) {

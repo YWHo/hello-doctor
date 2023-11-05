@@ -4,8 +4,8 @@ describe('selectors', () => {
   const state = {
     schedules: [
       { name: 'Jon', appointment: 'Morning' },
-      { name: '', appointment: 'Noon' }
-    ]
+      { name: '', appointment: 'Noon' },
+    ],
   };
 
   it('getSchedules should return the schedules', () => {

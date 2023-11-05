@@ -8,7 +8,7 @@ describe('dateHelper', () => {
   describe('getDatesOfPreviousTwoDaysFrom', () => {
     it('work as expected', () => {
       const list = dateHelper.getDatesOfPreviousTwoDaysFrom(
-        dayjs('2019-06-18')
+        dayjs('2019-06-18'),
       );
       expect(list.length).toBe(2);
       expect(list[0]).toBe('2019-06-16');
@@ -85,40 +85,40 @@ describe('dateHelper', () => {
 
   const morningTime = {
     'd6cbca46-e010-457d-8a7e-c6b3a28d729b': '2019-06-16T08:00:00',
-    '3ea1c27a-b0e5-4e25-af5e-8e0f9ad159a2': '2019-06-16T10:00:00'
+    '3ea1c27a-b0e5-4e25-af5e-8e0f9ad159a2': '2019-06-16T10:00:00',
   };
   const morningSessionOnly = {
     AvailableSlots: {
-      ...morningTime
-    }
+      ...morningTime,
+    },
   };
 
   const afternoonTime = {
     'c8f3f7fb-315d-4f13-a043-cba94c7c643b': '2019-06-16T12:00:00',
-    'b433b622-73ff-4062-aee4-4c6310e83a34': '2019-06-16T15:00:00'
+    'b433b622-73ff-4062-aee4-4c6310e83a34': '2019-06-16T15:00:00',
   };
   const afternoonSessionOnly = {
     AvailableSlots: {
-      ...afternoonTime
-    }
+      ...afternoonTime,
+    },
   };
 
   const eveningTime = {
     'c6c5a1af-892c-4ece-b669-a13657b829a2': '2019-06-16T17:00:00',
     '3a9319a6-2099-48fd-8e07-a33e883f4d7b': '2019-06-16T20:00:00',
-    '6b721dd9-1ec6-4961-adeb-507bfd91426f': '2019-06-16T19:00:00'
+    '6b721dd9-1ec6-4961-adeb-507bfd91426f': '2019-06-16T19:00:00',
   };
   const eveningSessionOnly = {
     AvailableSlots: {
-      ...eveningTime
-    }
+      ...eveningTime,
+    },
   };
   const allThreeSessions = {
     AvailableSlots: {
       'a65fe281-708b-47ad-83aa-644afc76d1fb': '2019-06-16T10:30:00',
       '12cbdc25-9fc7-4f4e-85f0-04d9f5e84913': '2019-06-16T13:00:00',
-      '9cb5b97c-203f-42be-a9e7-b8fda99c63f6': '2019-06-16T18:45:00'
-    }
+      '9cb5b97c-203f-42be-a9e7-b8fda99c63f6': '2019-06-16T18:45:00',
+    },
   };
 
   describe('hasMorningTimeInSchedules', () => {
@@ -176,7 +176,7 @@ describe('dateHelper', () => {
     const timeSlots = {
       ...morningTime,
       ...afternoonTime,
-      ...eveningTime
+      ...eveningTime,
     };
 
     it('return as it is when not specifying time', () => {
@@ -188,7 +188,7 @@ describe('dateHelper', () => {
     it('return as it is when specified to start from morning time', () => {
       const actualObj = dateHelper.filterTimeSlotByPartOfDay(
         timeSlots,
-        DAY_MORNING
+        DAY_MORNING,
       );
       expect(actualObj).toMatchObject(timeSlots);
       expect(timeSlots).toMatchObject(actualObj);
@@ -197,11 +197,11 @@ describe('dateHelper', () => {
     it('return without morning time when specified to start from afternoon time', () => {
       const expected = {
         ...afternoonTime,
-        ...eveningTime
+        ...eveningTime,
       };
       const actualObj = dateHelper.filterTimeSlotByPartOfDay(
         timeSlots,
-        DAY_AFTERNOON
+        DAY_AFTERNOON,
       );
       expect(actualObj).toMatchObject(expected);
       expect(expected).toMatchObject(actualObj);
@@ -209,11 +209,11 @@ describe('dateHelper', () => {
 
     it('return only evening time when specified to start from evening time', () => {
       const expected = {
-        ...eveningTime
+        ...eveningTime,
       };
       const actualObj = dateHelper.filterTimeSlotByPartOfDay(
         timeSlots,
-        DAY_EVENING
+        DAY_EVENING,
       );
       expect(actualObj).toMatchObject(expected);
       expect(expected).toMatchObject(actualObj);
@@ -225,15 +225,15 @@ describe('dateHelper', () => {
     const pastTime = {
       time1: '2019-06-16T09:00:00',
       time2: '2019-06-16T10:00:00',
-      time3: '2019-06-16T11:00:00'
+      time3: '2019-06-16T11:00:00',
     };
     const futureTime = {
       time4: '2019-06-16T12:00:00',
-      time5: '2019-06-16T13:00:00'
+      time5: '2019-06-16T13:00:00',
     };
     const timeSlots = {
       ...pastTime,
-      ...futureTime
+      ...futureTime,
     };
 
     it('filters past time', () => {
@@ -268,7 +268,7 @@ describe('dateHelper', () => {
           '2019-06-05',
           '2019-06-06',
           '2019-06-07',
-          '2019-06-08'
+          '2019-06-08',
         ],
         [
           '2019-06-09',
@@ -277,7 +277,7 @@ describe('dateHelper', () => {
           '2019-06-12',
           '2019-06-13',
           '2019-06-14',
-          '2019-06-15'
+          '2019-06-15',
         ],
         [
           '2019-06-16',
@@ -286,7 +286,7 @@ describe('dateHelper', () => {
           '2019-06-19',
           '2019-06-20',
           '2019-06-21',
-          '2019-06-22'
+          '2019-06-22',
         ],
         [
           '2019-06-23',
@@ -295,9 +295,9 @@ describe('dateHelper', () => {
           '2019-06-26',
           '2019-06-27',
           '2019-06-28',
-          '2019-06-29'
+          '2019-06-29',
         ],
-        ['2019-06-30']
+        ['2019-06-30'],
       ];
       expect(dateHelper.getMonthArray2dOf('2019-06-23')).toEqual(expected);
     });

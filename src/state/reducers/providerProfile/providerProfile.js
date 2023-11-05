@@ -1,6 +1,6 @@
 import {
   CLEAR_PROVIDER_PROFILE,
-  SAVE_PROVIDER_PROFILE
+  SAVE_PROVIDER_PROFILE,
 } from '../../../shared/constants';
 
 const initialState = {
@@ -10,7 +10,7 @@ const initialState = {
   Description: '',
   Languages: [],
   Degrees: [],
-  PictureURL: ''
+  PictureURL: '',
 };
 
 export default function providerProfile(state = initialState, action) {

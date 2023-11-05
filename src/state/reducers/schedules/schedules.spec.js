@@ -9,13 +9,13 @@ describe('schedules reducer', () => {
   it('should handle SAVE_SCHEDULES', () => {
     const schedules = [
       { name: 'Winne', title: 'Ms', appointment: 'Monday' },
-      { name: 'Typson', title: 'Mr', appointment: 'Sunday' }
+      { name: 'Typson', title: 'Mr', appointment: 'Sunday' },
     ];
     expect(
       reducerSchedules([], {
         type: constants.SAVE_SCHEDULES,
-        payload: { schedules }
-      })
+        payload: { schedules },
+      }),
     ).toEqual(schedules);
   });
 });

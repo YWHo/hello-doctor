@@ -1,7 +1,7 @@
 import {
   CLEAR_SELECTED_DAY_PART,
   DAY_MORNING,
-  SAVE_SELECTED_DAY_PART
+  SAVE_SELECTED_DAY_PART,
 } from '../../../shared/constants';
 
 const initialState = DAY_MORNING;
