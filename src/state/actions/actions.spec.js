@@ -13,7 +13,7 @@ describe('actions', () => {
     const schedules = mockData.scheduleDict['2019-06-16'];
     const expectedAction = {
       type: constants.SAVE_SCHEDULES,
-      payload: { schedules }
+      payload: { schedules },
     };
     expect(actions.saveSchedules(schedules)).toEqual(expectedAction);
   });
@@ -22,7 +22,7 @@ describe('actions', () => {
     const schedules = [];
     const expectedAction = {
       type: constants.CLEAR_SCHEDULES,
-      payload: {}
+      payload: {},
     };
     actions.saveSchedules(schedules);
     expect(actions.clearSchedules()).toEqual(expectedAction);
@@ -42,16 +42,16 @@ describe('async actions', () => {
   it('should create an async action to fetch and then save schedules', () => {
     const schedules = [
       { name: 'Bob', name: 'Bob' },
-      { name: 'Doe', time: 'Morning' }
+      { name: 'Doe', time: 'Morning' },
     ];
     const expectedAction = {
       type: constants.SAVE_SCHEDULES,
-      payload: { schedules }
+      payload: { schedules },
     };
 
-    mockGet.mockImplementation(fullUrl => {
+    mockGet.mockImplementation((fullUrl) => {
       return Promise.resolve({
-        data: JSON.stringify(schedules)
+        data: JSON.stringify(schedules),
       });
     });
 

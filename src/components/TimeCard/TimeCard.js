@@ -6,14 +6,14 @@ import dayjs from 'dayjs';
 import TimeSlots from '../TimeSlots';
 import {
   filterTimeSlotByPartOfDay,
-  filterTimePassedNow
+  filterTimePassedNow,
 } from '../../shared/dateHelper';
 import { toFetchProvider, toggleShowingProfile } from '../../state/actions';
 import { getSelectedDayPart } from '../../state/selectors';
 import {
   DAY_AFTERNOON,
   DAY_EVENING,
-  DAY_MORNING
+  DAY_MORNING,
 } from '../../shared/constants';
 
 const Container = styled.div`
@@ -56,19 +56,19 @@ export function TimeCard(props) {
   const {
     meetSchedule,
     selectedDayPart = DAY_MORNING,
-    today = dayjs()
+    today = dayjs(),
   } = props;
   const {
     Id: doctorId,
     Name: name,
     Title: title,
     AvailableSlots: availableSlots = [],
-    PictureURL: pictureURL = ''
+    PictureURL: pictureURL = '',
   } = meetSchedule;
   const fullUrl = `https://frontendchallenge2019.azurewebsites.net/${pictureURL}`;
   const filteredSlotsByPart = filterTimeSlotByPartOfDay(
     availableSlots,
-    selectedDayPart
+    selectedDayPart,
   );
   const filteredSlots = filterTimePassedNow(filteredSlotsByPart, today);
 
@@ -101,23 +101,20 @@ function onOpeningProfile(props, doctorID) {
 TimeCard.propTypes = {
   meetSchedule: PropTypes.object.isRequired,
   selectedDayPart: PropTypes.oneOf([DAY_MORNING, DAY_AFTERNOON, DAY_EVENING]),
-  today: PropTypes.object
+  today: PropTypes.object,
 };
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
-    selectedDayPart: getSelectedDayPart(state)
+    selectedDayPart: getSelectedDayPart(state),
   };
 };
 
 function mapDispatchToProps(dispatch) {
   return {
-    dToFetchProvider: id => dispatch(toFetchProvider(id)),
-    dToggleShowingProfile: status => dispatch(toggleShowingProfile(status))
+    dToFetchProvider: (id) => dispatch(toFetchProvider(id)),
+    dToggleShowingProfile: (status) => dispatch(toggleShowingProfile(status)),
   };
 }
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(TimeCard);
+export default connect(mapStateToProps, mapDispatchToProps)(TimeCard);

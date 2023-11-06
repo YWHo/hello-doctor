@@ -1,6 +1,6 @@
 import {
   CLEAR_SELECTED_TIME_ID,
-  SAVE_SELECTED_TIME_ID
+  SAVE_SELECTED_TIME_ID,
 } from '../../../shared/constants';
 
 const initialState = '';

@@ -5,7 +5,7 @@ import { TimeCard } from './TimeCard';
 import {
   DAY_MORNING,
   DAY_AFTERNOON,
-  DAY_EVENING
+  DAY_EVENING,
 } from '../../shared/constants';
 
 describe('TimeCard', () => {
@@ -17,14 +17,14 @@ describe('TimeCard', () => {
     AvailableSlots: {
       '9e7bbebf-92b7-4f1b-a6fc-35a72778cd77': '2019-06-16T08:00:00',
       '744022e0-54fb-41b5-b042-b4f8810d7e38': '2019-06-16T12:00:00',
-      '87e5128b-d134-4d67-aca2-eef56a800adc': '2019-06-16T17:00:00'
+      '87e5128b-d134-4d67-aca2-eef56a800adc': '2019-06-16T17:00:00',
     },
-    PictureURL: '/api/Picture/40abb954-2f57-4106-61ec-ddf2acfbf8ed'
+    PictureURL: '/api/Picture/40abb954-2f57-4106-61ec-ddf2acfbf8ed',
   };
 
   it('render default correctly', () => {
     const wrapper = shallow(
-      <TimeCard meetSchedule={scheduleObj} today={today} />
+      <TimeCard meetSchedule={scheduleObj} today={today} />,
     );
     expect(wrapper).toMatchSnapshot();
   });
@@ -35,7 +35,7 @@ describe('TimeCard', () => {
         meetSchedule={scheduleObj}
         selectedDayPart={DAY_MORNING}
         today={today}
-      />
+      />,
     );
     expect(wrapper).toMatchSnapshot();
   });
@@ -46,7 +46,7 @@ describe('TimeCard', () => {
         meetSchedule={scheduleObj}
         selectedDayPart={DAY_AFTERNOON}
         today={today}
-      />
+      />,
     );
     expect(wrapper).toMatchSnapshot();
   });
@@ -57,7 +57,7 @@ describe('TimeCard', () => {
         meetSchedule={scheduleObj}
         selectedDayPart={DAY_EVENING}
         today={today}
-      />
+      />,
     );
     expect(wrapper).toMatchSnapshot();
   });
@@ -65,10 +65,10 @@ describe('TimeCard', () => {
   it('render no time available correctly', () => {
     const emptyScheduleObj = {
       ...scheduleObj,
-      AvailableSlots: {}
+      AvailableSlots: {},
     };
     const wrapper = shallow(
-      <TimeCard meetSchedule={emptyScheduleObj} today={today} />
+      <TimeCard meetSchedule={emptyScheduleObj} today={today} />,
     );
     expect(wrapper).toMatchSnapshot();
   });
@@ -76,7 +76,7 @@ describe('TimeCard', () => {
   it('render only those time that are not in the past', () => {
     const currentTime = dayjs('2019-06-16T12:00:00');
     const wrapper = shallow(
-      <TimeCard meetSchedule={scheduleObj} today={currentTime} />
+      <TimeCard meetSchedule={scheduleObj} today={currentTime} />,
     );
     expect(wrapper).toMatchSnapshot();
   });

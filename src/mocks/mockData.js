@@ -53,9 +53,9 @@ export const scheduleDict = {
         '3faa10e0-f253-4eda-ac1e-5038c5566b19': '2019-06-16T19:15:00',
         '5687a4cc-1166-4528-a836-0fe2fd432be8': '2019-06-16T19:30:00',
         '5e3d85ec-62f2-4af0-b330-67fa4d1d4464': '2019-06-16T19:45:00',
-        '3a9319a6-2099-48fd-8e07-a33e883f4d7b': '2019-06-16T20:00:00'
+        '3a9319a6-2099-48fd-8e07-a33e883f4d7b': '2019-06-16T20:00:00',
       },
-      PictureURL: '/api/Picture/e538c28d-52df-0654-800f-6145909aca28'
+      PictureURL: '/api/Picture/e538c28d-52df-0654-800f-6145909aca28',
     },
     {
       Id: '40abb954-2f57-4106-61ec-ddf2acfbf8ed',
@@ -78,9 +78,9 @@ export const scheduleDict = {
         'a053fc80-c5ea-41b6-823a-85e70dee993d': '2019-06-16T11:15:00',
         '5912c71b-fab4-4390-aed4-31609632d8fc': '2019-06-16T11:30:00',
         '543fec11-2d4a-4328-8ef0-2d6c50bcbf16': '2019-06-16T11:45:00',
-        '744022e0-54fb-41b5-b042-b4f8810d7e38': '2019-06-16T12:00:00'
+        '744022e0-54fb-41b5-b042-b4f8810d7e38': '2019-06-16T12:00:00',
       },
-      PictureURL: '/api/Picture/40abb954-2f57-4106-61ec-ddf2acfbf8ed'
+      PictureURL: '/api/Picture/40abb954-2f57-4106-61ec-ddf2acfbf8ed',
     },
     {
       Id: '8dfe2600-52d5-3b80-129a-45d796fbaefd',
@@ -119,10 +119,10 @@ export const scheduleDict = {
         '33528206-8703-4483-8c0c-fe7cf8471906': '2019-06-16T19:15:00',
         '53935cdb-d892-4648-a328-08cc3a43e849': '2019-06-16T19:30:00',
         'a01fe071-d5f1-477e-aed4-1d76f51ee02b': '2019-06-16T19:45:00',
-        '8b00d93e-2a41-42d0-b164-ab19e0002a1c': '2019-06-16T20:00:00'
+        '8b00d93e-2a41-42d0-b164-ab19e0002a1c': '2019-06-16T20:00:00',
       },
-      PictureURL: '/api/Picture/8dfe2600-52d5-3b80-129a-45d796fbaefd'
-    }
+      PictureURL: '/api/Picture/8dfe2600-52d5-3b80-129a-45d796fbaefd',
+    },
   ],
   '2019-06-13': [
     {
@@ -130,23 +130,23 @@ export const scheduleDict = {
       Title: 'General Practitioner',
       Name: 'Dr. John Smith',
       AvailableSlots: {},
-      PictureURL: '/api/Picture/e538c28d-52df-0654-800f-6145909aca28'
+      PictureURL: '/api/Picture/e538c28d-52df-0654-800f-6145909aca28',
     },
     {
       Id: '40abb954-2f57-4106-61ec-ddf2acfbf8ed',
       Title: 'General Practitioner',
       Name: 'Dr. Mary Aniston',
       AvailableSlots: {},
-      PictureURL: '/api/Picture/40abb954-2f57-4106-61ec-ddf2acfbf8ed'
+      PictureURL: '/api/Picture/40abb954-2f57-4106-61ec-ddf2acfbf8ed',
     },
     {
       Id: '8dfe2600-52d5-3b80-129a-45d796fbaefd',
       Title: 'General Practitioner',
       Name: 'Dr. Sarah Lee Mance',
       AvailableSlots: {},
-      PictureURL: '/api/Picture/8dfe2600-52d5-3b80-129a-45d796fbaefd'
-    }
-  ]
+      PictureURL: '/api/Picture/8dfe2600-52d5-3b80-129a-45d796fbaefd',
+    },
+  ],
 };
 
 export const providers = {
@@ -158,7 +158,7 @@ export const providers = {
       'Dr. John Smith graduated from the University of Auckland in 1999. He has been working as a General Practitioner for 17 years, 8 years at MCAM and enjoys all aspects of General Practice, with special emphasis on preventative health care. His non-medical interests are fitness, reading and time with his family.',
     Languages: ['English', 'Italian', 'German'],
     Degrees: ['M.B.Ch.B', 'F.N.Z.C.G.P', 'Dip O&G'],
-    PictureURL: '/api/Picture/e538c28d-52df-0654-800f-6145909aca28'
+    PictureURL: '/api/Picture/e538c28d-52df-0654-800f-6145909aca28',
   },
   '40abb954-2f57-4106-61ec-ddf2acfbf8ed': {
     Id: '40abb954-2f57-4106-61ec-ddf2acfbf8ed',
@@ -168,7 +168,7 @@ export const providers = {
       'Canadian born, grew up in Brisbane and trained at Otago University. "I spent 5 years in London training under the Royal College of Surgeons in emergency medicine and after returning to NZ I completed my fellowship in general practice.I\'m married with 3 awesome adult children." As a Royal college educator and examiner, she also has a special interest in families, injury management and skin medicine.',
     Languages: ['English', 'Arabic'],
     Degrees: ['M.B.Ch.B', 'F.N.Z.C.G.P', 'DipO&G'],
-    PictureURL: '/api/Picture/40abb954-2f57-4106-61ec-ddf2acfbf8ed'
+    PictureURL: '/api/Picture/40abb954-2f57-4106-61ec-ddf2acfbf8ed',
   },
   '8dfe2600-52d5-3b80-129a-45d796fbaefd': {
     Id: '8dfe2600-52d5-3b80-129a-45d796fbaefd',
@@ -178,6 +178,6 @@ export const providers = {
       'Born in Sydney Australia, I completed my bachelor degrees at the University of Sydney. I moved to New Zealand over 10 years ago and I am a member of the Royal New Zealand Collage of General Practitioners.',
     Languages: ['English', 'French', 'Spanish'],
     Degrees: ['M.B.Ch.B', 'F.N.Z.C.G.P', 'Dip O&G'],
-    PictureURL: '/api/Picture/8dfe2600-52d5-3b80-129a-45d796fbaefd'
-  }
+    PictureURL: '/api/Picture/8dfe2600-52d5-3b80-129a-45d796fbaefd',
+  },
 };

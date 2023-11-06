@@ -20,5 +20,5 @@ export default combineReducers({
   selectedDayPart,
   selectedTimeID,
   showingCalendar,
-  showingProfile
+  showingProfile,
 });

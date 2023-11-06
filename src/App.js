@@ -4,7 +4,7 @@ import dayjs from 'dayjs';
 // import logo from './logo.svg';
 import './App.css';
 import ErrorBoundary from './ErrorBoundary';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import AppointmentPage from './components/AppointmentPage';
 import RegisterPage from './components/RegisterPage';
 import { toFetchSchedules } from './state/actions';
@@ -21,27 +21,26 @@ export function App(props) {
     <ErrorBoundary>
       <Router>
         <div>
-          <Route exact path='/' component={() => <AppointmentPage />} />
-          <Route path='/register' component={() => <RegisterPage />} />
+          <Routes>
+            <Route exact path='/' element={<AppointmentPage />} />
+            <Route path='/register' element={<RegisterPage />} />
+          </Routes>
         </div>
       </Router>
     </ErrorBoundary>
   );
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
-    selectedDate: getSelectedDate(state)
+    selectedDate: getSelectedDate(state),
   };
 };
 
 function mapDispatchToProps(dispatch) {
   return {
-    dToFetchSchedules: date => dispatch(toFetchSchedules(date))
+    dToFetchSchedules: (date) => dispatch(toFetchSchedules(date)),
   };
 }
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(App);

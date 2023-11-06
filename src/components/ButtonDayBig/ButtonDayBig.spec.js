@@ -12,7 +12,7 @@ describe('ButtonDayBig', () => {
         dateStr='2019-06-15'
         selectedDate={selectedDate}
         today={today}
-      />
+      />,
     );
     expect(wrapper).toMatchSnapshot();
   });
@@ -23,7 +23,7 @@ describe('ButtonDayBig', () => {
         dateStr='2019-06-16'
         selectedDate={selectedDate}
         today={today}
-      />
+      />,
     );
     expect(wrapper).toMatchSnapshot();
   });
@@ -34,7 +34,7 @@ describe('ButtonDayBig', () => {
         dateStr='2019-06-17'
         selectedDate={selectedDate}
         today={today}
-      />
+      />,
     );
     expect(wrapper).toMatchSnapshot();
   });

@@ -40,12 +40,12 @@ function showTimeCards(props) {
 }
 
 AppointmentPage.propTypes = {
-  schedules: PropTypes.arrayOf(PropTypes.object)
+  schedules: PropTypes.arrayOf(PropTypes.object),
 };
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
-    schedules: getSchedules(state)
+    schedules: getSchedules(state),
   };
 };
 
@@ -53,7 +53,4 @@ function mapDispatchToProps(dispatch) {
   return {};
 }
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(AppointmentPage);
+export default connect(mapStateToProps, mapDispatchToProps)(AppointmentPage);

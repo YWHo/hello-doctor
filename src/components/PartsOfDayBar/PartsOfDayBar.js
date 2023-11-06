@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import {
   DAY_MORNING,
   DAY_AFTERNOON,
-  DAY_EVENING
+  DAY_EVENING,
 } from '../../shared/constants';
 import * as selectors from '../../state/selectors';
 import * as actions from '../../state/actions';
@@ -24,7 +24,7 @@ const Button = styled.button`
   height: 38px;
   background-color: inherit;
   color: #fff;
-  border: ${props => (props.selected ? '1px solid #fff' : 'none')};
+  border: ${(props) => (props.selected ? '1px solid #fff' : 'none')};
   border-radius: 50px;
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
@@ -77,7 +77,7 @@ function showAfternoonButton(props) {
   const {
     hasAfternoonTime,
     hasMorningTime,
-    selectedDayPart = DAY_MORNING
+    selectedDayPart = DAY_MORNING,
   } = props;
   const selected =
     hasAfternoonTime && (!hasMorningTime || selectedDayPart === DAY_AFTERNOON);
@@ -102,7 +102,7 @@ function showEveningButton(props) {
     hasAfternoonTime,
     hasMorningTime,
     hasEveningTime,
-    selectedDayPart = DAY_MORNING
+    selectedDayPart = DAY_MORNING,
   } = props;
   const selected =
     hasEveningTime &&
@@ -132,26 +132,24 @@ PartsOfDayBar.propTypes = {
   hasMorningTime: PropTypes.bool,
   hasAfternoonTime: PropTypes.bool,
   hasEveningTime: PropTypes.bool,
-  selectedDayPart: PropTypes.oneOf([DAY_MORNING, DAY_AFTERNOON, DAY_EVENING])
+  selectedDayPart: PropTypes.oneOf([DAY_MORNING, DAY_AFTERNOON, DAY_EVENING]),
 };
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
     hasAfternoonTime: selectors.getHasAfternoonTime(state),
     hasEveningTime: selectors.getHasEveningTime(state),
     hasMorningTime: selectors.getHasMorningTime(state),
     schedules: selectors.getSchedules(state),
-    selectedDayPart: selectors.getSelectedDayPart(state)
+    selectedDayPart: selectors.getSelectedDayPart(state),
   };
 };
 
 function mapDispatchToProps(dispatch) {
   return {
-    dSaveSelectedDayPart: value => dispatch(actions.saveSelectedDayPart(value))
+    dSaveSelectedDayPart: (value) =>
+      dispatch(actions.saveSelectedDayPart(value)),
   };
 }
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(PartsOfDayBar);
+export default connect(mapStateToProps, mapDispatchToProps)(PartsOfDayBar);

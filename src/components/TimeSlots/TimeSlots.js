@@ -46,7 +46,7 @@ const ContainerInner = styled.div`
 
 const ButtonOfTime = styled.button`
   background-color: #f7f7f7;
-  border: ${props => (props.selected ? '1px solid #8d8d8d' : 'none')};
+  border: ${(props) => (props.selected ? '1px solid #8d8d8d' : 'none')};
   border-radius: 25px;
   margin-right: 10px;
   height: 37.95px;
@@ -108,22 +108,19 @@ function onButtonClicked(props, timeID) {
 
 TimeSlots.propTypes = {
   availableSlots: PropTypes.object,
-  selectedTimeID: PropTypes.string
+  selectedTimeID: PropTypes.string,
 };
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
-    selectedTimeID: getSelectedTimeID(state)
+    selectedTimeID: getSelectedTimeID(state),
   };
 };
 
 function mapDispatchToProps(dispatch) {
   return {
-    dSaveSelectedTimeID: value => dispatch(saveSelectedTimeID(value))
+    dSaveSelectedTimeID: (value) => dispatch(saveSelectedTimeID(value)),
   };
 }
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(TimeSlots);
+export default connect(mapStateToProps, mapDispatchToProps)(TimeSlots);

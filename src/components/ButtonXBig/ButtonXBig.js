@@ -61,5 +61,5 @@ export default function ButtonXBig(props) {
 }
 
 ButtonXBig.propTypes = {
-  onClick: PropTypes.func.isRequired
+  onClick: PropTypes.func.isRequired,
 };

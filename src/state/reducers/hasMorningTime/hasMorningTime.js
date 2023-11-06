@@ -1,6 +1,6 @@
 import {
   CLEAR_HAS_MORNING_TIME,
-  SAVE_HAS_MORNING_TIME
+  SAVE_HAS_MORNING_TIME,
 } from '../../../shared/constants';
 
 const initialState = false;

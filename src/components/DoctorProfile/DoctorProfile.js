@@ -7,7 +7,7 @@ import { getProviderProfile, getShowingProfile } from '../../state/selectors';
 
 const Container = styled.div`
   background-color: #fff;
-  display: ${props => (props.show ? 'block' : 'none')};
+  display: ${(props) => (props.show ? 'block' : 'none')};
   position: fixed;
   left: 0;
   top: 0;
@@ -106,7 +106,7 @@ export function DoctorProfile(props) {
     Languages: languages,
     Name: name,
     PictureURL: pictureURL,
-    Title: title
+    Title: title,
   } = providerProfile;
   const fullUrl = pictureURL
     ? `https://frontendchallenge2019.azurewebsites.net/${pictureURL}`
@@ -131,20 +131,17 @@ export function DoctorProfile(props) {
   );
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
     showingProfile: getShowingProfile(state),
-    providerProfile: getProviderProfile(state)
+    providerProfile: getProviderProfile(state),
   };
 };
 
 function mapDispatchToProps(dispatch) {
   return {
-    dToggleShowingProfile: status => dispatch(toggleShowingProfile(status))
+    dToggleShowingProfile: (status) => dispatch(toggleShowingProfile(status)),
   };
 }
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(DoctorProfile);
+export default connect(mapStateToProps, mapDispatchToProps)(DoctorProfile);

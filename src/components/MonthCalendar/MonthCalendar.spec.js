@@ -9,7 +9,7 @@ describe('MonthCalendar', () => {
       <MonthCalendar
         selectedDate={dayjs('2019-06-27')}
         today={dayjs('2019-06-23')}
-      />
+      />,
     );
     expect(wrapper).toMatchSnapshot();
   });
