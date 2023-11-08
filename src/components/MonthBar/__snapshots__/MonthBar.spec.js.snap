@@ -21,7 +21,7 @@ exports[`MonthBar render when showing calendar 1`] = `
   <styled.div>
     <styled.div>
       <styled.div
-        expanded={true}
+        $expanded={true}
         key="selMonth_0"
         onClick={[Function]}
         selected={false}
@@ -29,7 +29,7 @@ exports[`MonthBar render when showing calendar 1`] = `
         JUNE
       </styled.div>
       <styled.div
-        expanded={true}
+        $expanded={true}
         key="selMonth_1"
         onClick={[Function]}
         selected={true}
@@ -37,7 +37,7 @@ exports[`MonthBar render when showing calendar 1`] = `
         JULY
       </styled.div>
       <styled.div
-        expanded={true}
+        $expanded={true}
         key="selMonth_2"
         onClick={[Function]}
         selected={false}

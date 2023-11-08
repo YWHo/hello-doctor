@@ -10,25 +10,25 @@ import { getWeekdayLabels, getMonthArray2dOf } from '../../shared/dateHelper';
 const Container = styled.div`
   display: block;
   background-color: #177d91;
-  padding-top: ${(props) => (props.show ? '20px' : 0)};
-  padding-bottom: ${(props) => (props.show ? '16px' : 0)};
+  padding-top: ${(props) => (props.$show ? '20px' : 0)};
+  padding-bottom: ${(props) => (props.$show ? '16px' : 0)};
   height: 100%;
-  max-height: ${(props) => (props.show ? '328px' : 0)};
+  max-height: ${(props) => (props.$show ? '328px' : 0)};
   transition:
     max-height 1s,
     padding-top 1s,
     padding-bottom 1s;
-  transition-delay: ${(props) => (props.show ? 0 : '1s')};
+  transition-delay: ${(props) => (props.$show ? 0 : '1s')};
 `;
 
 const TableView = styled.table`
   margin: auto;
-  visibility: ${(props) => (props.show ? 'visible' : 'hidden')};
-  opacity: ${(props) => (props.show ? 1 : 0)};
+  visibility: ${(props) => (props.$show ? 'visible' : 'hidden')};
+  opacity: ${(props) => (props.$show ? 1 : 0)};
   transition:
     visibility 1.5s,
     opacity 1.5s;
-  transition-delay: ${(props) => (props.show ? '0.5s' : 0)};
+  transition-delay: ${(props) => (props.$show ? '0.5s' : 0)};
 `;
 
 const TableData = styled.td`
@@ -38,16 +38,16 @@ const TableData = styled.td`
 
 const DateLabel = styled.div`
   background-color: ${(props) =>
-    props.selected ? '#0E6171' : props.isAdjacent ? '#147487' : 'transparent'};
+    props.selected ? '#0E6171' : props.$isAdjacent ? '#147487' : 'transparent'};
   border-radius: ${(props) =>
-    props.selected || props.isAdjacent ? '50%' : '100%'};
+    props.selected || props.$isAdjacent ? '50%' : '100%'};
   font-family: 'Roboto', sans-serif;
   font-weight: ${(props) => (props.selected ? 500 : 300)};
   font-size: 20px;
   color: ${(props) =>
-    props.isHeader || props.selected
+    props.$isHeader || props.selected
       ? '#fff'
-      : props.enabled
+      : props.$enabled
       ? '#bbd9dd'
       : '#8bbcc6'};
   line-height: 38px;
@@ -61,8 +61,8 @@ export function MonthCalendar(props) {
   const { isShowingCalendar = false } = props;
 
   return (
-    <Container show={isShowingCalendar}>
-      <TableView show={isShowingCalendar}>
+    <Container $show={isShowingCalendar}>
+      <TableView $show={isShowingCalendar}>
         <tbody>
           {showWeekLabels()}
           {showCalendarRows(props)}
@@ -76,7 +76,7 @@ function showWeekLabels() {
   const weekLabels = getWeekdayLabels().map((name, idx) => {
     return (
       <TableData key={`td0_${idx}`}>
-        <DateLabel isHeader>{name}</DateLabel>
+        <DateLabel $isHeader>{name}</DateLabel>
       </TableData>
     );
   });
@@ -98,8 +98,8 @@ function showCalendarRows(props) {
         <TableData key={`tc_${idxA}_${idxB}`}>
           <DateLabel
             selected={selected}
-            isAdjacent={isAdjacent}
-            enabled={enabled}
+            $isAdjacent={isAdjacent}
+            $enabled={enabled}
             onClick={() => onDateSelected(props, dateStr, enabled)}
           >
             {dateVal}

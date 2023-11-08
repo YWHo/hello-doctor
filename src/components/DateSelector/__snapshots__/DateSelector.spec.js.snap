@@ -2,7 +2,7 @@
 
 exports[`DateSelector render default correctly,  1`] = `
 <styled.div
-  show={true}
+  $show={true}
 >
   <Connect(DaySlots) />
   <Connect(PartsOfDayBar) />

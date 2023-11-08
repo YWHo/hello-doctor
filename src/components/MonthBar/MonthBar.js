@@ -35,7 +35,7 @@ const Month = styled.div`
   border-bottom: ${(props) =>
     props.selected ? '3px solid #33CCCC' : '3px solid #177d91'};
   margin-right: 24px;
-  padding-bottom: ${(props) => (props.expanded ? '5.5px' : 0)};
+  padding-bottom: ${(props) => (props.$expanded ? '5.5px' : 0)};
 `;
 
 const Icon = styled.img`
@@ -57,7 +57,7 @@ function showCollapseView(props) {
 
   return (
     <ContainerView onClick={() => onMonthBarClicked(props)}>
-      <Month expanded={isShowingCalendar}>{selectedMonth}</Month>
+      <Month $expanded={isShowingCalendar}>{selectedMonth}</Month>
       <Icon src={calendarIcon} alt='Calendar' />
     </ContainerView>
   );
@@ -79,7 +79,7 @@ function showExpandView(props) {
         key={`selMonth_${idx}`}
         onClick={() => selectedNewMonth(props, month)}
         selected={isSelected}
-        expanded={isShowingCalendar}
+        $expanded={isShowingCalendar}
       >
         {monthName}
       </Month>
