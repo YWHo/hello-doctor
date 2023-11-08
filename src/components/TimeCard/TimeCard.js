@@ -15,6 +15,9 @@ import {
   DAY_EVENING,
   DAY_MORNING,
 } from '../../shared/constants';
+import doctor_male_1 from '../../assets/doctor_male_1.png';
+import doctor_female_1 from '../../assets/doctor_female_1.png';
+import doctor_female_2 from '../../assets/doctor_female_2.png';
 
 const Container = styled.div`
   background-color: #fff;
@@ -64,8 +67,25 @@ export function TimeCard(props) {
     Title: title,
     AvailableSlots: availableSlots = [],
     PictureURL: pictureURL = '',
+    PictureName: pictureName = '',
   } = meetSchedule;
-  const fullUrl = `https://frontendchallenge2019.azurewebsites.net/${pictureURL}`;
+
+  const pictureLink = pictureURL
+    ? `https://frontendchallenge2019.azurewebsites.net/${pictureURL}`
+    : '';
+  const getAssetPicture = (name) => {
+    switch (name) {
+      case 'doctor_male_1':
+        return doctor_male_1;
+      case 'doctor_female_1':
+        return doctor_female_1;
+      case 'doctor_female_2':
+        return doctor_female_2;
+      default:
+        return '';
+    }
+  };
+  const fullUrl = pictureName ? getAssetPicture(pictureName) : pictureLink;
   const filteredSlotsByPart = filterTimeSlotByPartOfDay(
     availableSlots,
     selectedDayPart,

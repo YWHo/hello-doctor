@@ -4,10 +4,13 @@ import styled from 'styled-components';
 import ButtonXBig from '../ButtonXBig';
 import { toggleShowingProfile } from '../../state/actions';
 import { getProviderProfile, getShowingProfile } from '../../state/selectors';
+import doctor_male_1 from '../../assets/doctor_male_1.png';
+import doctor_female_1 from '../../assets/doctor_female_1.png';
+import doctor_female_2 from '../../assets/doctor_female_2.png';
 
 const Container = styled.div`
   background-color: #fff;
-  display: ${(props) => (props.show ? 'block' : 'none')};
+  display: ${(props) => (props.$show ? 'block' : 'none')};
   position: fixed;
   left: 0;
   top: 0;
@@ -100,23 +103,36 @@ const LanguageBox = styled.span`
 
 export function DoctorProfile(props) {
   const { dToggleShowingProfile, providerProfile, showingProfile } = props;
-  //console.log('providerProfile: ', providerProfile)
   const {
     Description: description,
     Languages: languages,
     Name: name,
     PictureURL: pictureURL,
+    PictureName: pictureName,
     Title: title,
   } = providerProfile;
-  const fullUrl = pictureURL
+  const pictureLink = pictureURL
     ? `https://frontendchallenge2019.azurewebsites.net/${pictureURL}`
     : '';
+  const getAssetPicture = (name) => {
+    switch (name) {
+      case 'doctor_male_1':
+        return doctor_male_1;
+      case 'doctor_female_1':
+        return doctor_female_1;
+      case 'doctor_female_2':
+        return doctor_female_2;
+      default:
+        return '';
+    }
+  };
+  const fullUrl = pictureName ? getAssetPicture(pictureName) : pictureLink;
   const languageList = languages.map((elem, idx) => (
     <LanguageBox key={`lang_${idx}`}>{elem}</LanguageBox>
   ));
 
   return (
-    <Container show={showingProfile}>
+    <Container $show={showingProfile}>
       <Photo src={fullUrl} alt="Doctor's profile photo" />
       <NameFrame>{name}</NameFrame>
       <TitleFrame>{title}</TitleFrame>

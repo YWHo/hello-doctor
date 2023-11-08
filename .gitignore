@@ -62,3 +62,8 @@ typings/
 
 ## build folder by react-scripts
 build
+
+
+## Others
+.DS_Store
+**/.DS_Store
