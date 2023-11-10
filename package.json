@@ -7,6 +7,10 @@
     "npm": "9.x"
   },
   "dependencies": {
+    "@types/jest": "^29.5.8",
+    "@types/node": "^20.9.0",
+    "@types/react": "^18.2.37",
+    "@types/react-dom": "^18.2.15",
     "axios": "^1.6.0",
     "dayjs": "^1.11.10",
     "prop-types": "^15.8.1",
@@ -18,11 +22,16 @@
     "react-scripts": "^5.0.1",
     "redux": "^4.2.1",
     "redux-thunk": "^2.4.2",
-    "styled-components": "^6.1.0"
+    "styled-components": "^6.1.0",
+    "typescript": "^5.2.2",
+    "web-vitals": "^3.5.0"
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@cfaester/enzyme-adapter-react-18": "^0.7.1",
+    "@testing-library/jest-dom": "^6.1.4",
+    "@testing-library/react": "^14.1.0",
+    "@testing-library/user-event": "^14.5.1",
     "assert": "^2.1.0",
     "buffer": "^6.0.3",
     "crypto-browserify": "^3.12.0",
@@ -52,7 +61,10 @@
     "format": "prettier \"src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\" --jsx-single-quote --single-quote --write"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
