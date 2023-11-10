@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import dayjs from 'dayjs';
 import PropTypes from 'prop-types';
 import ButtonDayBig from '../ButtonDayBig';
-import * as selectors from '../../state/selectors';
+import { getSelectedDate } from '../../state/pendingAppointment';
 import * as dateHelper from '../../shared/dateHelper';
 
 const ContainerOuter = styled.div`
@@ -47,7 +47,7 @@ DaySlots.propTypes = {
 
 const mapStateToProps = (state) => {
   return {
-    selectedDate: selectors.getSelectedDate(state),
+    selectedDate: getSelectedDate(state),
   };
 };
 

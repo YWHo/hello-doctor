@@ -7,8 +7,8 @@ import ErrorBoundary from './ErrorBoundary';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import AppointmentPage from './components/AppointmentPage';
 import RegisterPage from './components/RegisterPage';
-import { toFetchSchedules } from './state/actions';
-import { getSelectedDate } from './state/selectors';
+import { toFetchSchedules } from './state/timeSlots';
+import { getSelectedDate } from './state/pendingAppointment';
 
 export function App(props) {
   const { dToFetchSchedules, selectedDate } = props;

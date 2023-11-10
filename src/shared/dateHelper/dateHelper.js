@@ -1,5 +1,5 @@
 import dayjs from 'dayjs';
-import { DAY_MORNING, DAY_AFTERNOON, DAY_EVENING } from '../constants';
+import { DAY } from '../constants';
 import customParseFormat from 'dayjs/plugin/customParseFormat';
 dayjs.extend(customParseFormat);
 
@@ -106,14 +106,14 @@ export function hasEveningTimeInSchedules(schedules = []) {
 
 export function filterTimeSlotByPartOfDay(
   timeSlots = {},
-  partOfDay = DAY_MORNING,
+  partOfDay = DAY.MORNING,
 ) {
   let startTime = dayjs('08:00', 'HH:mm');
   switch (partOfDay) {
-    case DAY_AFTERNOON:
+    case DAY.AFTERNOON:
       startTime = dayjs('12:00', 'HH:mm');
       break;
-    case DAY_EVENING:
+    case DAY.EVENING:
       startTime = dayjs('17:00', 'HH:mm');
       break;
     default:

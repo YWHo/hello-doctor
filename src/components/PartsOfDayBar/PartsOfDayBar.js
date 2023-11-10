@@ -2,13 +2,17 @@ import React from 'react';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
+import { DAY } from '../../shared/constants';
 import {
-  DAY_MORNING,
-  DAY_AFTERNOON,
-  DAY_EVENING,
-} from '../../shared/constants';
-import * as selectors from '../../state/selectors';
-import * as actions from '../../state/actions';
+  getHasAfternoonTime,
+  getHasEveningTime,
+  getHasMorningTime,
+  getSchedules,
+} from '../../state/timeSlots';
+import {
+  getSelectedDayPart,
+  saveSelectedDayPart,
+} from '../../state/pendingAppointment';
 
 const Container = styled.div`
   display: flex;
@@ -55,8 +59,8 @@ export function PartsOfDayBar(props) {
 }
 
 function showMorningButton(props) {
-  const { hasMorningTime, selectedDayPart = DAY_MORNING } = props;
-  const selected = hasMorningTime && selectedDayPart === DAY_MORNING;
+  const { hasMorningTime, selectedDayPart = DAY.MORNING } = props;
+  const selected = hasMorningTime && selectedDayPart === DAY.MORNING;
 
   return (
     <Button
@@ -64,7 +68,7 @@ function showMorningButton(props) {
       selected={selected}
       onClick={() => {
         if (hasMorningTime) {
-          onDayPartClicked(props, DAY_MORNING);
+          onDayPartClicked(props, DAY.MORNING);
         }
       }}
     >
@@ -77,10 +81,10 @@ function showAfternoonButton(props) {
   const {
     hasAfternoonTime,
     hasMorningTime,
-    selectedDayPart = DAY_MORNING,
+    selectedDayPart = DAY.MORNING,
   } = props;
   const selected =
-    hasAfternoonTime && (!hasMorningTime || selectedDayPart === DAY_AFTERNOON);
+    hasAfternoonTime && (!hasMorningTime || selectedDayPart === DAY.AFTERNOON);
 
   return (
     <Button
@@ -88,7 +92,7 @@ function showAfternoonButton(props) {
       selected={selected}
       onClick={() => {
         if (hasAfternoonTime) {
-          onDayPartClicked(props, DAY_AFTERNOON);
+          onDayPartClicked(props, DAY.AFTERNOON);
         }
       }}
     >
@@ -102,11 +106,11 @@ function showEveningButton(props) {
     hasAfternoonTime,
     hasMorningTime,
     hasEveningTime,
-    selectedDayPart = DAY_MORNING,
+    selectedDayPart = DAY.MORNING,
   } = props;
   const selected =
     hasEveningTime &&
-    ((!hasMorningTime && !hasAfternoonTime) || selectedDayPart === DAY_EVENING);
+    ((!hasMorningTime && !hasAfternoonTime) || selectedDayPart === DAY.EVENING);
 
   return (
     <Button
@@ -114,7 +118,7 @@ function showEveningButton(props) {
       selected={selected}
       onClick={() => {
         if (hasEveningTime) {
-          onDayPartClicked(props, DAY_EVENING);
+          onDayPartClicked(props, DAY.EVENING);
         }
       }}
     >
@@ -132,23 +136,22 @@ PartsOfDayBar.propTypes = {
   hasMorningTime: PropTypes.bool,
   hasAfternoonTime: PropTypes.bool,
   hasEveningTime: PropTypes.bool,
-  selectedDayPart: PropTypes.oneOf([DAY_MORNING, DAY_AFTERNOON, DAY_EVENING]),
+  selectedDayPart: PropTypes.oneOf([DAY.MORNING, DAY.AFTERNOON, DAY.EVENING]),
 };
 
 const mapStateToProps = (state) => {
   return {
-    hasAfternoonTime: selectors.getHasAfternoonTime(state),
-    hasEveningTime: selectors.getHasEveningTime(state),
-    hasMorningTime: selectors.getHasMorningTime(state),
-    schedules: selectors.getSchedules(state),
-    selectedDayPart: selectors.getSelectedDayPart(state),
+    hasAfternoonTime: getHasAfternoonTime(state),
+    hasEveningTime: getHasEveningTime(state),
+    hasMorningTime: getHasMorningTime(state),
+    schedules: getSchedules(state),
+    selectedDayPart: getSelectedDayPart(state),
   };
 };
 
 function mapDispatchToProps(dispatch) {
   return {
-    dSaveSelectedDayPart: (value) =>
-      dispatch(actions.saveSelectedDayPart(value)),
+    dSaveSelectedDayPart: (value) => dispatch(saveSelectedDayPart(value)),
   };
 }
 

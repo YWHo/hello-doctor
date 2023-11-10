@@ -2,11 +2,7 @@ import React from 'react';
 import dayjs from 'dayjs';
 import { shallow } from 'enzyme';
 import { TimeCard } from './TimeCard';
-import {
-  DAY_MORNING,
-  DAY_AFTERNOON,
-  DAY_EVENING,
-} from '../../shared/constants';
+import { DAY } from '../../shared/constants';
 
 describe('TimeCard', () => {
   const today = dayjs('2019-06-16T07:59:00');
@@ -33,7 +29,7 @@ describe('TimeCard', () => {
     const wrapper = shallow(
       <TimeCard
         meetSchedule={scheduleObj}
-        selectedDayPart={DAY_MORNING}
+        selectedDayPart={DAY.MORNING}
         today={today}
       />,
     );
@@ -44,7 +40,7 @@ describe('TimeCard', () => {
     const wrapper = shallow(
       <TimeCard
         meetSchedule={scheduleObj}
-        selectedDayPart={DAY_AFTERNOON}
+        selectedDayPart={DAY.AFTERNOON}
         today={today}
       />,
     );
@@ -55,7 +51,7 @@ describe('TimeCard', () => {
     const wrapper = shallow(
       <TimeCard
         meetSchedule={scheduleObj}
-        selectedDayPart={DAY_EVENING}
+        selectedDayPart={DAY.EVENING}
         today={today}
       />,
     );

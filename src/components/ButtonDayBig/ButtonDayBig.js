@@ -4,8 +4,10 @@ import styled from 'styled-components';
 import dayjs from 'dayjs';
 import assert from 'assert';
 import PropTypes from 'prop-types';
-import * as actions from '../../state/actions';
-import * as selectors from '../../state/selectors';
+import {
+  getSelectedDate,
+  saveSelectedDate,
+} from '../../state/pendingAppointment';
 
 const ButtonCircle = styled.button`
   background-color: ${(props) => (props.selected ? '#177d91' : 'transparent')};
@@ -96,13 +98,13 @@ ButtonDayBig.propTypes = {
 
 const mapStateToProps = (state) => {
   return {
-    selectedDate: selectors.getSelectedDate(state),
+    selectedDate: getSelectedDate(state),
   };
 };
 
 function mapDispatchToProps(dispatch) {
   return {
-    dSaveSelectedDate: (value) => dispatch(actions.saveSelectedDate(value)),
+    dSaveSelectedDate: (value) => dispatch(saveSelectedDate(value)),
   };
 }
 

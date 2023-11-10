@@ -1,6 +1,6 @@
 import dayjs from 'dayjs';
 import * as dateHelper from './dateHelper';
-import { DAY_MORNING, DAY_AFTERNOON, DAY_EVENING } from '../constants';
+import { DAY } from '../constants';
 import customParseFormat from 'dayjs/plugin/customParseFormat';
 dayjs.extend(customParseFormat);
 
@@ -188,7 +188,7 @@ describe('dateHelper', () => {
     it('return as it is when specified to start from morning time', () => {
       const actualObj = dateHelper.filterTimeSlotByPartOfDay(
         timeSlots,
-        DAY_MORNING,
+        DAY.MORNING,
       );
       expect(actualObj).toMatchObject(timeSlots);
       expect(timeSlots).toMatchObject(actualObj);
@@ -201,7 +201,7 @@ describe('dateHelper', () => {
       };
       const actualObj = dateHelper.filterTimeSlotByPartOfDay(
         timeSlots,
-        DAY_AFTERNOON,
+        DAY.AFTERNOON,
       );
       expect(actualObj).toMatchObject(expected);
       expect(expected).toMatchObject(actualObj);
@@ -213,7 +213,7 @@ describe('dateHelper', () => {
       };
       const actualObj = dateHelper.filterTimeSlotByPartOfDay(
         timeSlots,
-        DAY_EVENING,
+        DAY.EVENING,
       );
       expect(actualObj).toMatchObject(expected);
       expect(expected).toMatchObject(actualObj);
