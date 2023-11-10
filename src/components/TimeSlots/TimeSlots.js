@@ -3,8 +3,10 @@ import { connect } from 'react-redux';
 import styled from 'styled-components';
 import dayjs from 'dayjs';
 import PropTypes from 'prop-types';
-import { getSelectedTimeID } from '../../state/selectors';
-import { saveSelectedTimeID } from '../../state/actions';
+import {
+  getSelectedTimeID,
+  saveSelectedTimeID,
+} from '../../state/pendingAppointment';
 
 const ContainerNoAppointment = styled.div`
   margin-top: 25.19px;

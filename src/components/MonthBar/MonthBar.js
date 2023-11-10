@@ -4,8 +4,11 @@ import styled from 'styled-components';
 import dayjs from 'dayjs';
 import PropTypes from 'prop-types';
 import calendarIcon from '../../assets/calendar_icon.svg';
-import { getSelectedDate, getShowingCalendar } from '../../state/selectors';
-import { saveSelectedDate, toggleShowingCalendar } from '../../state/actions';
+import {
+  getSelectedDate,
+  saveSelectedDate,
+} from '../../state/pendingAppointment';
+import { getShowingCalendar, toggleShowingCalendar } from '../../state/uiShow';
 
 const Container = styled.div`
   background-color: #177d91;

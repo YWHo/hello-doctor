@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import styled from 'styled-components';
 import DaySlots from '../DaySlots';
 import PartsOfDayBar from '../PartsOfDayBar';
-import { getShowingCalendar } from '../../state/selectors';
+import { getShowingCalendar } from '../../state/uiShow';
 
 const Container = styled.div`
   background-color: #3cb9c0;

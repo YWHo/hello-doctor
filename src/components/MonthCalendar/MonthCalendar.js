@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
 import dayjs from 'dayjs';
 import PropTypes from 'prop-types';
-import { getSelectedDate, getShowingCalendar } from '../../state/selectors';
-import { saveSelectedDate, toggleShowingCalendar } from '../../state/actions';
+import {
+  getSelectedDate,
+  saveSelectedDate,
+} from '../../state/pendingAppointment';
+import { getShowingCalendar, toggleShowingCalendar } from '../../state/uiShow';
 import { getWeekdayLabels, getMonthArray2dOf } from '../../shared/dateHelper';
 
 const Container = styled.div`
@@ -57,8 +60,18 @@ const DateLabel = styled.div`
   vertical-align: middle;
 `;
 
+MonthCalendar.propTypes = {
+  selectedDate: PropTypes.object.isRequired,
+  today: PropTypes.object,
+};
+
 export function MonthCalendar(props) {
-  const { isShowingCalendar = false } = props;
+  const { dSaveSelectedDate, isShowingCalendar = false } = props;
+
+  useEffect(() => {
+    dSaveSelectedDate(dayjs());
+    // eslint-disable-next-line
+  }, []);
 
   return (
     <Container $show={isShowingCalendar}>
@@ -133,11 +146,6 @@ function getAdjacentDateDict(refDate) {
   });
   return adjacent;
 }
-
-MonthCalendar.propTypes = {
-  selectedDate: PropTypes.object.isRequired,
-  today: PropTypes.object,
-};
 
 const mapStateToProps = (state) => {
   return {

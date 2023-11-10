@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import { getSchedules } from '../../state/selectors';
+import { getSchedules } from '../../state/timeSlots';
 import DateSelector from '../DateSelector';
 import NavBar from '../NavBar';
 import MonthBar from '../MonthBar';

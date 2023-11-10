@@ -8,13 +8,10 @@ import {
   filterTimeSlotByPartOfDay,
   filterTimePassedNow,
 } from '../../shared/dateHelper';
-import { toFetchProvider, toggleShowingProfile } from '../../state/actions';
-import { getSelectedDayPart } from '../../state/selectors';
-import {
-  DAY_AFTERNOON,
-  DAY_EVENING,
-  DAY_MORNING,
-} from '../../shared/constants';
+import { toFetchProvider } from '../../state/providerProfile';
+import { toggleShowingProfile } from '../../state/uiShow';
+import { getSelectedDayPart } from '../../state/pendingAppointment';
+import { DAY } from '../../shared/constants';
 import doctor_male_1 from '../../assets/doctor_male_1.png';
 import doctor_female_1 from '../../assets/doctor_female_1.png';
 import doctor_female_2 from '../../assets/doctor_female_2.png';
@@ -58,7 +55,7 @@ const TextFrame = styled.div`
 export function TimeCard(props) {
   const {
     meetSchedule,
-    selectedDayPart = DAY_MORNING,
+    selectedDayPart = DAY.MORNING,
     today = dayjs(),
   } = props;
   const {
@@ -120,7 +117,7 @@ function onOpeningProfile(props, doctorID) {
 
 TimeCard.propTypes = {
   meetSchedule: PropTypes.object.isRequired,
-  selectedDayPart: PropTypes.oneOf([DAY_MORNING, DAY_AFTERNOON, DAY_EVENING]),
+  selectedDayPart: PropTypes.oneOf([DAY.MORNING, DAY.AFTERNOON, DAY.EVENING]),
   today: PropTypes.object,
 };
 
