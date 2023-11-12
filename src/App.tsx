@@ -10,7 +10,12 @@ import RegisterPage from './components/RegisterPage';
 import { toFetchSchedules } from './state/timeSlots';
 import { getSelectedDate } from './state/pendingAppointment';
 
-export function App(props) {
+interface AppProps {
+  dToFetchSchedules: (date: dayjs.Dayjs | Date) => void;
+  selectedDate: dayjs.Dayjs;
+}
+
+export function App(props: AppProps) {
   const { dToFetchSchedules, selectedDate } = props;
 
   useEffect(() => {
@@ -22,7 +27,7 @@ export function App(props) {
       <Router>
         <div>
           <Routes>
-            <Route exact path='/' element={<AppointmentPage />} />
+            <Route path='/' element={<AppointmentPage />} />
             <Route path='/register' element={<RegisterPage />} />
           </Routes>
         </div>
@@ -31,15 +36,16 @@ export function App(props) {
   );
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state: any) => {
   return {
     selectedDate: getSelectedDate(state),
   };
 };
 
-function mapDispatchToProps(dispatch) {
+function mapDispatchToProps(dispatch: any) {
   return {
-    dToFetchSchedules: (date) => dispatch(toFetchSchedules(date)),
+    dToFetchSchedules: (date: dayjs.Dayjs | Date) =>
+      dispatch(toFetchSchedules(date)),
   };
 }
 
