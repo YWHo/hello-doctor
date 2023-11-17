@@ -30,7 +30,7 @@ const ButtonHelp = styled.button`
   text-align: center;
 `;
 
-export default function NavBar(props) {
+const NavBar: React.FC = () => {
   return (
     <Container>
       <ButtonBack>
@@ -42,4 +42,6 @@ export default function NavBar(props) {
       </ButtonHelp>
     </Container>
   );
-}
+};
+
+export default NavBar;
