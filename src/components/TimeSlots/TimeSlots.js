@@ -1,12 +1,9 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import styled from 'styled-components';
 import dayjs from 'dayjs';
 import PropTypes from 'prop-types';
-import {
-  getSelectedTimeID,
-  saveSelectedTimeID,
-} from '../../state/pendingAppointment';
+import useActions from '../../hooks/useActions';
+import useTypedSelector from '../../hooks/useTypedSelector';
 
 const ContainerNoAppointment = styled.div`
   margin-top: 25.19px;
@@ -69,10 +66,21 @@ const TextOfTime = styled.div`
   font-size: 18px;
   font-weight: 300;
   color: #8d8d8d;
+  cursor: pointer;
 `;
 
 export function TimeSlots(props) {
-  const { availableSlots = {}, selectedTimeID = 'notAvailable' } = props;
+  const { availableSlots = {} } = props;
+  const { saveSelectedTimeID } = useActions();
+  const { selectedTimeID = 'notAvailable' } = useTypedSelector(
+    (state) => state.pendingAppointmentReducer,
+  );
+  const allProps = {
+    ...props,
+    saveSelectedTimeID,
+    selectedTimeID,
+  };
+
   const slots = Object.keys(availableSlots).map((timeID, idx) => {
     const timeStr = dayjs(availableSlots[timeID]).format('H:mm');
     return (
@@ -80,7 +88,7 @@ export function TimeSlots(props) {
         key={`tb_${idx}`}
         selected={timeID === selectedTimeID}
         onClick={() => {
-          onButtonClicked(props, timeID);
+          onButtonClicked(allProps, timeID);
         }}
       >
         <TextOfTime>{timeStr}</TextOfTime>
@@ -104,25 +112,12 @@ export function TimeSlots(props) {
 }
 
 function onButtonClicked(props, timeID) {
-  const { dSaveSelectedTimeID } = props;
-  dSaveSelectedTimeID(timeID);
+  const { saveSelectedTimeID } = props;
+  saveSelectedTimeID(timeID);
 }
 
 TimeSlots.propTypes = {
   availableSlots: PropTypes.object,
-  selectedTimeID: PropTypes.string,
 };
 
-const mapStateToProps = (state) => {
-  return {
-    selectedTimeID: getSelectedTimeID(state),
-  };
-};
-
-function mapDispatchToProps(dispatch) {
-  return {
-    dSaveSelectedTimeID: (value) => dispatch(saveSelectedTimeID(value)),
-  };
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(TimeSlots);
+export default TimeSlots;

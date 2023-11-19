@@ -1,7 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`RegisterPage render correctly 1`] = `
-<div>
-  Hello World from register page
-</div>
-`;

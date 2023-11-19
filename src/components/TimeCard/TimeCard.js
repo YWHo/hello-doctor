@@ -1,5 +1,4 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import dayjs from 'dayjs';
@@ -8,13 +7,12 @@ import {
   filterTimeSlotByPartOfDay,
   filterTimePassedNow,
 } from '../../shared/dateHelper';
-import { toFetchProvider } from '../../state/providerProfile';
-import { toggleShowingProfile } from '../../state/uiShow';
-import { getSelectedDayPart } from '../../state/pendingAppointment';
-import { DAY } from '../../shared/constants';
 import doctor_male_1 from '../../assets/doctor_male_1.png';
 import doctor_female_1 from '../../assets/doctor_female_1.png';
 import doctor_female_2 from '../../assets/doctor_female_2.png';
+import useActions from '../../hooks/useActions';
+import useTypedSelector from '../../hooks/useTypedSelector';
+import { DAY } from '../../shared/constants';
 
 const Container = styled.div`
   background-color: #fff;
@@ -29,10 +27,12 @@ const Photo = styled.img`
   float: left;
   height: 81px;
   width: 80px;
+  cursor: pointer;
 `;
 
-const NameFrame = styled.div`
+const NameFrame = styled.span`
   color: #2a95bf;
+  cursor: pointer;
   font-family: 'Roboto', sans-serif;
   font-size: 22px;
   min-height: 29px;
@@ -40,8 +40,9 @@ const NameFrame = styled.div`
   vertical-align: middle;
 `;
 
-const TitleFrame = styled.div`
+const TitleFrame = styled.span`
   color: #818181;
+  cursor: pointer;
   font-size: 14px;
   height: 19px;
   vertical-align: middle;
@@ -53,11 +54,18 @@ const TextFrame = styled.div`
 `;
 
 export function TimeCard(props) {
-  const {
-    meetSchedule,
-    selectedDayPart = DAY.MORNING,
-    today = dayjs(),
-  } = props;
+  const { meetSchedule, today = dayjs() } = props;
+  const { toFetchProvider, toFetchSchedules, toggleShowingProfile } =
+    useActions();
+  const { selectedDayPart = DAY.MORNING } = useTypedSelector(
+    (state) => state.pendingAppointmentReducer,
+  );
+  const allProps = {
+    ...props,
+    toFetchProvider,
+    toFetchSchedules,
+    toggleShowingProfile,
+  };
   const {
     Id: doctorId,
     Name: name,
@@ -94,15 +102,19 @@ export function TimeCard(props) {
       <Photo
         src={fullUrl}
         alt="Doctor's photo"
-        onClick={() => onOpeningProfile(props, doctorId)}
+        onClick={() => onOpeningProfile(allProps, doctorId)}
       />
       <TextFrame>
-        <NameFrame onClick={() => onOpeningProfile(props, doctorId)}>
-          {name}
-        </NameFrame>
-        <TitleFrame onClick={() => onOpeningProfile(props, doctorId)}>
-          {title}
-        </TitleFrame>
+        <div>
+          <NameFrame onClick={() => onOpeningProfile(allProps, doctorId)}>
+            {name}
+          </NameFrame>
+        </div>
+        <div>
+          <TitleFrame onClick={() => onOpeningProfile(allProps, doctorId)}>
+            {title}
+          </TitleFrame>
+        </div>
       </TextFrame>
       <TimeSlots availableSlots={filteredSlots} />
     </Container>
@@ -110,28 +122,14 @@ export function TimeCard(props) {
 }
 
 function onOpeningProfile(props, doctorID) {
-  const { dToFetchProvider, dToggleShowingProfile } = props;
-  dToFetchProvider(doctorID);
-  dToggleShowingProfile(true);
+  const { toFetchProvider, toggleShowingProfile } = props;
+  toFetchProvider(doctorID);
+  toggleShowingProfile(true);
 }
 
 TimeCard.propTypes = {
   meetSchedule: PropTypes.object.isRequired,
-  selectedDayPart: PropTypes.oneOf([DAY.MORNING, DAY.AFTERNOON, DAY.EVENING]),
   today: PropTypes.object,
 };
 
-const mapStateToProps = (state) => {
-  return {
-    selectedDayPart: getSelectedDayPart(state),
-  };
-};
-
-function mapDispatchToProps(dispatch) {
-  return {
-    dToFetchProvider: (id) => dispatch(toFetchProvider(id)),
-    dToggleShowingProfile: (status) => dispatch(toggleShowingProfile(status)),
-  };
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(TimeCard);
+export default TimeCard;

@@ -1,14 +1,10 @@
 import React, { useEffect } from 'react';
-import { connect } from 'react-redux';
 import styled from 'styled-components';
 import dayjs from 'dayjs';
 import PropTypes from 'prop-types';
-import {
-  getSelectedDate,
-  saveSelectedDate,
-} from '../../state/pendingAppointment';
-import { getShowingCalendar, toggleShowingCalendar } from '../../state/uiShow';
 import { getWeekdayLabels, getMonthArray2dOf } from '../../shared/dateHelper';
+import useActions from '../../hooks/useActions';
+import useTypedSelector from '../../hooks/useTypedSelector';
 
 const Container = styled.div`
   display: block;
@@ -53,6 +49,7 @@ const DateLabel = styled.div`
       : props.$enabled
       ? '#bbd9dd'
       : '#8bbcc6'};
+  cursor: pointer;
   line-height: 38px;
   height: 38px;
   width: 38px;
@@ -61,24 +58,34 @@ const DateLabel = styled.div`
 `;
 
 MonthCalendar.propTypes = {
-  selectedDate: PropTypes.object.isRequired,
   today: PropTypes.object,
 };
 
 export function MonthCalendar(props) {
-  const { dSaveSelectedDate, isShowingCalendar = false } = props;
+  const { saveSelectedDate, toggleShowingCalendar } = useActions();
+  const { selectedDate } = useTypedSelector(
+    (state) => state.pendingAppointmentReducer,
+  );
+  const { showingCalendar } = useTypedSelector((state) => state.uiShowReducer);
+  const allProps = {
+    ...props,
+    saveSelectedDate,
+    selectedDate,
+    showingCalendar,
+    toggleShowingCalendar,
+  };
 
   useEffect(() => {
-    dSaveSelectedDate(dayjs());
+    saveSelectedDate(dayjs());
     // eslint-disable-next-line
   }, []);
 
   return (
-    <Container $show={isShowingCalendar}>
-      <TableView $show={isShowingCalendar}>
+    <Container $show={showingCalendar}>
+      <TableView $show={showingCalendar}>
         <tbody>
           {showWeekLabels()}
-          {showCalendarRows(props)}
+          {showCalendarRows(allProps)}
         </tbody>
       </TableView>
     </Container>
@@ -126,16 +133,15 @@ function showCalendarRows(props) {
 }
 
 function onDateSelected(props, dateStr, enabled) {
-  const { dSaveSelectedDate, dToggleShowingCalendar, isShowingCalendar } =
-    props;
+  const { saveSelectedDate, toggleShowingCalendar, showingCalendar } = props;
   if (!enabled) return;
 
   const newDateStr = dayjs(dateStr).format('YYYY-MM-DD');
-  dSaveSelectedDate(dayjs(newDateStr));
+  saveSelectedDate(dayjs(newDateStr));
 
   // Using setTimeout as a workaround to solve the problem of immediately
   // hide calendar due to CSS animation failed to work for an unknown reason
-  setTimeout(() => dToggleShowingCalendar(!isShowingCalendar), 100);
+  setTimeout(() => toggleShowingCalendar(!showingCalendar), 100);
 }
 
 function getAdjacentDateDict(refDate) {
@@ -147,18 +153,4 @@ function getAdjacentDateDict(refDate) {
   return adjacent;
 }
 
-const mapStateToProps = (state) => {
-  return {
-    isShowingCalendar: getShowingCalendar(state),
-    selectedDate: getSelectedDate(state),
-  };
-};
-
-function mapDispatchToProps(dispatch) {
-  return {
-    dSaveSelectedDate: (value) => dispatch(saveSelectedDate(value)),
-    dToggleShowingCalendar: (status) => dispatch(toggleShowingCalendar(status)),
-  };
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(MonthCalendar);
+export default MonthCalendar;

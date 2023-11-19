@@ -1,13 +1,11 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import styled from 'styled-components';
 import ButtonXBig from '../ButtonXBig';
-import { toggleShowingProfile } from '../../state/uiShow';
-import { getProviderProfile } from '../../state/providerProfile';
-import { getShowingProfile } from '../../state/uiShow';
 import doctor_male_1 from '../../assets/doctor_male_1.png';
 import doctor_female_1 from '../../assets/doctor_female_1.png';
 import doctor_female_2 from '../../assets/doctor_female_2.png';
+import useActions from '../../hooks/useActions';
+import useTypedSelector from '../../hooks/useTypedSelector';
 
 const Container = styled.div`
   background-color: #fff;
@@ -102,8 +100,12 @@ const LanguageBox = styled.span`
   margin-right: 29px;
 `;
 
-export function DoctorProfile(props) {
-  const { dToggleShowingProfile, providerProfile, showingProfile } = props;
+export function DoctorProfile() {
+  const { toggleShowingProfile } = useActions();
+  const providerProfile = useTypedSelector(
+    (state) => state.providerProfileReducer,
+  );
+  const { showingProfile } = useTypedSelector((state) => state.uiShowReducer);
   const {
     Description: description,
     Languages: languages,
@@ -128,7 +130,7 @@ export function DoctorProfile(props) {
     }
   };
   const fullUrl = pictureName ? getAssetPicture(pictureName) : pictureLink;
-  const languageList = languages.map((elem, idx) => (
+  const languageList = languages?.map((elem, idx) => (
     <LanguageBox key={`lang_${idx}`}>{elem}</LanguageBox>
   ));
 
@@ -141,24 +143,11 @@ export function DoctorProfile(props) {
         <ButtonBookingBig>Book an Appointment</ButtonBookingBig>
       </ContainerButtonBookingBig>
       <DescriptionBox>{description}</DescriptionBox>
-      <ButtonXBig onClick={() => dToggleShowingProfile(false)} />
+      <ButtonXBig onClick={() => toggleShowingProfile(false)} />
       <LanguageHeading>Languages Spoken</LanguageHeading>
       <LanguagesFrame>{languageList}</LanguagesFrame>
     </Container>
   );
 }
 
-const mapStateToProps = (state) => {
-  return {
-    showingProfile: getShowingProfile(state),
-    providerProfile: getProviderProfile(state),
-  };
-};
-
-function mapDispatchToProps(dispatch) {
-  return {
-    dToggleShowingProfile: (status) => dispatch(toggleShowingProfile(status)),
-  };
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(DoctorProfile);
+export default DoctorProfile;

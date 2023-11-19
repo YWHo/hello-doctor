@@ -1,8 +1,5 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
-import { getSchedules } from '../../state/timeSlots';
 import DateSelector from '../DateSelector';
 import NavBar from '../NavBar';
 import MonthBar from '../MonthBar';
@@ -10,6 +7,7 @@ import MonthCalendar from '../MonthCalendar';
 import MonthContainer from '../MonthContainer';
 import TimeCard from '../TimeCard';
 import DoctorProfile from '../DoctorProfile';
+import useTypedSelector from '../../hooks/useTypedSelector';
 
 const Container = styled.div`
   background-color: #f5f5f5;
@@ -18,6 +16,7 @@ const Container = styled.div`
 `;
 
 export function AppointmentPage(props) {
+  const { schedules } = useTypedSelector((state) => state.timeSlotsReducer);
   return (
     <Container>
       <NavBar />
@@ -26,7 +25,7 @@ export function AppointmentPage(props) {
         <MonthCalendar />
       </MonthContainer>
       <DateSelector />
-      {showTimeCards(props)}
+      {showTimeCards({ ...props, schedules })}
       <DoctorProfile />
     </Container>
   );
@@ -39,18 +38,4 @@ function showTimeCards(props) {
   });
 }
 
-AppointmentPage.propTypes = {
-  schedules: PropTypes.arrayOf(PropTypes.object),
-};
-
-const mapStateToProps = (state) => {
-  return {
-    schedules: getSchedules(state),
-  };
-};
-
-function mapDispatchToProps(dispatch) {
-  return {};
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(AppointmentPage);
+export default AppointmentPage;
