@@ -22,7 +22,6 @@ export function mockFetchProvider(id) {
   const { providers } = mockData;
   const { providers2 } = mockData2;
   const data = { ...providers, ...providers2 };
-  console.log('provider data:\n', data);
 
   if (data[id]) {
     return Promise.resolve(data[id]);

@@ -1,14 +1,10 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import styled from 'styled-components';
 import dayjs from 'dayjs';
 import PropTypes from 'prop-types';
 import calendarIcon from '../../assets/calendar_icon.svg';
-import {
-  getSelectedDate,
-  saveSelectedDate,
-} from '../../state/pendingAppointment';
-import { getShowingCalendar, toggleShowingCalendar } from '../../state/uiShow';
+import useActions from '../../hooks/useActions';
+import useTypedSelector from '../../hooks/useTypedSelector';
 
 const Container = styled.div`
   background-color: #177d91;
@@ -17,6 +13,7 @@ const Container = styled.div`
 
 const ContainerView = styled.div`
   display: flex;
+  cursor: ${(props) => (props.$expanded ? 'default' : 'pointer')};
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
@@ -25,8 +22,9 @@ const ContainerView = styled.div`
 
 const MonthSelection = styled.div`
   display: flex;
+  cursor: pointer;
   flex-direction: row;
-  justify-connect: flex-start;
+  justify-content: flex-start;
   align-items: center;
   height: 39px;
 `;
@@ -46,28 +44,39 @@ const Icon = styled.img`
 `;
 
 export function MonthBar(props) {
-  const { isShowingCalendar } = props;
-  const view = isShowingCalendar
-    ? showExpandView(props)
-    : showCollapseView(props);
+  const { saveSelectedDate, toggleShowingCalendar } = useActions();
+  const { selectedDate } = useTypedSelector(
+    (state) => state.pendingAppointmentReducer,
+  );
+  const { showingCalendar } = useTypedSelector((state) => state.uiShowReducer);
+  const allProps = {
+    ...props,
+    saveSelectedDate,
+    selectedDate,
+    showingCalendar,
+    toggleShowingCalendar,
+  };
+  const view = showingCalendar
+    ? showExpandView(allProps)
+    : showCollapseView(allProps);
 
   return <Container>{view}</Container>;
 }
 
 function showCollapseView(props) {
-  const { isShowingCalendar, selectedDate = dayjs() } = props;
+  const { selectedDate = dayjs() } = props;
   const selectedMonth = dayjs(selectedDate).format('MMMM').toUpperCase();
 
   return (
-    <ContainerView onClick={() => onMonthBarClicked(props)}>
-      <Month $expanded={isShowingCalendar}>{selectedMonth}</Month>
+    <ContainerView $expanded={false} onClick={() => onMonthBarClicked(props)}>
+      <Month $expanded={false}>{selectedMonth}</Month>
       <Icon src={calendarIcon} alt='Calendar' />
     </ContainerView>
   );
 }
 
 function showExpandView(props) {
-  const { isShowingCalendar, selectedDate = dayjs(), today = dayjs() } = props;
+  const { selectedDate = dayjs(), today = dayjs() } = props;
   const selectedMonth = dayjs(selectedDate).format('MMMM').toUpperCase();
   const threeMonths = [
     dayjs(today),
@@ -82,7 +91,7 @@ function showExpandView(props) {
         key={`selMonth_${idx}`}
         onClick={() => selectedNewMonth(props, month)}
         selected={isSelected}
-        $expanded={isShowingCalendar}
+        $expanded={true}
       >
         {monthName}
       </Month>
@@ -90,7 +99,7 @@ function showExpandView(props) {
   });
 
   return (
-    <ContainerView>
+    <ContainerView $expanded={true}>
       <MonthSelection>{monthsDisplay}</MonthSelection>
       <Icon src={calendarIcon} alt='Calendar' />
     </ContainerView>
@@ -98,33 +107,17 @@ function showExpandView(props) {
 }
 
 function selectedNewMonth(props, month) {
-  const { dSaveSelectedDate } = props;
-  dSaveSelectedDate(month);
+  const { saveSelectedDate } = props;
+  saveSelectedDate(month);
 }
 
 function onMonthBarClicked(props) {
-  const { dToggleShowingCalendar, isShowingCalendar } = props;
-  dToggleShowingCalendar(!isShowingCalendar);
+  const { toggleShowingCalendar, showingCalendar } = props;
+  toggleShowingCalendar(!showingCalendar);
 }
 
 MonthBar.propTypes = {
-  isShowingCalendar: PropTypes.bool,
-  selectedDate: PropTypes.object,
   today: PropTypes.object,
 };
 
-const mapStateToProps = (state) => {
-  return {
-    isShowingCalendar: getShowingCalendar(state),
-    selectedDate: getSelectedDate(state),
-  };
-};
-
-function mapDispatchToProps(dispatch) {
-  return {
-    dSaveSelectedDate: (date) => dispatch(saveSelectedDate(date)),
-    dToggleShowingCalendar: (status) => dispatch(toggleShowingCalendar(status)),
-  };
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(MonthBar);
+export default MonthBar;

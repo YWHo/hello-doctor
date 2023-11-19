@@ -1,10 +1,8 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import styled from 'styled-components';
 import dayjs from 'dayjs';
 import PropTypes from 'prop-types';
 import ButtonDayBig from '../ButtonDayBig';
-import { getSelectedDate } from '../../state/pendingAppointment';
 import * as dateHelper from '../../shared/dateHelper';
 
 const ContainerOuter = styled.div`
@@ -45,14 +43,4 @@ DaySlots.propTypes = {
   today: PropTypes.object,
 };
 
-const mapStateToProps = (state) => {
-  return {
-    selectedDate: getSelectedDate(state),
-  };
-};
-
-function mapDispatchToProps(dispatch) {
-  return {};
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(DaySlots);
+export default DaySlots;

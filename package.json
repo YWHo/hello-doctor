@@ -7,6 +7,7 @@
     "npm": "9.x"
   },
   "dependencies": {
+    "@redux-devtools/extension": "^3.2.6",
     "@types/jest": "^27.5.2",
     "@types/node": "^16.18.61",
     "@types/react": "^18.2.37",

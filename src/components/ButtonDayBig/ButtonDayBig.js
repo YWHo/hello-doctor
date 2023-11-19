@@ -1,19 +1,17 @@
 import React, { useEffect, useRef } from 'react';
-import { connect } from 'react-redux';
 import styled from 'styled-components';
 import dayjs from 'dayjs';
 import assert from 'assert';
 import PropTypes from 'prop-types';
-import {
-  getSelectedDate,
-  saveSelectedDate,
-} from '../../state/pendingAppointment';
+import useActions from '../../hooks/useActions';
+import useTypedSelector from '../../hooks/useTypedSelector';
 
 const ButtonCircle = styled.button`
   background-color: ${(props) => (props.selected ? '#177d91' : 'transparent')};
   border: none;
   border-radius: 50%;
   color: #fff;
+  cursor: pointer;
   height: 66px;
   width: 66px;
   margin-right: 8px;
@@ -53,7 +51,11 @@ const WeekDayName = styled.div`
 `;
 
 export function ButtonDayBig(props) {
-  const { dateStr, selectedDate = dayjs(), today = dayjs() } = props;
+  const { dateStr, today = dayjs() } = props;
+  const { saveSelectedDate } = useActions();
+  const { selectedDate = dayjs() } = useTypedSelector(
+    (state) => state.pendingAppointmentReducer,
+  );
   assert(
     /^\d{4}-\d{2}-\d{2}$/.test(dateStr),
     'must be in the format of YYYY-MM-DD',
@@ -78,7 +80,7 @@ export function ButtonDayBig(props) {
       ref={nameRef}
       disabled={disabled}
       selected={selected}
-      onClick={() => onDayClicked(props, dateStr)}
+      onClick={() => onDayClicked(props, dateStr, saveSelectedDate)}
     >
       <DateNum>{tmpDate.format('D')}</DateNum>
       <WeekDayName>{tmpDate.format('ddd').toLowerCase()}</WeekDayName>
@@ -86,26 +88,12 @@ export function ButtonDayBig(props) {
   );
 }
 
-function onDayClicked(props, dateStr) {
-  const { dSaveSelectedDate } = props;
-  dSaveSelectedDate(dayjs(dateStr));
+function onDayClicked(props, dateStr, saveSelectedDate) {
+  saveSelectedDate(dayjs(dateStr));
 }
 
 ButtonDayBig.propTypes = {
-  selectedDate: PropTypes.object,
   today: PropTypes.object,
 };
 
-const mapStateToProps = (state) => {
-  return {
-    selectedDate: getSelectedDate(state),
-  };
-};
-
-function mapDispatchToProps(dispatch) {
-  return {
-    dSaveSelectedDate: (value) => dispatch(saveSelectedDate(value)),
-  };
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(ButtonDayBig);
+export default ButtonDayBig;
