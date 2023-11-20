@@ -8,7 +8,7 @@ import RegisterPage from '../RegisterPage';
 import useActions from '../../hooks/useActions';
 import useTypedSelector from '../../hooks/useTypedSelector';
 
-export function App() {
+export default function App() {
   const { toFetchSchedules } = useActions();
   const { selectedDate } = useTypedSelector(
     (state) => state.pendingAppointmentReducer,
@@ -32,5 +32,3 @@ export function App() {
     </ErrorBoundary>
   );
 }
-
-export default App;

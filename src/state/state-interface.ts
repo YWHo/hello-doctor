@@ -22,7 +22,7 @@ interface scheduleSlot {
   [key: string]: string | undefined;
 }
 
-interface schedule {
+export interface schedule {
   Id?: number;
   Title?: string;
   Name?: string;

@@ -8,6 +8,7 @@ import MonthContainer from '../MonthContainer';
 import TimeCard from '../TimeCard';
 import DoctorProfile from '../DoctorProfile';
 import useTypedSelector from '../../hooks/useTypedSelector';
+import { schedule as scheduleType } from '../../state/state-interface';
 
 const Container = styled.div`
   background-color: #f5f5f5;
@@ -15,8 +16,10 @@ const Container = styled.div`
   min-width: 300px;
 `;
 
-export function AppointmentPage(props) {
-  const { schedules } = useTypedSelector((state) => state.timeSlotsReducer);
+export default function AppointmentPage() {
+  const { schedules = [] } = useTypedSelector(
+    (state) => state.timeSlotsReducer,
+  );
   return (
     <Container>
       <NavBar />
@@ -25,17 +28,19 @@ export function AppointmentPage(props) {
         <MonthCalendar />
       </MonthContainer>
       <DateSelector />
-      {showTimeCards({ ...props, schedules })}
+      {showTimeCards({ schedules })}
       <DoctorProfile />
     </Container>
   );
 }
 
-function showTimeCards(props) {
+interface showTimeCardsProps {
+  schedules: scheduleType[];
+}
+
+function showTimeCards(props: showTimeCardsProps) {
   const { schedules = [] } = props;
   return Array.from(schedules).map((scheduleObj, idx) => {
     return <TimeCard meetSchedule={scheduleObj} key={`tc_${idx}`} />;
   });
 }
-
-export default AppointmentPage;
