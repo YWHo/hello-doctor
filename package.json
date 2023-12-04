@@ -8,7 +8,6 @@
   },
   "dependencies": {
     "@redux-devtools/extension": "^3.2.6",
-    "@types/jest": "^27.5.2",
     "@types/node": "^16.18.61",
     "@types/react": "^18.2.37",
     "@types/react-dom": "^18.2.15",
@@ -33,9 +32,9 @@
     "build": "react-app-rewired build",
     "pre-commit": "lint-staged",
     "prepare": "husky install",
-    "test": "react-app-rewired test --transformIgnorePatterns \"node_modules/(?!axios)/\"",
-    "testNoWatch": "react-app-rewired test --watchAll=false --transformIgnorePatterns \"node_modules/(?!axios)/\"",
-    "eject": "react-app-rewired eject",
+    "test": "react-scripts test",
+    "testNoWatch": "react-scripts test --watchAll=false",
+    "eject": "react-scripts eject",
     "format": "prettier \"src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\" --jsx-single-quote --single-quote --write"
   },
   "eslintConfig": {
@@ -80,15 +79,29 @@
     ],
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
+    ],
+    "testMatch": [
+      "<rootDir>/src/**/*.test.{js,jsx,ts,tsx}",
+      "<rootDir>/src/**/?(*.)(spec|test).{js,jsx,ts,tsx}"
+    ],
+    "transform": {
+      "^.+\\.[t|j]sx?$": "babel-jest"
+    },
+    "transformIgnorePatterns": [
+      "node_modules/(?!axios)"
     ]
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@babel/preset-env": "^7.23.3",
+    "@babel/preset-react": "^7.23.3",
     "@cfaester/enzyme-adapter-react-18": "^0.7.1",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "@types/enzyme": "^3.10.16",
+    "@types/jest": "^29.5.8",
+    "@types/redux-mock-store": "^1.0.6",
     "assert": "^2.1.0",
     "buffer": "^6.0.3",
     "crypto-browserify": "^3.12.0",
@@ -105,6 +118,7 @@
     "redux-mock-store": "^1.5.4",
     "stream-browserify": "^3.0.0",
     "stream-http": "^3.2.0",
+    "ts-jest": "^29.1.1",
     "url": "^0.11.3"
   }
 }
